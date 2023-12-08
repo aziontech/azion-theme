@@ -1,0 +1,33 @@
+{
+  "name": "azion-theme",
+  "type": "module",
+  "version": "0.0.1",
+  "private": false,
+  "description": "Sharing Azion Theme between Platform, Web kit and another newset one.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aziontech/azion-theme.git"
+  },
+  "keywords": [
+    "theme",
+    "css",
+    "design",
+    "system",
+    "tailwind",
+    "primevue",
+    "azion",
+    "css",
+    "azion",
+    "theme"
+  ],
+  "author": "@aziontech",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aziontech/azion-theme/issues"
+  },
+  "homepage": "https://github.com/aziontech/azion-theme#readme"
+}
