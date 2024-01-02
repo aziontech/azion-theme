@@ -28,7 +28,7 @@ $highlightTextColor: none;
 
 /// Background of a highlighted item in focus state
 /// @group general
-$highlightFocusBg: rgba($primaryColor, 0.16);
+$highlightFocusBg: rgba($primaryColor, 0.06);
 
 /// Radius of the corners
 /// @group general
@@ -66,7 +66,7 @@ $primeIconFontSize: 1rem;
 
 /// Separator border
 /// @group general
-$divider: 1px solid #e7e7e7;
+$divider: 1px solid var(--surface-border);
 
 /// Space between two inline items
 /// @group general
