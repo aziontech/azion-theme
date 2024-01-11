@@ -1,5 +1,7 @@
 # azion-theme
 
+![Sass Cover Azion Theme](./doc/cover.png "Sass Cover Azion Theme")
+
 The Azion Theme repositorie is focused to share our style kit between interfaces and be used in all projeects inside the company, 
 Real Time Manager, Azion Web Site, Landing Pages and all the user iteraction with Azion.
 
@@ -7,6 +9,7 @@ Real Time Manager, Azion Web Site, Landing Pages and all the user iteraction wit
 ## How to use
 
 To be able to download and publish Azion Github Packages It is necessary a basic Auth autentication.
+
 On your file `~/.npmrc` you need the below configuration:
 
 ``` bash
@@ -31,7 +34,7 @@ or configure the `package.json` file increasing the dependencie packages;
 ``` json
 {
     "dependencies": {
-        "@aziontech/azion-theme": "ˆ0.0.1"
+        "@aziontech/azion-theme": "ˆ0.0.2"
     }
 }
 ```
