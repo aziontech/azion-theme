@@ -1,18 +1,14 @@
 {
-  "name": "azion-theme",
+  "name": "@aziontech/azion-theme",
   "type": "module",
   "version": "0.0.1",
   "private": false,
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "repository": "https://github.com/aziontech/azion-web-kit.git",
+  "repository": "https://github.com/aziontech/azion-theme.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aziontech/azion-theme.git"
   },
   "keywords": [
     "theme",
