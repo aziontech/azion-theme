@@ -1,10 +1,15 @@
-# azion-theme
+<h1 align="center">
+  azion-theme
+</h1>
 
-![Sass Cover Azion Theme](./doc/cover.png "Sass Cover Azion Theme")
+<p align="center">
+  <img src="./doc/cover.png" alt="Sass Cover Azion Theme"/>
+</p>
 
-The Azion Theme repositorie is focused to share our style kit between interfaces and be used in all projeects inside the company, 
-Real Time Manager, Azion Web Site, Landing Pages and all the user iteraction with Azion.
-
+<p align="center">
+  The Azion Theme repositorie is focused to share our style kit between interfaces and be used in all projeects inside the company, 
+  Real Time Manager, Azion Web Site, Landing Pages and all the user iteraction with Azion.
+</p>
 
 ## How to use
 
