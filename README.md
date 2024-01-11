@@ -9,7 +9,7 @@ Real Time Manager, Azion Web Site, Landing Pages and all the user iteraction wit
 To be able to download and publish Azion Github Packages It is necessary a basic Auth autentication.
 On your file `~/.npmrc` you need the below configuration:
 
-```
+``` bash
 //registry=https://npm.pkg.github/aziontech=true
 //npm.pkg.github.com/:_authToken=ghp_SprUskNOYknOQWEDJ02qFX1gB5zeaEd3GTIrs
 @aziontech:registry=https://npm.pkg.github.com/
@@ -57,7 +57,7 @@ cd ../azion-web-kit && npm install && npm link @aziontech/azion-theme
 npm run dev; # any azion-theme modification will be reflected on this dev server with hot reload
 ```
 
-### How to integrate in the Front-End Project?
+### How to integrate in the Front-End Projec/?
 
 On your `App.vue, main.js, index.js` or any anoter project entrypoint you need to import the both files:
 
