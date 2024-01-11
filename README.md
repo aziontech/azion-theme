@@ -37,3 +37,33 @@ or configure the `package.json` file increasing the dependencie packages;
 ```
 
 and you will be able to run `npm install` inside the root of project.
+
+
+## How to work to develop
+
+To local maintaining you should clone the the `azion-theme` repository and the another one where `azion-theme` will be used;
+
+### Example:
+In this example we will use an [azion-web-kit](https://github.com/aziontech/azion-web-kit) example:
+
+
+``` bash
+git clone git@github.com:aziontech/azion-web-kit.git
+git clone git@github.com:aziontech/azion-theme.git
+
+cd azion-theme && npm install -g
+cd ../azion-web-kit && npm install && npm link ../azion-theme
+
+npm run dev; # any azion-theme modification will be reflected on this dev server with hot reload
+```
+
+### How to integrate in the Front-End Project?
+
+On your `App.vue, main.js, index.js` or any anoter project entrypoint you need to import the both files:
+
+``` javascript
+import '../node_modules/@aziontech/azion-theme/src/azion-light/theme.scss';
+import '../node_modules/@aziontech/azion-theme/src/azion-dark/theme.scss';
+```
+
+> Will can import in your main.scss
