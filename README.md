@@ -52,7 +52,7 @@ git clone git@github.com:aziontech/azion-web-kit.git
 git clone git@github.com:aziontech/azion-theme.git
 
 cd azion-theme && npm install -g
-cd ../azion-web-kit && npm install && npm link ../azion-theme
+cd ../azion-web-kit && npm install && npm link @aziontech/azion-theme
 
 npm run dev; # any azion-theme modification will be reflected on this dev server with hot reload
 ```
