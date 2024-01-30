@@ -1,7 +1,9 @@
-.prose * {
-  color: var(--text-color-secondary) !important;
+.prose {
+  *:not(a, a > u) {
+    color: var(--text-color-secondary) !important;
+  }
 
-  a {
+  a, a > u {
     color: var(--text-color-link) !important;
   }
 }
