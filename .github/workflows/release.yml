@@ -1,0 +1,71 @@
+name: Publish Package to npm.pkg.github
+
+on:
+  repository_dispatch:
+    types: [semantic-release] # curl -v -H "Accept: application/vnd.github.everest-preview+json" -H "Authorization: token ${GITHUB_TOKEN}" https://api.github.com/repos/[org-name-or-username]/[repository]/dispatches -d '{ "event_type": "semantic-release" }'
+  push:
+    branches:
+      - main
+
+permissions: write-all
+
+jobs:
+  deploy:
+    name: Release
+
+    strategy:
+      matrix:
+        node: ['20.8.1']
+        os: ['self-hosted']
+
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      id-token: write
+
+    runs-on: ${{ matrix.os }}
+    container:
+      image: ubuntu:latest
+
+    steps:
+      - name: OS - Update
+        run: apt-get update -y
+
+      - name: OS - Installing packages
+        run: apt-get install tzdata
+
+      - name: OS - Installing Git CLI
+        run: apt-get install git-all -y
+
+      - name: CHECKOUT project
+        uses: actions/checkout@v3
+        with:
+          repository: aziontech/azion-web-kit
+          ref: main
+          path: '.'
+          clean: true
+          fetch-depth: '0'
+          lfs: 'false'
+
+      - name: Node.js Setup
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+        #   registry-url: 'https://npm.pkg.github.com'
+        #   scope: '@aziontech'
+        #   always-auth: true
+        # env:
+        #   NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGES_SECRET }}
+
+      - name: Node.js installing project dependencies
+        run: npm install
+
+      - name: Release
+        run: npx semantic-release
+        env:
+          GH_TOKEN: ${{ secrets.GIT_PKG }}
+          GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
+          NPM_TOKEN: ${{ secrets.GIT_PKG }}
+          NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
+
