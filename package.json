@@ -6,6 +6,20 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
+  "author": "aziontech",
+  "contributors": [
+    {
+      "name":"Eduardo de Cesaro Amarante",
+      "url": "https://www.professorduda.com/"
+    },
+    {
+      "name":"Robson Junior",
+      "url": "https://www.robsonjunior.dev/"
+    },
+    {
+      "name":"Luis Igreja"
+    }
+  ],
   "repository": "https://github.com/aziontech/azion-theme.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
