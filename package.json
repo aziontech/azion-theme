@@ -3,6 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "private": false,
+  "repository": "https://github.com/aziontech/azion-theme.git",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
@@ -20,21 +21,20 @@
       "name":"Luis Igreja"
     }
   ],
-  "repository": "https://github.com/aziontech/azion-theme.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "theme",
     "css",
+    "brand",
     "design",
     "system",
-    "tailwind",
     "primevue",
     "azion",
     "css",
     "azion",
-    "theme"
+    "theme",
+    "theme-base"
   ],
   "license": "MIT",
   "bugs": {
@@ -46,6 +46,7 @@
     "@semantic-release/commit-analyzer": "^10.0.1",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^9.2.6",
-    "@semantic-release/release-notes-generator": "^11.0.4"
+    "@semantic-release/release-notes-generator": "^11.0.4",
+    "conventional-changelog-conventionalcommits": "^7.0.2"
   }
 }
