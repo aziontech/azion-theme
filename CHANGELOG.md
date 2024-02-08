@@ -1,3 +1,10 @@
+## [1.1.0](https://github.com/aziontech/azion-theme/compare/v1.0.1...v1.1.0) (2024-02-08)
+
+
+### Features
+
+* Azion selection color ([#4](https://github.com/aziontech/azion-theme/issues/4)) ([d3c6436](https://github.com/aziontech/azion-theme/commit/d3c643631044e8708424b687fbd4b1d2d1e2483c))
+
 ## [1.0.1](https://github.com/aziontech/azion-theme/compare/v1.0.0...v1.0.1) (2024-02-08)
 
 
