@@ -1,9 +1,13 @@
 .prose {
-  *:not(a, a > u) {
+  *:not(p, a, li) {
+    color: var(--text-color) !important;
+  }
+
+  *:is(p), *:is(li) {
     color: var(--text-color-secondary) !important;
   }
 
-  a, a > u {
+  *:is(a), *:is(a > u) {
     color: var(--text-color-link) !important;
   }
 }
