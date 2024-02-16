@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/aziontech/azion-theme/compare/v1.1.2...v1.1.3) (2024-02-16)
+
+
+### Bug Fixes
+
+* sintax of [@group](https://github.com/group) ([ea4c3f4](https://github.com/aziontech/azion-theme/commit/ea4c3f4202122ef47389438d4b9a14dc2bc31f5a))
+
 ## [1.1.2](https://github.com/aziontech/azion-theme/compare/v1.1.1...v1.1.2) (2024-02-09)
 
 
