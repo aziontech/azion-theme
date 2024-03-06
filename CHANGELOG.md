@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/aziontech/azion-theme/compare/v1.2.0...v1.2.1) (2024-03-06)
+
+
+### Bug Fixes
+
+* focus-visible a ([2d4b4d7](https://github.com/aziontech/azion-theme/commit/2d4b4d77fea6489a89fc34d17c863477fa3b54f9))
+
 ## [1.2.0](https://github.com/aziontech/azion-theme/compare/v1.1.3...v1.2.0) (2024-03-06)
 
 
