@@ -1,3 +1,5 @@
-a { 
-  @include focused();
+a {
+  &:focus-visible {
+    @include focused();
+  }
 }
