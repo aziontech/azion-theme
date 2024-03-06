@@ -1,3 +1,10 @@
+## [1.2.0](https://github.com/aziontech/azion-theme/compare/v1.1.3...v1.2.0) (2024-03-06)
+
+
+### Features
+
+* general features for global css ([#8](https://github.com/aziontech/azion-theme/issues/8)) ([f751478](https://github.com/aziontech/azion-theme/commit/f75147847ec4adddc854be1ba5450980017bde48))
+
 ## [1.1.3](https://github.com/aziontech/azion-theme/compare/v1.1.2...v1.1.3) (2024-02-16)
 
 
