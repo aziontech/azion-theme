@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/aziontech/azion-theme/compare/v1.2.1...v1.2.2) (2024-03-06)
+
+
+### Bug Fixes
+
+* a focus ([90a0fac](https://github.com/aziontech/azion-theme/commit/90a0fac7772289444996a2df61536d4bb76bca18))
+
 ## [1.2.1](https://github.com/aziontech/azion-theme/compare/v1.2.0...v1.2.1) (2024-03-06)
 
 
