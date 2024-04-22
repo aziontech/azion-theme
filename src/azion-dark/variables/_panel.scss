@@ -108,7 +108,7 @@ $accordionHeaderHoverBg: var(--surface-hover);
 
 /// Border of an accordion panel header in hover state
 /// @group panel
-$accordionHeaderHoverBorderColor: $panelHeaderBorder;
+$accordionHeaderHoverBorderColor: var(--surface-border);
 
 /// Text color of an accordion panel header in hover state
 /// @group panel
