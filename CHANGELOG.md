@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/aziontech/azion-theme/compare/v1.2.2...v1.2.3) (2024-04-22)
+
+
+### Bug Fixes
+
+* color hover border accordion ([#9](https://github.com/aziontech/azion-theme/issues/9)) ([2e6ea04](https://github.com/aziontech/azion-theme/commit/2e6ea04f2740a1a266704526a55b1f84e42fa8ce))
+
 ## [1.2.2](https://github.com/aziontech/azion-theme/compare/v1.2.1...v1.2.2) (2024-03-06)
 
 
