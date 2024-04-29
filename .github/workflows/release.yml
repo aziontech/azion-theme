@@ -11,29 +11,13 @@ jobs:
   deploy:
     name: Release
 
-<<<<<<< HEAD
-=======
-#    strategy:
-#      matrix:
-#        node: ['20.8.1']
-#        os: ['self-hosted']
-
->>>>>>> c62e82c (chore: replace self-hosted to ubuntu-latest)
     permissions:
       contents: write
       issues: write
       pull-requests: write
       id-token: write
 
-<<<<<<< HEAD
     runs-on: [self-hosted, stage]
-=======
-#    runs-on: ${{ matrix.os }}
-#    container:
-#      image: ubuntu:latest
-
-    runs-on: ubuntu-latest
->>>>>>> c62e82c (chore: replace self-hosted to ubuntu-latest)
     container:
       image: node:18-alpine3.18
 
@@ -53,10 +37,6 @@ jobs:
       - name: Node.js Setup
         uses: actions/setup-node@v3
         with:
-<<<<<<< HEAD
-=======
-#          node-version: ${{ matrix.node }}
->>>>>>> c62e82c (chore: replace self-hosted to ubuntu-latest)
           node-version: '20.8.1'
           registry-url: 'https://npm.pkg.github.com'
           scope: '@aziontech'
