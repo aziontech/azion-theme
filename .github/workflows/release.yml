@@ -17,7 +17,11 @@ jobs:
       pull-requests: write
       id-token: write
 
-    runs-on: [self-hosted, stage]
+    # runs-on: [self-hosted, stage]
+    # container:
+    #   image: node:18-alpine3.18
+
+    runs-on: ubuntu-latest
     container:
       image: node:18-alpine3.18
 
