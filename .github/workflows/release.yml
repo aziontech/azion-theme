@@ -19,11 +19,11 @@ jobs:
 
     # runs-on: [self-hosted, stage]
     # container:
-    #   image: node:18-alpine3.18
+    #   image: ubuntu:latest
 
     runs-on: ubuntu-latest
     container:
-      image: node:18-alpine3.18
+      image: node:20-alpine3.18
 
     steps:
 #      - name: OS - Update
@@ -41,7 +41,7 @@ jobs:
       - name: Node.js Setup
         uses: actions/setup-node@v3
         with:
-          node-version: '20.8.2'
+          node-version: '20.8.1'
           registry-url: 'https://npm.pkg.github.com'
           scope: '@aziontech'
           always-auth: true
