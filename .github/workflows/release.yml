@@ -11,29 +11,52 @@ jobs:
   deploy:
     name: Release
 
+<<<<<<< HEAD
+=======
+#    strategy:
+#      matrix:
+#        node: ['20.8.1']
+#        os: ['self-hosted']
+
+>>>>>>> c62e82c (chore: replace self-hosted to ubuntu-latest)
     permissions:
       contents: write
       issues: write
       pull-requests: write
       id-token: write
 
+<<<<<<< HEAD
     runs-on: [self-hosted, stage]
+=======
+#    runs-on: ${{ matrix.os }}
+#    container:
+#      image: ubuntu:latest
+
+    runs-on: ubuntu-latest
+>>>>>>> c62e82c (chore: replace self-hosted to ubuntu-latest)
     container:
-      image: ubuntu:latest
+      image: node:18-alpine3.18
 
     steps:
-      - name: OS - Update
-        run: apt-get update -y
+#      - name: OS - Update
+#        run: apt-get update -y
 
-      - name: OS - Installing packages
-        run: apt-get install tzdata
+#      - name: OS - Installing packages
+#        run: apt-get install tzdata
 
-      - name: OS - Installing Git CLI
-        run: apt-get install git-all -y
+#      - name: OS - Installing Git CLI
+#        run: apt-get install git-all -y
+
+      - name: OS - Installing dep
+        run: apk add curl git bash jq
 
       - name: Node.js Setup
         uses: actions/setup-node@v3
         with:
+<<<<<<< HEAD
+=======
+#          node-version: ${{ matrix.node }}
+>>>>>>> c62e82c (chore: replace self-hosted to ubuntu-latest)
           node-version: '20.8.1'
           registry-url: 'https://npm.pkg.github.com'
           scope: '@aziontech'
