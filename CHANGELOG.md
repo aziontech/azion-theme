@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/aziontech/azion-theme/compare/v1.2.3...v1.2.4) (2024-04-30)
+
+
+### Bug Fixes
+
+* public package ([672d660](https://github.com/aziontech/azion-theme/commit/672d6609814189fcf87cb3cdbd85815c016fa5ae))
+
 ## [1.2.3](https://github.com/aziontech/azion-theme/compare/v1.2.2...v1.2.3) (2024-04-22)
 
 
