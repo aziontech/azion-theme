@@ -7,6 +7,10 @@
     color: var(--text-color-secondary) !important;
   }
 
+  *:is(hr) {
+    border-color: var(--surface-border) !important;
+  }
+
   *:is(a), *:is(a > u) {
     color: var(--text-color-link) !important;
   }
