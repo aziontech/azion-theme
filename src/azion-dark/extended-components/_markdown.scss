@@ -3,11 +3,51 @@
     color: var(--text-color) !important;
   }
 
+  *:is(a), *:is(a > u) {
+    color: var(--text-color-link) !important;
+  }
+
+  *:is(table) {
+    border-collapse: separate !important;
+    border-spacing: .5px !important;
+    box-sizing: content-box !important;
+    border: 1px solid var(--surface-border) !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+  }
+
+  *:is(table > thead) {
+    border-collapse: separate !important;
+    background: #1c1c1c !important;
+  }
+
+  *:is(tr > th) {
+    background: #1c1c1c !important;
+  }
+
+  *:is(tr > th) {
+    font-size: .875rem !important;
+    text-wrap: nowrap !important;
+    color: var(--text-color) !important;
+    font-weight: 600 !important;
+    text-align: left !important;
+    padding: 1rem !important;
+    background: #1c1c1c !important;
+  }
+
+  *:is(tr > td) {
+    font-size: .875rem;
+    color: var(--text-color) !important;
+    padding: 1rem !important;
+    border-top: 1px solid var(--surface-border) !important;
+    background: var(--surface-section) !important;
+  }
+
   *:is(p), *:is(li) {
     color: var(--text-color-secondary) !important;
   }
 
-  *:is(a), *:is(a > u) {
-    color: var(--text-color-link) !important;
+  *:is(hr) {
+    border-color: var(--surface-border) !important;
   }
 }
