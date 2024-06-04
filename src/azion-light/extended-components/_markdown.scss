@@ -8,40 +8,51 @@
   }
 
   *:is(table) {
-    border-collapse: separate !important;
-    border-spacing: .5px !important;
-    box-sizing: content-box !important;
-    border: 1px solid var(--surface-border) !important;
-    border-radius: 6px !important;
-    overflow: hidden !important;
+    border-collapse: separate;
+    border-spacing: .5px;
+    box-sizing: content-box;
+    border: 1px solid var(--surface-border);
+    border-radius: 6px;
+    overflow: hidden;
   }
 
   *:is(table > thead) {
-    border-collapse: separate !important;
-    background: #e7e7e7 !important;
+    border-collapse: separate;
+    background: #e7e7e7;
   }
 
   *:is(tr > th) {
-    background: #e7e7e7 !important;
+    background: #e7e7e7;
   }
 
   *:is(tr > th) {
-    font-size: .875rem !important;
-    text-wrap: nowrap !important;
-    color: var(--text-color) !important;
-    font-weight: 600 !important;
-    text-align: left !important;
+    font-size: .875rem;
+    text-wrap: nowrap;
+    color: var(--text-color);
+    font-weight: 600;
+    text-align: left;
     padding: 1rem !important;
-    background: #e7e7e7 !important;
+    background: #e7e7e7;
   }
 
   *:is(tr > td) {
     font-size: .875rem;
-    color: var(--text-color) !important;
+    color: var(--text-color);
     padding: 1rem !important;
-    border-top: 1px solid var(--surface-border) !important;
-    background: var(--surface-section) !important;
+    border-top: 1px solid var(--surface-border);
+    background: var(--surface-section);
   }
+
+  @media screen and (max-width: 640px) {
+    table {
+      display: block;
+      width: 100%;
+      overflow-x: scroll;
+    }
+    table td {
+      white-space: nowrap;
+    }
+  } 
 
   *:is(p), *:is(li) {
     color: var(--text-color-secondary) !important;
