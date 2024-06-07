@@ -84,4 +84,11 @@
     font-size: 1rem;
     padding-left: .375rem;
   }
+
+  *:is(.expressive-code) {
+    margin-bottom: 1.8rem !important;
+  }
+  *:is(.expressive-code code) {
+    background: var(--surface-200) !important;
+  }
 }
