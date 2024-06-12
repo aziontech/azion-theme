@@ -52,7 +52,7 @@
     table td {
       white-space: nowrap;
     }
-  } 
+  }
 
   *:is(p), *:is(li) {
     color: var(--text-color-secondary) !important;
@@ -77,13 +77,14 @@
   *:is(aside.content.note) {
     background: var(--surface-200) !important;
     border-left: var(--surface-600) 5px solid !important;
+    margin: 2rem 0 !important;
   }
   *:is(aside.content > p) {
     color: var(--text-color) !important;
     display: flex;
     gap: 0.375rem;
     fill: #f3652b !important;
-    margin: 0 !important;
+    margin: 1rem 0 !important;
     padding-left: .375rem;
   }
   *:is(aside.content > section > p) {
@@ -106,9 +107,9 @@
     height: 10px !important;
     background: #f3652b !important;
   }
-  *:is(._tab-scroll-overflow_ugdi6_10 > .border){
+  *:is(._tab-scroll-overflow_ugdi6_10 > .border) {
     border-color: var(--surface-border) !important;
-
+  }
   *:is(.expressive-code) {
     margin-bottom: 1.8rem !important;
   }
