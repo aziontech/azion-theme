@@ -1,7 +1,7 @@
 {
   "name": "@aziontech/azion-theme",
   "type": "module",
-  "version": "1.2.10",
+  "version": "1.2.11",
   "private": false,
   "repository": "https://github.com/aziontech/azion-theme.git",
   "publishConfig": {
