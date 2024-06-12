@@ -61,6 +61,13 @@
   *:is(hr) {
     border-color: var(--surface-border) !important;
   }
+  *:is(hr) ~ .heading-wrapper {
+    align-items: flex-start !important;
+    
+    *:is(h2, h3, h4, h5, h6) {
+      margin-top: 0 !important;
+    }
+  }
   
   *:is(aside.content) {
     background: #f3652b15 !important;
