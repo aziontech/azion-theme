@@ -92,6 +92,23 @@
     padding-left: .375rem;
   }
 
+  *:is(._tablist_ugdi6_34){
+    border-color: transparent !important;
+  }
+  *:is(.TabGroup) {
+    border-bottom: none !important;
+  }
+  *:is(.TabGroup > button){
+    font-weight: 500 !important;
+  }
+  *:is(.TabGroup > span){
+    color: #f3652b !important;
+    height: 10px !important;
+    background: #f3652b !important;
+  }
+  *:is(._tab-scroll-overflow_ugdi6_10 > .border){
+    border-color: var(--surface-border) !important;
+
   *:is(.expressive-code) {
     margin-bottom: 1.8rem !important;
   }
