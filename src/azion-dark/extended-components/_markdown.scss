@@ -61,6 +61,13 @@
   *:is(hr) {
     border-color: var(--surface-border) !important;
   }
+  *:is(hr) ~ .heading-wrapper {
+    align-items: flex-start !important;
+    
+    *:is(h2, h3, h4, h5, h6) {
+      margin-top: 0 !important;
+    }
+  }
   
   *:is(aside.content) {
     background: #f3652b15 !important;
@@ -101,5 +108,11 @@
   }
   *:is(._tab-scroll-overflow_ugdi6_10 > .border){
     border-color: var(--surface-border) !important;
+    
+  *:is(.expressive-code) {
+    margin-bottom: 1.8rem !important;
+  }
+  *:is(.expressive-code code) {
+    background: var(--surface-200) !important;
   }
 }
