@@ -61,9 +61,6 @@
   *:is(hr) {
     border-color: var(--surface-border) !important;
   }
-  *:is(header h1) {
-    margin-bottom: 0 !important;
-  }
   *:is(hr + .heading-wrapper) {
     align-items: flex-start !important;
 
