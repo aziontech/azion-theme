@@ -60,13 +60,15 @@
   *:is(hr) {
     border-color: var(--surface-border) !important;
   }
-  *:is(hr) ~ .heading-wrapper {
+  *:is(hr + .heading-wrapper) {
     align-items: flex-start !important;
 
-    *:is(h2, h3, h4, h5, h6) {
+    h1, h2, h3, h4, h5, h6 {
       margin-top: 0 !important;
     }
   }
+
+  *:is(.heading-wrapper + p) { margin-top: 0 !important;}
 
   *:is(aside.content) {
     background: #f3652b15 !important;
@@ -114,5 +116,8 @@
   }
   *:is(.expressive-code code) {
     background: var(--surface-200) !important;
+  }
+  *:is(.p-button) {
+    margin: 0 .5rem .5rem 0;
   }
 }
