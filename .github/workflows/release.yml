@@ -29,11 +29,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 'lts/*'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@aziontech'
-          always-auth: true
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGES_SECRET }}
 
       - name: Release
         shell: bash
@@ -44,6 +39,5 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GIT_PKG }}
           GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGES_SECRET }}
+          NPM_TOKEN: ${{ secrets.PKG_NPM_TOKEN }}
 
