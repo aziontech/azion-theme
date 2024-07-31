@@ -1,77 +1,77 @@
-<h1 align="center">
-  azion-theme
-</h1>
+# Azion Theme
 
-<p align="center">
-  <img src="./doc/cover.png" alt="Sass Cover Azion Theme"/>
-</p>
+![Sass Cover Azion Theme](./doc/cover.png)
 
-<p align="center">
-  The Azion Theme repositorie is focused to share our style kit between interfaces and be used in all projeects inside the company, 
-  Real Time Manager, Azion Web Site, Landing Pages and all the user iteraction with Azion.
-</p>
-
-## How to use
-
-To be able to download and publish Azion Github Packages It is necessary a basic Auth autentication.
-
-On your file `~/.npmrc` you need the below configuration:
-
-``` bash
-//registry=https://npm.pkg.github/aziontech=true
-//npm.pkg.github.com/:_authToken=ghp_SprUskNOYknOQWEDJ02qFX1gB5zeaEd3GTIrs
-@aziontech:registry=https://npm.pkg.github.com/
-```
-
-> Don't forget to replace the `_authToken` value param. The currently value is a g.e;
+The Azion Theme repository is focused on sharing our style kit across interfaces and should be used in all company projects, including Azion Console Kit, Azion Site, Landing Pages, and all user interactions with Azion.
 
 
 ## How to install
 
-With the configured autentication you need to:
+To install the Azion Theme, you can use the following command:
 
 ``` bash
-npm install @aziontech/azion-theme;
+npm install azion-theme
 ```
 
-or configure the `package.json` file increasing the dependencie packages;
+``` bash
+yarn add azion-theme
+```
+
+Alternatively, you can configure the package.json file by adding the dependency:
 
 ``` json
 {
     "dependencies": {
-        "@aziontech/azion-theme": "ˆ0.0.2"
+        "azion-theme": "ˆ1.4.0"
     }
 }
 ```
 
-and you will be able to run `npm install` inside the root of project.
+After updating the package.json file, run npm install in the root of your project to install the Azion Theme.
+
+
+### How to Integrate into a Front-End Project
+
+To integrate the Azion Theme into your front-end project, you need to import the theme files in your project's entry point file (App.vue, main.js, index.js, etc.):
+
+``` javascript
+import 'azion-theme/dark';
+import 'azion-theme/light';
+```
+
+Make sure to include these imports at the top of your entry point file to ensure the styles are applied correctly throughout your application.
 
 
 ## How to work to develop
 
-To local maintaining you should clone the the `azion-theme` repository and the another one where `azion-theme` will be used;
+To work locally, you should clone both the `azion-theme` repository and the other repository where `azion-theme` will be used.
 
 ### Example:
-In this example we will use an [azion-web-kit](https://github.com/aziontech/azion-web-kit) example:
+In this example, we will use the [azion-webkit](https://github.com/aziontech/webkit) repository:
 
+1. Clone the `azion-webkit` and `azion-theme` repositories:
+  ```bash
+   git clone https://github.com/aziontech/webkit.git
+   git clone https://github.com/aziontech/azion-theme.git
+  ```
 
-``` bash
-git clone git@github.com:aziontech/azion-web-kit.git
-git clone git@github.com:aziontech/azion-theme.git
+2. Install dependecies and create a link point
+  ```bash
+    cd azion-theme
+    npm install
+    npm link
+  ```
 
-cd azion-theme && npm install -g
-cd ../azion-web-kit && npm install && npm link @aziontech/azion-theme
-
-npm run dev; # any azion-theme modification will be reflected on this dev server with hot reload
+3. Link the `azion-theme` to the `azion-webkit` project:
+```bash
+  cd ../azion-webkit
+  npm install
+  npm link azion-theme
 ```
 
-### How to integrate in the Front-End Projec/?
+4. Run the development server:
+  ```bash
+    npm run dev
+  ```
 
-On your `App.vue, main.js, index.js` or any anoter project entrypoint you need to import the both files:
-
-``` javascript
-import '../node_modules/@aziontech/azion-theme/src/azion-light/theme.scss';
-import '../node_modules/@aziontech/azion-theme/src/azion-dark/theme.scss';
-```
-
-> Will can import in your main.scss
+Any modifications made to `azion-theme` will be reflected on this development server with hot reload.
