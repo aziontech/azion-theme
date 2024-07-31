@@ -1,3 +1,14 @@
+## [1.3.0](https://github.com/aziontech/azion-theme/compare/v1.2.17...v1.3.0) (2024-07-31)
+
+### Features
+
+* change package name ([130dada](https://github.com/aziontech/azion-theme/commit/130dada0028860d98fa4cb92c4f99cee97762f5a))
+* NPM Sematinc Release ([6faf9da](https://github.com/aziontech/azion-theme/commit/6faf9da47385189b1cd19a5702dd84a2beb8c8a6))
+
+### Bug Fixes
+
+* conventional commits version ([7924966](https://github.com/aziontech/azion-theme/commit/79249667eef3cf71e25011a0780fa4c8e0876834))
+
 ## [1.2.4](https://github.com/aziontech/azion-theme/compare/v1.2.3...v1.2.4) (2024-04-30)
 
 
