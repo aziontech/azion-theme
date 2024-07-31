@@ -28,7 +28,7 @@ jobs:
       - name: Node.js Setup
         uses: actions/setup-node@v3
         with:
-          node-version: 20.13.1
+          node-version: 'lts/*'
           registry-url: 'https://npm.pkg.github.com'
           scope: '@aziontech'
           always-auth: true
@@ -44,6 +44,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GIT_PKG }}
           GITHUB_TOKEN: ${{ secrets.GIT_PKG }}
-          NPM_TOKEN: ${{ secrets.GIT_PKG }}
-          NODE_AUTH_TOKEN: ${{ secrets.GIT_PKG }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGES_SECRET }}
 
