@@ -42,7 +42,7 @@ import 'azion-theme/light';
 Make sure to include these imports at the top of your entry point file to ensure the styles are applied correctly throughout your application.
 
 
-## How to work to develop
+## How to work to locally
 
 To work locally, you should clone both the `azion-theme` repository and the other repository where `azion-theme` will be used.
 
