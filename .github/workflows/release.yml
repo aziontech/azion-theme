@@ -39,7 +39,7 @@ jobs:
         shell: bash
         run: |
           rm -rf ./*
-          git clone https://github.com/aziontech/azion-theme.git && cd ./azion-theme && npm install
+          git clone https://github.com/aziontech/theme.git && cd ./theme && npm install
           npx semantic-release
         env:
           GH_TOKEN: ${{ secrets.GIT_PKG }}
