@@ -16,6 +16,10 @@
       "name": "Luis Igreja"
     }
   ],
+  "exports": {
+    "./dark": "./dark.js",
+    "./light": "./light.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
