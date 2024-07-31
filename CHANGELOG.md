@@ -1,3 +1,9 @@
+## [1.4.0](https://github.com/aziontech/azion-theme/compare/v1.3.5...v1.4.0) (2024-07-31)
+
+### Features
+
+* create package entrypoints ([3f76541](https://github.com/aziontech/azion-theme/commit/3f76541544d361a734adba4d42ab7d66c4edd080))
+
 ## [1.3.5](https://github.com/aziontech/azion-theme/compare/v1.3.4...v1.3.5) (2024-07-31)
 
 ### Bug Fixes
