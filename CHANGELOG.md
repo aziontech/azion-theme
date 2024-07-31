@@ -1,3 +1,9 @@
+## [1.3.3](https://github.com/aziontech/theme/compare/v1.3.2...v1.3.3) (2024-07-31)
+
+### Bug Fixes
+
+* rename project removing organization ([3847349](https://github.com/aziontech/theme/commit/3847349d7c8b714fb65a35173856364179cf1eb8))
+
 ## [1.3.2](https://github.com/aziontech/theme/compare/v1.3.1...v1.3.2) (2024-07-31)
 
 ### Bug Fixes
