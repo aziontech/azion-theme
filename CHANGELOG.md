@@ -1,3 +1,9 @@
+## [1.3.4](https://github.com/aziontech/theme/compare/v1.3.3...v1.3.4) (2024-07-31)
+
+### Bug Fixes
+
+* remove publishConf ([b9a51f8](https://github.com/aziontech/theme/commit/b9a51f86914ec6aa5e82b18401587dd62f6d98d9))
+
 ## [1.3.3](https://github.com/aziontech/theme/compare/v1.3.2...v1.3.3) (2024-07-31)
 
 ### Bug Fixes
