@@ -1,3 +1,9 @@
+## [1.3.1](https://github.com/aziontech/theme/compare/v1.3.0...v1.3.1) (2024-07-31)
+
+### Bug Fixes
+
+* homepage, repository.type.url from azion-theme to theme ([d45be83](https://github.com/aziontech/theme/commit/d45be834988407f90e4b4772c796c91144106db5))
+
 ## [1.3.0](https://github.com/aziontech/azion-theme/compare/v1.2.17...v1.3.0) (2024-07-31)
 
 ### Features
