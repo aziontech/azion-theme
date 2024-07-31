@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/aziontech/theme/compare/v1.3.1...v1.3.2) (2024-07-31)
+
+### Bug Fixes
+
+* PKG_NPM_TOKEN local ([c852cfe](https://github.com/aziontech/theme/commit/c852cfe8cbc6a726b19990c7dbdcfd5207ebb079))
+* rename on cicd the project name ([0c7f2c4](https://github.com/aziontech/theme/commit/0c7f2c4dce4e564559435e3cf9a46301104e6172))
+
 ## [1.3.1](https://github.com/aziontech/theme/compare/v1.3.0...v1.3.1) (2024-07-31)
 
 ### Bug Fixes
