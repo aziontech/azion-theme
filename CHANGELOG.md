@@ -1,3 +1,9 @@
+## [1.3.5](https://github.com/aziontech/azion-theme/compare/v1.3.4...v1.3.5) (2024-07-31)
+
+### Bug Fixes
+
+* rename from @aziontech/theme to azion-theme ([219492f](https://github.com/aziontech/azion-theme/commit/219492f6ad7db21ed4c72dcbea671c112f8677c9))
+
 ## [1.3.4](https://github.com/aziontech/theme/compare/v1.3.3...v1.3.4) (2024-07-31)
 
 ### Bug Fixes
