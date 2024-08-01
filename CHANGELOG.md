@@ -1,3 +1,9 @@
+## [1.4.2](https://github.com/aziontech/azion-theme/compare/v1.4.1...v1.4.2) (2024-08-01)
+
+### Bug Fixes
+
+* text typo ([a1c28aa](https://github.com/aziontech/azion-theme/commit/a1c28aa79d11aad4bce50fdfacb2b70ac3880680))
+
 ## [1.4.1](https://github.com/aziontech/azion-theme/compare/v1.4.0...v1.4.1) (2024-08-01)
 
 ### Bug Fixes
