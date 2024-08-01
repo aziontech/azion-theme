@@ -9,7 +9,7 @@ including Azion Console Kit, Azion Site, Landing Pages, and all user interaction
 ## Easy to install
 
 To install the azion-theme project, you need to follow the command.
-Choise one of your preference: npm or yarn;
+Choice one of your preference: npm or yarn;
 
 ``` bash
 npm install azion-theme --save
