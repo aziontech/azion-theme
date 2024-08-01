@@ -1,3 +1,9 @@
+## [1.4.3](https://github.com/aziontech/azion-theme/compare/v1.4.2...v1.4.3) (2024-08-01)
+
+### Bug Fixes
+
+* relaunch docs ([3011ee2](https://github.com/aziontech/azion-theme/commit/3011ee228d273f71f505afb0d1af39aadffd84be))
+
 ## [1.4.2](https://github.com/aziontech/azion-theme/compare/v1.4.1...v1.4.2) (2024-08-01)
 
 ### Bug Fixes
