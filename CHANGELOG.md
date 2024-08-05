@@ -1,3 +1,9 @@
+## [1.5.0](https://github.com/aziontech/azion-theme/compare/v1.4.3...v1.5.0) (2024-08-05)
+
+### Features
+
+* default theme supporting dark/light mode ([14433c6](https://github.com/aziontech/azion-theme/commit/14433c6814c8ef6601a73106043a4e83b47fc36b))
+
 ## [1.4.3](https://github.com/aziontech/azion-theme/compare/v1.4.2...v1.4.3) (2024-08-01)
 
 ### Bug Fixes
