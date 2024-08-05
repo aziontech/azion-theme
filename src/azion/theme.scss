@@ -1,0 +1,10 @@
+@import './variables';
+
+.azion {
+  @import './_fonts';
+  @import '../primevue-sass-theme/theme-base/components.scss';
+  @import './_extensions';
+  @import './custom';
+
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
