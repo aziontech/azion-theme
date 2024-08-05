@@ -20,7 +20,7 @@ $textSecondaryColor: var(--text-color-secondary);
 
 /// Background of a highlighted item
 /// @group general
-$highlightBg: var(--highlight-bg);
+$highlightBg: $highlightBg;
 
 /// Text color of a highlighted item
 /// @group general
