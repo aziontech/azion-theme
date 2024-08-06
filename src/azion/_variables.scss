@@ -1,98 +1,90 @@
 // Theme Specific Variables
 
-$pc: #f4f4f4;
-$pdc: hsla(0, 0%, 96%, 0.5);
-$pderc: #f4f4f4;
-$ptc: #f4f4f4;
-$highlightBg: rgba($pc, 0.06);
-$overlayContentBg: #171717;
 
-:root.azion-light {
+  $highlightBg: #f4f4f410;
+
   $pc: #2b2b2b;
   $pdc: #000;
   $pderc: #000;
   $ptc: #f4f4f4;
   $highlightBg: rgba($pc, 0.06);
   $overlayContentBg: #ffffff;
-}
 
-$primaryColor: $pc;
-$primaryDarkColor: $pdc;
-$primaryDarkerColor: $pderc;
-$primaryTextColor: $ptc;
+  :root {
+    --surface-a: #ffffff;
+    --surface-b: #f8f9fa;
+    --surface-c: #e9ecef;
+    --surface-d: #dee2e6;
+    --surface-e: #ffffff;
+    --surface-f: #ffffff;
 
-$colors: (
-  "blue": #2196f3,
-  "green": #4caf50,
-  "yellow": #fbc02d,
-  "cyan": #00bcd4,
-  "pink": #e91e63,
-  "indigo": #3f51b5,
-  "teal": #009688,
-  "orange": #f57c00,
-  "bluegray": #607d8b,
-  "purple": #9c27b0,
-  "red": #ff4032,
-  "primary": $primaryColor,
-);
+    --green-50: #f4fcf7;
+    --green-100: #caf1d8;
+    --green-200: #a0e6ba;
+    --green-300: #76db9b;
+    --green-400: #4cd07d;
+    --green-500: #22c55e;
+    --green-600: #1da750;
+    --green-700: #188a42;
+    --green-800: #136c34;
+    --green-900: #0e4f26;
 
-// Mandatory Designer Variables
-@import "./variables/general";
-@import "./variables/form";
-@import "./variables/button";
-@import "./variables/panel";
-@import "./variables/_data";
-@import "./variables/_overlay";
-@import "./variables/_message";
-@import "./variables/_menu";
-@import "./variables/_media";
-@import "./variables/_misc";
+    --red-50: #fff5f5;
+    --red-100: #ffd0ce;
+    --red-200: #ffaca7;
+    --red-300: #ff8780;
+    --red-400: #ff6259;
+    --red-500: #ff3d32;
+    --red-600: #d9342b;
+    --red-700: #b32b23;
+    --red-800: #8c221c;
+    --red-900: #661814;
 
-:root {
-  --surface-a: #ffffff;
-  --surface-b: #f8f9fa;
-  --surface-c: #e9ecef;
-  --surface-d: #dee2e6;
-  --surface-e: #ffffff;
-  --surface-f: #ffffff;
+    --font-family: "Roboto", sans-serif;
+  }
+  // Mandatory Designer Variables
 
-  --green-50: #f4fcf7;
-  --green-100: #caf1d8;
-  --green-200: #a0e6ba;
-  --green-300: #76db9b;
-  --green-400: #4cd07d;
-  --green-500: #22c55e;
-  --green-600: #1da750;
-  --green-700: #188a42;
-  --green-800: #136c34;
-  --green-900: #0e4f26;
+  $colors: (
+    "blue": #2196f3,
+    "green": #4caf50,
+    "yellow": #fbc02d,
+    "cyan": #00bcd4,
+    "pink": #e91e63,
+    "indigo": #3f51b5,
+    "teal": #009688,
+    "orange": #f57c00,
+    "bluegray": #607d8b,
+    "purple": #9c27b0,
+    "red": #ff4032,
+    "primary": #f4f4f4
+  );
 
-  --red-50: #fff5f5;
-  --red-100: #ffd0ce;
-  --red-200: #ffaca7;
-  --red-300: #ff8780;
-  --red-400: #ff6259;
-  --red-500: #ff3d32;
-  --red-600: #d9342b;
-  --red-700: #b32b23;
-  --red-800: #8c221c;
-  --red-900: #661814;
-
-  --font-family: "Roboto", sans-serif;
-}
+  @import "./variables/general";
+  @import "./variables/form";
+  @import "./variables/button";
+  @import "./variables/panel";
+  @import "./variables/_data";
+  @import "./variables/_overlay";
+  @import "./variables/_message";
+  @import "./variables/_menu";
+  @import "./variables/_media";
+  @import "./variables/_misc";
 
 :root.azion.azion-dark {
   color-scheme: dark;
+
+  --primary-color: #f4f4f4;
+  --primary-dark-color: #hsla(0, 0%, 96%, 0.5);;
+  --primary-darker-color: #f4f4f4;
+  --primary-text-color: #f4f4f4;
+  --overlay-content-bg: #171717;
+  --highlight-bg: #f4f4f410;
+
   --text-color: #ededed;
+  --primary-color-text: #1e1e1e;
   --text-color-secondary: #b5b5b5;
   --text-color-link: #93c5fd;
   --text-color-link-hover: #93c5fd;
-
-  --primary-color: #f4f4f4;
-  --primary-color-text: #1e1e1e;
-  --primary-dark-color: hsla(0, 0%, 96%, 0.5);
-  --primary-darker-color: #f4f4f4;
-  --primary-text-color: #f4f4f4;
 
   --surface-0: #0a0a0a;
   --surface-50: #111111;
@@ -124,14 +116,13 @@ $colors: (
   --surface-border: #282828;
   --surface-hover: #f5f5f516;
 
-  --content-padding: #{$panelContentPadding};
-  --inline-spacing: #{$inlineSpacing};
-  --border-radius: #{$borderRadius};
-  --focus-ring: #{$focusShadow};
+  --content-padding: 1.25rem;
+  --inline-spacing: 0.5rem;
+  --border-radius: 6px;
+  --focus-ring: 0 0 0 0.2rem #f3642b9f;
 
-  --maskbg: #{$maskBg};
-  --highlight-bg: rgba(var(--primary-color), 0.06);
-  --highlight-text-color: #{$highlightTextColor};
+  --maskbg: #1c1c1c80;
+  --highlight-text-color: none;
   --highlight-focus-bg: rgba(var(--primary-color), 0.08);
   --disabled-opacity: 0.5;
   --error-color: #f26464;
@@ -210,7 +201,7 @@ $colors: (
   --tooltip-text-color: #1c1c1c;
   --badge-font-weight: 400;
   --tag-padding: 0.25rem 0.5rem;
-  --progress-bar-value-bg: #($primaryColor);
+  --progress-bar-value-bg: #(var(--primary-color));
   --progress-spinner-stroke-color: var(--surface-600);
   --avatar-bg: #363636;
   --chip-bg: #404040;
@@ -236,12 +227,22 @@ $colors: (
 :root.azion.azion-light {
   color-scheme: light;
   --text-color: #1c1c1c;
+  --primary-color-text: #f4f4f4;
   --text-color-secondary: #666666;
   --text-color-link: #3265cb;
   --text-color-link-hover: #2851a4;
 
-  --primary-color: #1e1e1e;
+  --primary-color: #2b2b2b;
+  --primary-dark-color: #000;
+  --primary-darker-color: #000;
+  --primary-text-color: #f4f4f4;
+
+  --overlay-content-bg: #ffffff;
+  --highlight-bg: rgba(var(--primary-color), 0.06);
+
   --primary-color-text: #f4f4f4;
+  --primary-text-color: #f4f4f4;
+  --overlay-content-bg: #ffffff;
 
   --surface-0: #ffffff;
   --surface-50: #f9fafb;
@@ -273,9 +274,8 @@ $colors: (
   --surface-border: #e8e8e8;
   --surface-hover: #3b3b3b16;
 
-  --maskbg: #{$maskBg};
-  --highlight-bg: rgba(var(--primary-color), 0.06);
-  --highlight-text-color: #{$highlightTextColor};
+  --maskbg: #1e1e1e32;
+  --highlight-text-color: none;
   --highlight-focus-bg: rgba(var(--primary-color), 0.08);
   --disabled-opacity: 0.4;
   --mask-bg: #1e1e1e32;
