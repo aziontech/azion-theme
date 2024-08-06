@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/aziontech/azion-theme/compare/v1.5.0...v1.5.1) (2024-08-06)
+
+### Bug Fixes
+
+* fork primevue base theme and remove scss functions ([e6346c8](https://github.com/aziontech/azion-theme/commit/e6346c87edcdd4c777f0ddedea95a8f374c33744))
+* scss variablens + functions ([efe88d3](https://github.com/aziontech/azion-theme/commit/efe88d368e063d697c156ff6642e9552f67f4064))
+
 ## [1.5.0](https://github.com/aziontech/azion-theme/compare/v1.4.3...v1.5.0) (2024-08-05)
 
 ### Features
