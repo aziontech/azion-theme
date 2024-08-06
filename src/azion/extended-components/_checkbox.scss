@@ -56,12 +56,3 @@
     }
   }
 }
-
-@if ($highlightBg == $checkboxActiveBg) {
-  .p-highlight {
-    .p-checkbox {
-      .p-checkbox-box {
-      }
-    }
-  }
-}

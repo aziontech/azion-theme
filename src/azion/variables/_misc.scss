@@ -56,7 +56,7 @@ $progressBarValueBg: var(--progress-bar-value-bg);
 
 /// Text color of a progress bar value
 /// @group misc
-$progressBarValueTextColor: $primaryTextColor;
+$progressBarValueTextColor: var(--primary-text-color);
 
 /// Stroke color of a progress spinner
 /// @group misc

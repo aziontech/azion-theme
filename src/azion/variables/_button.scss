@@ -16,7 +16,7 @@ $buttonBg: #f3652b;
 
 /// Text color of a button
 /// @group button
-$buttonTextColor: $primaryTextColor;
+$buttonTextColor: var(--primary-text-color);
 
 /// Border of a button
 /// @group button
@@ -28,7 +28,7 @@ $buttonHoverBg: #f5793f;
 
 /// Text color of a button in hover state
 /// @group button
-$buttonTextHoverColor: $primaryTextColor;
+$buttonTextHoverColor: var(--primary-text-color);
 
 /// Border color of a button in hover state
 /// @group button
@@ -40,7 +40,7 @@ $buttonActiveBg: #eb6f3f;
 
 /// Color of a button in pressed state
 /// @group button
-$buttonTextActiveColor: $primaryTextColor;
+$buttonTextActiveColor: var(--primary-text-color);
 
 /// Border color of a button in pressed state
 /// @group button
@@ -371,35 +371,35 @@ $toggleButtonIconHoverColor: $textSecondaryColor;
 
 /// Background of a toggle button in selected state
 /// @group button
-$toggleButtonActiveBg: $primaryColor;
+$toggleButtonActiveBg: var(--primary-color);
 
 /// Border color of a toggle button in selected state
 /// @group button
-$toggleButtonActiveBorderColor: $primaryColor;
+$toggleButtonActiveBorderColor: var(--primary-color);
 
 /// Text color of a toggle button in selected state
 /// @group button
-$toggleButtonTextActiveColor: $primaryTextColor;
+$toggleButtonTextActiveColor: var(--primary-text-color);
 
 /// Icon color of a toggle button in selected state
 /// @group button
-$toggleButtonIconActiveColor: $primaryTextColor;
+$toggleButtonIconActiveColor: var(--primary-text-color);
 
 /// Hover background of a toggle button in selected state
 /// @group button
-$toggleButtonActiveHoverBg: $primaryDarkColor;
+$toggleButtonActiveHoverBg: var(--primary-dark-color);
 
 /// Hover border color of a toggle button in selected state
 /// @group button
-$toggleButtonActiveHoverBorderColor: $primaryDarkColor;
+$toggleButtonActiveHoverBorderColor: var(--primary-dark-color);
 
 /// Hover text color of a toggle button in selected state
 /// @group button
-$toggleButtonTextActiveHoverColor: $primaryTextColor;
+$toggleButtonTextActiveHoverColor: var(--primary-text-color);
 
 /// Hover icon of a toggle button in selected state
 /// @group button
-$toggleButtonIconActiveHoverColor: $primaryTextColor;
+$toggleButtonIconActiveHoverColor: var(--primary-text-color);
 
 /// Width of the speed dial button
 /// @group button

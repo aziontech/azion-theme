@@ -76,7 +76,7 @@ $menuitemIconHoverColor: $textColor;
 
 /// Background of a menuitem in hover state
 /// @group menu
-$menuitemHoverBg: rgba($primaryColor, 0.06);
+$menuitemHoverBg: rgba(var(--primary-color), 0.06);
 
 /// Text color of a menuitem in focus state
 /// @group menu
@@ -88,7 +88,7 @@ $menuitemIconFocusColor: $textColor;
 
 /// Background of a menuitem in focus state
 /// @group menu
-$menuitemFocusBg: rgba($primaryColor, 0.06);
+$menuitemFocusBg: rgba(var(--primary-color), 0.06);
 
 /// Text color of a menuitem in active state
 /// @group menu
@@ -100,11 +100,11 @@ $menuitemIconActiveColor: $textSecondaryColor;
 
 /// Background of a menuitem in active state
 /// @group menu
-$menuitemActiveBg: rgba($primaryColor, 0.08);
+$menuitemActiveBg: rgba(var(--primary-color), 0.08);
 
 /// Background of a menuitem in active and focus states
 /// @group menu
-$menuitemActiveFocusBg: rgba($primaryColor, 0.06);
+$menuitemActiveFocusBg: rgba(var(--primary-color), 0.06);
 
 /// Font size of an icon indicating the item has a submenu
 /// @group menu

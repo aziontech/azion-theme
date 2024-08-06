@@ -92,7 +92,7 @@ $inputListItemTextColor: $textColor;
 
 /// Hover state background for an individual itrem of an input list
 /// @group form
-$inputListItemHoverBg: rgba($primaryColor, 0.06);
+$inputListItemHoverBg: rgba(var(--primary-color), 0.06);
 
 /// Hover state text color for an individual itrem of an input list
 /// @group form
@@ -100,7 +100,7 @@ $inputListItemTextHoverColor: $textColor;
 
 /// Focus state background for an individual itrem of an input list
 /// @group form
-$inputListItemFocusBg: rgba($primaryColor, 0.06);
+$inputListItemFocusBg: rgba(var(--primary-color), 0.06);
 
 /// Focus state text color for an individual itrem of an input list
 /// @group form
@@ -176,27 +176,27 @@ $checkboxIconFontSize: 14px;
 
 /// Border color of a selected checkbox
 /// @group form
-$checkboxActiveBorderColor: $primaryColor;
+$checkboxActiveBorderColor: var(--primary-color);
 
 /// Background of a selected checkbox
 /// @group form
-$checkboxActiveBg: $primaryColor;
+$checkboxActiveBg: var(--primary-color);
 
 /// Icon color of a selected checkbox
 /// @group form
-$checkboxIconActiveColor: $primaryTextColor;
+$checkboxIconActiveColor: var(--primary-text-color);
 
 /// Background of a selected checkbox in hover state
 /// @group form
-$checkboxActiveHoverBg: $primaryDarkerColor;
+$checkboxActiveHoverBg: var(--primary-darker-color);
 
 /// Icon color of a selected checkbox in hover state
 /// @group form
-$checkboxIconActiveHoverColor: $primaryTextColor;
+$checkboxIconActiveHoverColor: var(--primary-text-color);
 
 /// Border color of a selected checkbox in hover state
 /// @group form
-$checkboxActiveHoverBorderColor: $primaryDarkerColor;
+$checkboxActiveHoverBorderColor: var(--primary-darker-color);
 
 /// Width of a radiobutton
 /// @group form
@@ -224,19 +224,19 @@ $radiobuttonActiveBg: #f3652b;
 
 /// Icon color of a selected radiobutton
 /// @group form
-$radiobuttonIconActiveColor: $primaryTextColor;
+$radiobuttonIconActiveColor: var(--primary-text-color);
 
 /// Background of a selected radiobutton in hover state
 /// @group form
-$radiobuttonActiveHoverBg: $primaryDarkerColor;
+$radiobuttonActiveHoverBg: var(--primary-darker-color);
 
 /// Icon color of a selected radiobutton in hover state
 /// @group form
-$radiobuttonIconActiveHoverColor: $primaryTextColor;
+$radiobuttonIconActiveHoverColor: var(--primary-text-color);
 
 /// Border color of a selected radiobutton in hover state
 /// @group form
-$radiobuttonActiveHoverBorderColor: $primaryDarkerColor;
+$radiobuttonActiveHoverBorderColor: var(--primary-darker-color);
 
 /// Width of a color picker preview element
 /// @group form
@@ -276,11 +276,11 @@ $ratingStarIconOffColor: $textColor;
 
 /// Icon color for the star icon of a rating in selected state
 /// @group form
-$ratingStarIconOnColor: $primaryColor;
+$ratingStarIconOnColor: var(--primary-color);
 
 /// Icon color for the star icon of a rating in hover state
 /// @group form
-$ratingStarIconHoverColor: $primaryColor;
+$ratingStarIconHoverColor: var(--primary-color);
 
 /// Background of a slider
 /// @group form
@@ -312,7 +312,7 @@ $sliderHandleBg: #ffffff;
 
 /// Border of a slider handle
 /// @group form
-$sliderHandleBorder: 2px solid $primaryColor;
+$sliderHandleBorder: 2px solid var(--primary-color);
 
 /// Border radius of a slider handle
 /// @group form
@@ -320,15 +320,15 @@ $sliderHandleBorderRadius: 50%;
 
 /// Border of a slider handle in hover state
 /// @group form
-$sliderHandleHoverBorderColor: $primaryColor;
+$sliderHandleHoverBorderColor: var(--primary-color);
 
 /// Background of a slider handle in hover state
 /// @group form
-$sliderHandleHoverBg: $primaryColor;
+$sliderHandleHoverBg: var(--primary-color);
 
 /// Background color of a range slider
 /// @group form
-$sliderRangeBg: $primaryColor;
+$sliderRangeBg: var(--primary-color);
 
 /// Margin of a calendar table
 /// @group form
@@ -388,7 +388,7 @@ $calendarHeaderCellPadding: 0.5rem;
 
 /// Text color of current month and year text in hover state
 /// @group form
-$calendarMonthYearHeaderHoverTextColor: $primaryColor !default;
+$calendarMonthYearHeaderHoverTextColor: var(--primary-color) !default;
 
 /// Padding of a calendar date cell
 /// @group form
@@ -412,7 +412,7 @@ $calendarCellDateBorder: 1px solid transparent;
 
 /// Background of a calendar date cell in hover state
 /// @group form
-$calendarCellDateHoverBg: rgba($primaryColor, 0.06);
+$calendarCellDateHoverBg: rgba(var(--primary-color), 0.06);
 
 /// Background of a calendar date cell indicating today
 /// @group form
@@ -492,11 +492,11 @@ $inputSwitchSliderOffHoverBg: var(--input-switch-slider-off-hover-bg);
 
 /// Background color of an inputswitch slider when selected
 /// @group form
-$inputSwitchSliderOnBg: $primaryColor;
+$inputSwitchSliderOnBg: var(--primary-color);
 
 /// Hover background color of an inputswitch slider when selected
 /// @group form
-$inputSwitchSliderOnHoverBg: $primaryDarkColor;
+$inputSwitchSliderOnHoverBg: var(--primary-dark-color);
 
 /// Background color of an inputswitch handle when selected
 /// @group form
@@ -511,7 +511,7 @@ $fileUploadProgressBarHeight: 0.25rem;
 $fileUploadContentPadding: 2rem 1rem;
 
 /// Border of the fileupload content section
-$fileUploadContentHoverBorder: 1px dashed $primaryColor !default;
+$fileUploadContentHoverBorder: 1px dashed var(--primary-color) !default;
 
 /// Border of the fileupload content item section
 /// @group form
@@ -543,7 +543,7 @@ $editorToolbarIconHoverColor: #495057;
 
 /// Icon color of an editor toolbar in active state
 /// @group form
-$editorIconActiveColor: $primaryColor;
+$editorIconActiveColor: var(--primary-color);
 
 /// Border of an editor content
 /// @group form
