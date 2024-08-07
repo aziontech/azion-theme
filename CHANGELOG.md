@@ -1,3 +1,9 @@
+## [1.5.4](https://github.com/aziontech/azion-theme/compare/v1.5.3...v1.5.4) (2024-08-07)
+
+### Bug Fixes
+
+* button secondary color priority ([0d0f457](https://github.com/aziontech/azion-theme/commit/0d0f457c4a54394a7a2f2526ea8449b5b0c5a055))
+
 ## [1.5.3](https://github.com/aziontech/azion-theme/compare/v1.5.2...v1.5.3) (2024-08-07)
 
 ### Bug Fixes
