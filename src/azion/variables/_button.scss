@@ -87,7 +87,7 @@ $secondaryButtonBg: var(--secondary-button-bg);
 
 /// Text color of a secondary button
 /// @group button
-$secondaryButtonTextColor: var(--secondary-button-text-color);
+$secondaryButtonTextColor: var(--secondary-button-text-color) !important;
 
 /// Border of a secondary button
 /// @group button
