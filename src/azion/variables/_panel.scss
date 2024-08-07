@@ -216,7 +216,7 @@ $tabviewHeaderTextHoverColor: $textColor;
 
 /// Background of a tabview header in selected state
 /// @group panel
-$tabviewHeaderActiveBg: var(--primary-color);
+$tabviewHeaderActiveBg: var(--tabview-header-active-bg);
 
 /// Border of a tabview header in selected state
 /// @group panel

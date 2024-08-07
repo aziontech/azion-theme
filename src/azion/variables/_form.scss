@@ -92,7 +92,7 @@ $inputListItemTextColor: $textColor;
 
 /// Hover state background for an individual itrem of an input list
 /// @group form
-$inputListItemHoverBg: rgba(var(--primary-color), 0.06);
+$inputListItemHoverBg: var(--dropdown-hover-bg);
 
 /// Hover state text color for an individual itrem of an input list
 /// @group form
@@ -100,7 +100,7 @@ $inputListItemTextHoverColor: $textColor;
 
 /// Focus state background for an individual itrem of an input list
 /// @group form
-$inputListItemFocusBg: rgba(var(--primary-color), 0.06);
+$inputListItemFocusBg: var(--highlight-focus-bg);
 
 /// Focus state text color for an individual itrem of an input list
 /// @group form
@@ -412,7 +412,7 @@ $calendarCellDateBorder: 1px solid transparent;
 
 /// Background of a calendar date cell in hover state
 /// @group form
-$calendarCellDateHoverBg: rgba(var(--primary-color), 0.06);
+$calendarCellDateHoverBg: var(--surface-hover);
 
 /// Background of a calendar date cell indicating today
 /// @group form

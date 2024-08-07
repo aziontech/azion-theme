@@ -35,14 +35,14 @@
 
             &.p-highlight {
                 .p-tabview-nav-link {
-                    background: $tabviewHeaderActiveBg;
-                    border-color: $tabviewHeaderActiveBorderColor;
+                  background: $tabviewHeaderActiveBg;
+                  border-color: $tabviewHeaderActiveBorderColor;
                     color: $tabviewHeaderTextActiveColor;
                 }
             }
         }
     }
-    
+
     .p-tabview-nav-btn.p-link {
         background: $tabviewHeaderActiveBg;
         color: $tabviewHeaderTextActiveColor;
