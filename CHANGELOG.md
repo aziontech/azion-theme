@@ -1,3 +1,9 @@
+## [1.5.3](https://github.com/aziontech/azion-theme/compare/v1.5.2...v1.5.3) (2024-08-07)
+
+### Bug Fixes
+
+* sync theme transition with primevue transitions ([7537d14](https://github.com/aziontech/azion-theme/commit/7537d1429ec986c8076bbfb25730f18bcb32a13e))
+
 ## [1.5.2](https://github.com/aziontech/azion-theme/compare/v1.5.1...v1.5.2) (2024-08-07)
 
 ### Bug Fixes
