@@ -46,7 +46,7 @@ $colors: (
   "bluegray": #607d8b,
   "purple": #9c27b0,
   "red": #ff4032,
-  "primary": #f4f4f4,
+  "primary": #2b2b2b,
 );
 
 @import "./variables/general";
@@ -215,6 +215,14 @@ $colors: (
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
     0px 0px 0px 1px #3c3c3c;
   --horizontal-menu-bg: #1c1c1c;
+  --p-tag-background: #ff6c4729;
+  --p-tag-color: #ff6c47;
+  --p-tag-success-background: #16a34a33;
+  --p-tag-success-color: #39e478;
+  --p-tag-warning-background: #ffb64d33;
+  --p-tag-warning-color: #ffb64d;
+  --p-tag-danger-background: #f53d3d33;
+  --p-tag-danger-color: #f53d3d;
 }
 
 :root.azion.azion-light {
@@ -225,7 +233,7 @@ $colors: (
   --text-color-link: #3265cb;
   --text-color-link-hover: #2851a4;
 
-  --primary-color: #f4f4f4;
+  --primary-color: #2b2b2b;
   --primary-dark-color: #000;
   --primary-darker-color: #000;
   --primary-text-color: #f4f4f4;
@@ -363,4 +371,12 @@ $colors: (
   --overlay-menu-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.04),
     0px 0px 0px 1px #e7e7e7;
   --horizontal-menu-bg: #f8f9fa;
+  --p-tag-background: #ff6c4729;
+  --p-tag-color: #ff6c47;
+  --p-tag-success-background: #16a34a33;
+  --p-tag-success-color: #16a34a;
+  --p-tag-warning-background: #c5970733;
+  --p-tag-warning-color: #c59707;
+  --p-tag-danger-background: #ef404033;
+  --p-tag-danger-color: #ef4040;
 }
