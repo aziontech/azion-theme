@@ -1,3 +1,9 @@
+## [1.5.5](https://github.com/aziontech/azion-theme/compare/v1.5.4...v1.5.5) (2024-08-07)
+
+### Bug Fixes
+
+* tags dark/light variables + primary color on light mode ([b83c5d6](https://github.com/aziontech/azion-theme/commit/b83c5d67342482f8ff92c231622a0184087c4674))
+
 ## [1.5.4](https://github.com/aziontech/azion-theme/compare/v1.5.3...v1.5.4) (2024-08-07)
 
 ### Bug Fixes
