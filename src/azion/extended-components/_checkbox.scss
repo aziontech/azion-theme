@@ -4,9 +4,6 @@
     border: 2px solid var(--surface-border) !important;
     .p-checkbox-icon {
       color: white !important;
-
-      &.p-icon {
-      }
     }
 
     &.p-highlight {
@@ -35,24 +32,5 @@
 
   &.p-invalid > .p-checkbox-box {
     @include invalid-input();
-  }
-}
-
-.p-input-filled {
-  .p-checkbox {
-    .p-checkbox-box {
-      &.p-highlight {
-      }
-    }
-
-    &:not(.p-checkbox-disabled) {
-      .p-checkbox-box {
-        &:hover {
-        }
-
-        &.p-highlight:hover {
-        }
-      }
-    }
   }
 }
