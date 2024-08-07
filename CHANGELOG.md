@@ -1,3 +1,9 @@
+## [1.5.2](https://github.com/aziontech/azion-theme/compare/v1.5.1...v1.5.2) (2024-08-07)
+
+### Bug Fixes
+
+* light/dark mode merge missing colors ([11e8e39](https://github.com/aziontech/azion-theme/commit/11e8e39131911616a6da72e147cd76d2a175f34e))
+
 ## [1.5.1](https://github.com/aziontech/azion-theme/compare/v1.5.0...v1.5.1) (2024-08-06)
 
 ### Bug Fixes
