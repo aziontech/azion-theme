@@ -1,3 +1,9 @@
+## [1.5.6](https://github.com/aziontech/azion-theme/compare/v1.5.5...v1.5.6) (2024-08-15)
+
+### Bug Fixes
+
+* toast shadow + bg hover color ([f4805dd](https://github.com/aziontech/azion-theme/commit/f4805ddb0ead5b98c27abf82d92c7841cfd34bf9))
+
 ## [1.5.5](https://github.com/aziontech/azion-theme/compare/v1.5.4...v1.5.5) (2024-08-07)
 
 ### Bug Fixes
