@@ -156,11 +156,11 @@ $tableBodyRowTextColor: $textColor;
 
 /// Background of an even table body row
 /// @group data
-$tableBodyRowEvenBg: #ffffff;
+$tableBodyRowEvenBg: var(--table-body-row-even-bg);
 
 /// Background of a table body row in hover state
 /// @group data
-$tableBodyRowHoverBg: #f7f7f7;
+$tableBodyRowHoverBg: var(--table-body-row-hover-bg);
 
 /// Text color of a table body row in hover state
 /// @group data
