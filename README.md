@@ -1,7 +1,14 @@
 
-# Azion Theme
+<h1 align="center">azion-theme</h1>
 
-![Sass Cover Azion Theme](./doc/cover-image.png)
+![production](https://github.com/aziontech/azion-theme/actions/workflows/release.yml/badge.svg)
+
+<p align="center">
+    <img
+        src="./doc/cover-image.png"
+        width="1200px"
+    />
+</p>
 
 The Azion Theme repository is focused on sharing our style kit across interfaces and should be used in all company projects, including Azion Console Kit, Azion Site, Landing Pages, and all user interactions with Azion.
 
