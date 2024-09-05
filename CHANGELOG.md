@@ -1,3 +1,9 @@
+## [1.5.7](https://github.com/aziontech/azion-theme/compare/v1.5.6...v1.5.7) (2024-09-05)
+
+### Bug Fixes
+
+* prose link button primary/secondary text colors ([ad171b9](https://github.com/aziontech/azion-theme/commit/ad171b9d7b8c4f70627dfd9427f0b08cc94c8d0c))
+
 ## [1.5.6](https://github.com/aziontech/azion-theme/compare/v1.5.5...v1.5.6) (2024-08-15)
 
 ### Bug Fixes
