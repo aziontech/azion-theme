@@ -1,3 +1,9 @@
+## [1.6.0](https://github.com/aziontech/azion-theme/compare/v1.5.8...v1.6.0) (2024-09-16)
+
+### Features
+
+* surfaces update ([#25](https://github.com/aziontech/azion-theme/issues/25)) ([08ea867](https://github.com/aziontech/azion-theme/commit/08ea867392692a5ae1c56564b80519657b84cb74))
+
 ## [1.5.8](https://github.com/aziontech/azion-theme/compare/v1.5.7...v1.5.8) (2024-09-16)
 
 ### Bug Fixes
