@@ -223,6 +223,7 @@ $colors: (
   --p-tag-warning-color: #ffb64d;
   --p-tag-danger-background: #f53d3d33;
   --p-tag-danger-color: #f53d3d;
+  --carousel-highlight-indicator: #ededed;
 }
 
 :root.azion.azion-light {
@@ -379,4 +380,5 @@ $colors: (
   --p-tag-warning-color: #c59707;
   --p-tag-danger-background: #ef404033;
   --p-tag-danger-color: #ef4040;
+  --carousel-highlight-indicator: #1c1c1c;
 }
