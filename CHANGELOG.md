@@ -1,3 +1,9 @@
+## [1.5.8](https://github.com/aziontech/azion-theme/compare/v1.5.7...v1.5.8) (2024-09-16)
+
+### Bug Fixes
+
+* carousel colors indicator ([#24](https://github.com/aziontech/azion-theme/issues/24)) ([ac6386a](https://github.com/aziontech/azion-theme/commit/ac6386a4f571324624071555c1d1caaad4e94165))
+
 ## [1.5.7](https://github.com/aziontech/azion-theme/compare/v1.5.6...v1.5.7) (2024-09-05)
 
 ### Bug Fixes
