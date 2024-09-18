@@ -1,3 +1,9 @@
+## [1.7.1](https://github.com/aziontech/azion-theme/compare/v1.7.0...v1.7.1) (2024-09-18)
+
+### Bug Fixes
+
+* remove rgba from degrade-primary var ([c05c6cc](https://github.com/aziontech/azion-theme/commit/c05c6ccb9d1e79955ab8dacb021dff99ddda0bf7))
+
 ## [1.7.0](https://github.com/aziontech/azion-theme/compare/v1.6.0...v1.7.0) (2024-09-18)
 
 ### Features
