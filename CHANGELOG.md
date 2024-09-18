@@ -1,3 +1,9 @@
+## [1.7.0](https://github.com/aziontech/azion-theme/compare/v1.6.0...v1.7.0) (2024-09-18)
+
+### Features
+
+* new degrade variable ([8e2c0de](https://github.com/aziontech/azion-theme/commit/8e2c0dec0d8193d5050a2de0daa3b9a16f7f6ebd))
+
 ## [1.6.0](https://github.com/aziontech/azion-theme/compare/v1.5.8...v1.6.0) (2024-09-16)
 
 ### Features
