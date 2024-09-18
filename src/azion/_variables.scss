@@ -69,6 +69,7 @@ $colors: (
   --primary-text-color: #f4f4f4;
   --overlay-content-bg: #171717;
   --highlight-bg: #f4f4f410;
+  --degrade-primary: rgba(255, 255, 255, 0.1)
 
   --text-color: #ededed;
   --primary-color-text: #1e1e1e;
@@ -235,6 +236,7 @@ $colors: (
   --text-color-secondary: #666666;
   --text-color-link: #3265cb;
   --text-color-link-hover: #2851a4;
+  --degrade-primary: rgba(0, 0, 0, 0.1)
 
   --primary-color: #2b2b2b;
   --primary-dark-color: #000;
