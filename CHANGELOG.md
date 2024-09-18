@@ -1,3 +1,9 @@
+## [1.7.2](https://github.com/aziontech/azion-theme/compare/v1.7.1...v1.7.2) (2024-09-18)
+
+### Bug Fixes
+
+* css ; ([6d340be](https://github.com/aziontech/azion-theme/commit/6d340bee088933faa37891160c850a6c0b5a8662))
+
 ## [1.7.1](https://github.com/aziontech/azion-theme/compare/v1.7.0...v1.7.1) (2024-09-18)
 
 ### Bug Fixes
