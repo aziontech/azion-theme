@@ -1,3 +1,9 @@
+## [1.7.3](https://github.com/aziontech/azion-theme/compare/v1.7.2...v1.7.3) (2024-09-18)
+
+### Bug Fixes
+
+* turn back surfaces ([#26](https://github.com/aziontech/azion-theme/issues/26)) ([104658e](https://github.com/aziontech/azion-theme/commit/104658ea5be9f658d02801fd9ef6d2f0438b0e9c))
+
 ## [1.7.2](https://github.com/aziontech/azion-theme/compare/v1.7.1...v1.7.2) (2024-09-18)
 
 ### Bug Fixes
