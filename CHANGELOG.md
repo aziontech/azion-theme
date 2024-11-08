@@ -1,3 +1,9 @@
+## [1.7.4](https://github.com/aziontech/azion-theme/compare/v1.7.3...v1.7.4) (2024-11-08)
+
+### Bug Fixes
+
+* hover emptydatatable ([#28](https://github.com/aziontech/azion-theme/issues/28)) ([f552d10](https://github.com/aziontech/azion-theme/commit/f552d105e7306695547b84d5b03200fb86a0b434))
+
 ## [1.7.3](https://github.com/aziontech/azion-theme/compare/v1.7.2...v1.7.3) (2024-09-18)
 
 ### Bug Fixes
