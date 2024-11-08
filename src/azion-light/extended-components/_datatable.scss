@@ -9,10 +9,6 @@
     border-top-left-radius: $borderRadius;
   }
 
-  .p-datatable-tbody > .p-datatable-emptymessage:hover {
-    background: unset !important;
-  }
-
   .p-datatable-tbody > tr > td {
     box-sizing: inherit !important;
     font-size: 0.875rem;
@@ -57,6 +53,10 @@
 
   .p-datatable-wrapper {
     overscroll-behavior: revert !important;
+  }
+
+  .p-datatable-tbody > .p-datatable-emptymessage:hover {
+    background: unset !important;
   }
 }
 
