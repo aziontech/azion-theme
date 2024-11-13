@@ -1,3 +1,9 @@
+## [1.8.0](https://github.com/aziontech/azion-theme/compare/v1.7.4...v1.8.0) (2024-11-13)
+
+### Features
+
+* special button styles and variables ([#29](https://github.com/aziontech/azion-theme/issues/29)) ([a518a0d](https://github.com/aziontech/azion-theme/commit/a518a0ddd985995d3679189d0a0c5bced5879eb6))
+
 ## [1.7.4](https://github.com/aziontech/azion-theme/compare/v1.7.3...v1.7.4) (2024-11-08)
 
 ### Bug Fixes
