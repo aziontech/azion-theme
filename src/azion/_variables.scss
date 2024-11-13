@@ -227,6 +227,8 @@ $colors: (
   --carousel-indicator: #e9ecef20;
   --carousel-indicator-highlight: #ededed;
   --carousel-indicator-hover: #dee2e640;
+  --special-button-bg: rgba(23, 23, 23, 0.85);
+  --special-button-hover-bg: rgba(23, 23, 23, 0.25);
 }
 
 :root.azion.azion-light {
@@ -387,4 +389,6 @@ $colors: (
   --carousel-indicator: #e9ecef;
   --carousel-indicator-highlight: #1c1c1c;
   --carousel-indicator-hover: #dee2e6;
+  --special-button-bg: rgba(255, 255, 255);
+  --special-button-hover-bg: rgba(255, 255, 255, 0.85);
 }
