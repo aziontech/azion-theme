@@ -1,3 +1,9 @@
+## [1.8.1](https://github.com/aziontech/azion-theme/compare/v1.8.0...v1.8.1) (2024-11-14)
+
+### Bug Fixes
+
+* remove unused folders ([#30](https://github.com/aziontech/azion-theme/issues/30)) ([ef9a92d](https://github.com/aziontech/azion-theme/commit/ef9a92dcba5219a01e04196a0b337c6170d0fc7c))
+
 ## [1.8.0](https://github.com/aziontech/azion-theme/compare/v1.7.4...v1.8.0) (2024-11-13)
 
 ### Features
