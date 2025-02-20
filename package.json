@@ -17,9 +17,8 @@
     }
   ],
   "exports": {
-    "./dark": "./dark.js",
-    "./light": "./light.js",
-    ".": "./default.js"
+    ".": "./default.js",
+    "./widget": "./widget.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
