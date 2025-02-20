@@ -1,3 +1,9 @@
+## [1.9.0](https://github.com/aziontech/azion-theme/compare/v1.8.1...v1.9.0) (2025-02-20)
+
+### Features
+
+* new export for widget ([#32](https://github.com/aziontech/azion-theme/issues/32)) ([3f6dc5a](https://github.com/aziontech/azion-theme/commit/3f6dc5a42c7acba0f5b90dad6947f8087c8837df))
+
 ## [1.8.1](https://github.com/aziontech/azion-theme/compare/v1.8.0...v1.8.1) (2024-11-14)
 
 ### Bug Fixes
