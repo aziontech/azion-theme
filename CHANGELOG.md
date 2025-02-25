@@ -1,3 +1,9 @@
+## [1.10.0](https://github.com/aziontech/azion-theme/compare/v1.9.0...v1.10.0) (2025-02-25)
+
+### Features
+
+* add code log body style ([#33](https://github.com/aziontech/azion-theme/issues/33)) ([8bafe31](https://github.com/aziontech/azion-theme/commit/8bafe3165f5b18820810ed28e258ebcb946611e1))
+
 ## [1.9.0](https://github.com/aziontech/azion-theme/compare/v1.8.1...v1.9.0) (2025-02-20)
 
 ### Features
