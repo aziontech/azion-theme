@@ -1,11 +1,11 @@
 .code-log-body {
   padding: 1px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Roboto Mono", serif;
   color: var(--text-color);
-  background: var(--surface-400);
+  background: var(--surface-code-highlight) ;
 }
 
 .value-code-log-body {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Roboto Mono", serif;
   color: var(--text-color);
 }
