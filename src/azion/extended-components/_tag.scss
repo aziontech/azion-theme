@@ -39,4 +39,9 @@
     background-color: var(--p-tag-danger-background) !important;
     color: var(--p-tag-danger-color) !important;
   }
+
+  &.tag-close {
+    background-color: var(--p-tag-close-background) !important;
+    color: var(--p-tag-close-color) !important;
+  }
 }

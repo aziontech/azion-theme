@@ -1,3 +1,9 @@
+## [1.10.1](https://github.com/aziontech/azion-theme/compare/v1.10.0...v1.10.1) (2025-03-06)
+
+### Bug Fixes
+
+* trigger version ([e4fe653](https://github.com/aziontech/azion-theme/commit/e4fe6534f7924df8eaa58888f0c667356e846627))
+
 ## [1.10.0](https://github.com/aziontech/azion-theme/compare/v1.9.0...v1.10.0) (2025-02-25)
 
 ### Features
