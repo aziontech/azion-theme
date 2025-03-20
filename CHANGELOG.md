@@ -1,3 +1,9 @@
+## [1.11.0](https://github.com/aziontech/azion-theme/compare/v1.10.3...v1.11.0) (2025-03-20)
+
+### Features
+
+* added degrade secondary variable ([#38](https://github.com/aziontech/azion-theme/issues/38)) ([f87816d](https://github.com/aziontech/azion-theme/commit/f87816dbdfc220b1bea9909e4db679a5856923cf))
+
 ## [1.10.3](https://github.com/aziontech/azion-theme/compare/v1.10.2...v1.10.3) (2025-03-11)
 
 ### Bug Fixes
