@@ -1,3 +1,27 @@
+## [1.10.3](https://github.com/aziontech/azion-theme/compare/v1.10.2...v1.10.3) (2025-03-11)
+
+### Bug Fixes
+
+* trigger ([3496d70](https://github.com/aziontech/azion-theme/commit/3496d70892d0af8fa9ee0d7feae13e4a4e30396e))
+
+## [1.10.2](https://github.com/aziontech/azion-theme/compare/v1.10.1...v1.10.2) (2025-03-10)
+
+### Bug Fixes
+
+* trigger cicd ([ab37d68](https://github.com/aziontech/azion-theme/commit/ab37d68a1f6c9e89bc5f6c40393a6f816edfe98e))
+
+## [1.10.1](https://github.com/aziontech/azion-theme/compare/v1.10.0...v1.10.1) (2025-03-06)
+
+### Bug Fixes
+
+* trigger version ([e4fe653](https://github.com/aziontech/azion-theme/commit/e4fe6534f7924df8eaa58888f0c667356e846627))
+
+## [1.10.0](https://github.com/aziontech/azion-theme/compare/v1.9.0...v1.10.0) (2025-02-25)
+
+### Features
+
+* add code log body style ([#33](https://github.com/aziontech/azion-theme/issues/33)) ([8bafe31](https://github.com/aziontech/azion-theme/commit/8bafe3165f5b18820810ed28e258ebcb946611e1))
+
 ## [1.9.0](https://github.com/aziontech/azion-theme/compare/v1.8.1...v1.9.0) (2025-02-20)
 
 ### Features
