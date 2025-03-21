@@ -3,7 +3,7 @@
   .p-checkbox-box {
     border: 2px solid var(--surface-border) !important;
     .p-checkbox-icon {
-      color: white !important;
+      color: var(--text-color) !important;
     }
 
     &.p-highlight {
