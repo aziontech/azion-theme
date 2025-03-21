@@ -1,3 +1,9 @@
+## [1.11.1](https://github.com/aziontech/azion-theme/compare/v1.11.0...v1.11.1) (2025-03-21)
+
+### Bug Fixes
+
+* checkbox icon color ([#39](https://github.com/aziontech/azion-theme/issues/39)) ([49f4dc1](https://github.com/aziontech/azion-theme/commit/49f4dc1ad85a3893fa949cd9beffb69a4114e325))
+
 ## [1.11.0](https://github.com/aziontech/azion-theme/compare/v1.10.3...v1.11.0) (2025-03-20)
 
 ### Features
