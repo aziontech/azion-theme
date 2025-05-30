@@ -1,3 +1,9 @@
+## [1.11.2](https://github.com/aziontech/azion-theme/compare/v1.11.1...v1.11.2) (2025-05-30)
+
+### Bug Fixes
+
+* readable content code block colors ([#41](https://github.com/aziontech/azion-theme/issues/41)) ([3e76cad](https://github.com/aziontech/azion-theme/commit/3e76cad7717439278a27cc7389dd0d21318efc58))
+
 ## [1.11.1](https://github.com/aziontech/azion-theme/compare/v1.11.0...v1.11.1) (2025-03-21)
 
 ### Bug Fixes
