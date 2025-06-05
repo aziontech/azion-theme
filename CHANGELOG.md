@@ -1,3 +1,9 @@
+## [1.11.3](https://github.com/aziontech/azion-theme/compare/v1.11.2...v1.11.3) (2025-06-05)
+
+### Bug Fixes
+
+* empty results color ([#40](https://github.com/aziontech/azion-theme/issues/40)) ([bb9906a](https://github.com/aziontech/azion-theme/commit/bb9906a8187f8212bea25b67a53362a358e738de))
+
 ## [1.11.2](https://github.com/aziontech/azion-theme/compare/v1.11.1...v1.11.2) (2025-05-30)
 
 ### Bug Fixes
