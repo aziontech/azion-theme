@@ -148,9 +148,8 @@
     }
 
     .p-multiselect-empty-message {
-      padding: $inputListItemPadding;
-      color: $inputListItemTextColor;
-      background: $inputListItemBg;
+      color: var(--text-color-empty);
+      font-size: 14px;
     }
   }
 }

@@ -77,6 +77,7 @@ $colors: (
   --text-color-secondary: #b5b5b5;
   --text-color-link: #93c5fd;
   --text-color-link-hover: #93c5fd;
+  --text-color-empty: var(--surface-800);
 
   --surface-0: #0a0a0a;
   --surface-50: #111111;
@@ -243,6 +244,7 @@ $colors: (
   --text-color-secondary: #666666;
   --text-color-link: #3265cb;
   --text-color-link-hover: #2851a4;
+  --text-color-empty: var(--surface-800);
   --degrade-primary: 0, 0, 0;
   --degrade-secondary: 255, 255, 255;
 
