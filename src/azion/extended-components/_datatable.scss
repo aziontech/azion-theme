@@ -13,17 +13,15 @@
     background: unset !important;
   }
 
-  .p-datatable-tbody > tr > td {
-    box-sizing: inherit !important;
-    font-size: 0.875rem;
-
+  .p-datatable-tbody {
     .p-frozen-column {
       background: none !important;
     }
   }
 
-  .p-datatable-scrollable .p-frozen-column {
-    background: none !important;
+  .p-datatable-tbody > tr > td {
+    box-sizing: inherit !important;
+    font-size: 0.875rem;
   }
 
   .p-datatable-thead > tr > th {
