@@ -16,6 +16,10 @@
   .p-datatable-tbody > tr > td {
     box-sizing: inherit !important;
     font-size: 0.875rem;
+
+    .p-frozen-column {
+      background: none !important;
+    }
   }
 
   .p-datatable-thead > tr > th {
