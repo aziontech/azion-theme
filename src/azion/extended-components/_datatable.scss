@@ -4,6 +4,12 @@
   font-size: 0.875rem !important;
   text-wrap: nowrap !important;
 
+  .p-paginator {
+    border-width: 0px !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
+
   .p-datatable-header {
     border-top-right-radius: $borderRadius;
     border-top-left-radius: $borderRadius;
@@ -11,6 +17,12 @@
 
   .p-datatable-tbody > .p-datatable-emptymessage:hover {
     background: unset !important;
+  }
+
+  .p-datatable-tbody {
+    .p-frozen-column {
+      background: none !important;
+    }
   }
 
   .p-datatable-tbody > tr > td {
