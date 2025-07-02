@@ -1,3 +1,9 @@
+## [1.11.4](https://github.com/aziontech/azion-theme/compare/v1.11.3...v1.11.4) (2025-07-02)
+
+### Bug Fixes
+
+* ajuste cor de background do frozen column da datatable ([#42](https://github.com/aziontech/azion-theme/issues/42)) ([7915720](https://github.com/aziontech/azion-theme/commit/79157208748bc45ae2de2d11a9ef06adecc99067))
+
 ## [1.11.3](https://github.com/aziontech/azion-theme/compare/v1.11.2...v1.11.3) (2025-06-05)
 
 ### Bug Fixes
