@@ -22,6 +22,10 @@
     }
   }
 
+  .p-datatable-scrollable .p-frozen-column {
+    background: none !important;
+  }
+
   .p-datatable-thead > tr > th {
     box-sizing: inherit !important;
     font-size: 0.875rem;
