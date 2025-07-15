@@ -1,3 +1,9 @@
+## [1.11.5](https://github.com/aziontech/azion-theme/compare/v1.11.4...v1.11.5) (2025-07-15)
+
+### Bug Fixes
+
+* dropdown group style ([#43](https://github.com/aziontech/azion-theme/issues/43)) ([fa0e4c3](https://github.com/aziontech/azion-theme/commit/fa0e4c390a3bceccc2c11656d2312d40d6816ccb))
+
 ## [1.11.4](https://github.com/aziontech/azion-theme/compare/v1.11.3...v1.11.4) (2025-07-02)
 
 ### Bug Fixes
