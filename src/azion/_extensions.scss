@@ -1,5 +1,6 @@
 /* Customizations to the designer theme should be defined here */
 @layer primevue {
+  @import './extended-components/autocomplete';
   @import './extended-components/button';
   @import './extended-components/selectbutton';
   @import './extended-components/tabview';
