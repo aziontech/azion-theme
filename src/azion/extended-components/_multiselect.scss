@@ -140,11 +140,9 @@
     }
 
     .p-multiselect-item-group {
-      margin: $submenuHeaderMargin;
-      padding: $submenuHeaderPadding;
-      color: $submenuHeaderTextColor;
-      background: $submenuHeaderBg;
-      font-weight: $submenuHeaderFontWeight;
+      font-size: 0.75rem !important;
+      font-weight: 500 !important;
+      padding-bottom: 0.25rem !important;
     }
 
     .p-multiselect-empty-message {
