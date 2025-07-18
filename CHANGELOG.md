@@ -1,3 +1,9 @@
+## [1.11.6](https://github.com/aziontech/azion-theme/compare/v1.11.5...v1.11.6) (2025-07-18)
+
+### Bug Fixes
+
+* spacing accordion ([#44](https://github.com/aziontech/azion-theme/issues/44)) ([e690d2a](https://github.com/aziontech/azion-theme/commit/e690d2a17751ecaa6ed69d735c96a7b28f3d7435))
+
 ## [1.11.5](https://github.com/aziontech/azion-theme/compare/v1.11.4...v1.11.5) (2025-07-15)
 
 ### Bug Fixes
