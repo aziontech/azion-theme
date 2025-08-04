@@ -148,14 +148,14 @@
 
           &.p-datepicker-today {
               > span {
-                  background: var(--surface-500) !important;
-                  color: var(--text-color) !important;
-                  border-color: none !important;
+                  background: var(--surface-500);
+                  color: var(--text-color);
+                  border-color: none;
 
                   &.p-highlight {
-                    color: var(--primary-color-text) !important;
-                    font-weight: 500 !important;
-                    background: var(--primary-dark-color) !important;
+                    color: var(--primary-color-text);
+                    font-weight: 500;
+                    background: var(--primary-dark-color);
                   }
               }
           }
@@ -209,7 +209,7 @@
 
           &.p-highlight {
               color: $highlightTextColor;
-              background: var(--surface-500) !important;
+              background: $highlightBg;
           }
       }
   }
