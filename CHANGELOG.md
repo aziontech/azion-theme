@@ -1,3 +1,9 @@
+## [1.11.7](https://github.com/aziontech/azion-theme/compare/v1.11.6...v1.11.7) (2025-08-05)
+
+### Bug Fixes
+
+* calendar color and size fixes ([#46](https://github.com/aziontech/azion-theme/issues/46)) ([5055c17](https://github.com/aziontech/azion-theme/commit/5055c1710c14e5bc65c0db07c2dbbdccce228b65))
+
 ## [1.11.6](https://github.com/aziontech/azion-theme/compare/v1.11.5...v1.11.6) (2025-07-18)
 
 ### Bug Fixes
