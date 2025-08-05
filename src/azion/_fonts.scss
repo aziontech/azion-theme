@@ -93,3 +93,61 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Proto Mono';
+  src: url('https://fonts.azion.com/proto-mono/ProtoMono-Light.woff2') format('woff2'),
+       url('https://fonts.azion.com/proto-mono/ProtoMono-Light.woff') format('woff'),
+       url('https://fonts.azion.com/proto-mono/ProtoMono-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proto Mono';
+  src: url('https://fonts.azion.com/proto-mono/ProtoMono-Regular.woff2') format('woff2'),
+       url('https://fonts.azion.com/proto-mono/ProtoMono-Regular.woff') format('woff'),
+       url('https://fonts.azion.com/proto-mono/ProtoMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proto Mono';
+  src: url('https://fonts.azion.com/proto-mono/ProtoMono-Medium.woff2') format('woff2'),
+       url('https://fonts.azion.com/proto-mono/ProtoMono-Medium.woff') format('woff'),
+       url('https://fonts.azion.com/proto-mono/ProtoMono-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proto Mono';
+  src: url('https://fonts.azion.com/proto-mono/ProtoMono-SemiBold.woff2') format('woff2'),
+       url('https://fonts.azion.com/proto-mono/ProtoMono-SemiBold.woff') format('woff'),
+       url('https://fonts.azion.com/proto-mono/ProtoMono-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('https://fonts.azion.com/roboto-condensed/RobotoCondensed-Italic.woff') format('woff'),
+       url('https://fonts.azion.com/roboto-condensed/RobotoCondensed-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Titillium Web';
+  src: url('https://fonts.azion.com/titillium-web/TitilliumWeb-Italic.woff') format('woff'),
+       url('https://fonts.azion.com/titillium-web/TitilliumWeb-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
