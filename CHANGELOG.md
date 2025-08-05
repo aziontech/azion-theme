@@ -1,3 +1,9 @@
+## [1.11.8](https://github.com/aziontech/azion-theme/compare/v1.11.7...v1.11.8) (2025-08-05)
+
+### Bug Fixes
+
+* fixed highlight bg on light theme ([#47](https://github.com/aziontech/azion-theme/issues/47)) ([fa8cdb0](https://github.com/aziontech/azion-theme/commit/fa8cdb085851cddd16196662215775344c9ff0ca))
+
 ## [1.11.7](https://github.com/aziontech/azion-theme/compare/v1.11.6...v1.11.7) (2025-08-05)
 
 ### Bug Fixes
