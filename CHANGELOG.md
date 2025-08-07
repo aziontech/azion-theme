@@ -1,3 +1,9 @@
+## [1.12.0](https://github.com/aziontech/azion-theme/compare/v1.11.8...v1.12.0) (2025-08-05)
+
+### Features
+
+* add Proto Mono, Roboto Condensed, and Titillium Web font faces … ([#48](https://github.com/aziontech/azion-theme/issues/48)) ([7180048](https://github.com/aziontech/azion-theme/commit/71800487580a514b49d4f336297430375a541127))
+
 ## [1.11.8](https://github.com/aziontech/azion-theme/compare/v1.11.7...v1.11.8) (2025-08-05)
 
 ### Bug Fixes
