@@ -95,6 +95,14 @@
 }
 
 @font-face {
+  font-family: 'Sora';
+  src: url('https://fonts.azion.com/sora/Sora-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Proto Mono';
   src: url('https://fonts.azion.com/proto-mono/ProtoMono-Light.woff2') format('woff2');
   font-weight: 300;
