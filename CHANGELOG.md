@@ -1,3 +1,9 @@
+## [1.13.0](https://github.com/aziontech/azion-theme/compare/v1.12.0...v1.13.0) (2025-08-08)
+
+### Features
+
+* add sora font ([#49](https://github.com/aziontech/azion-theme/issues/49)) ([53b1c14](https://github.com/aziontech/azion-theme/commit/53b1c14f5df41f498721edcd91c1b1ff8df3a32c))
+
 ## [1.12.0](https://github.com/aziontech/azion-theme/compare/v1.11.8...v1.12.0) (2025-08-05)
 
 ### Features
