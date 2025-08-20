@@ -1,3 +1,9 @@
+## [1.13.1](https://github.com/aziontech/azion-theme/compare/v1.13.0...v1.13.1) (2025-08-20)
+
+### Bug Fixes
+
+* frozen color visual bug ([#51](https://github.com/aziontech/azion-theme/issues/51)) ([8a0afc8](https://github.com/aziontech/azion-theme/commit/8a0afc8141b6c6f6c60729881eb2c6c7babf8a7f))
+
 ## [1.13.0](https://github.com/aziontech/azion-theme/compare/v1.12.0...v1.13.0) (2025-08-08)
 
 ### Features
