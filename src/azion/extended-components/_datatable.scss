@@ -21,7 +21,14 @@
 
   .p-datatable-tbody {
     .p-frozen-column {
-      background: none !important;
+      background: var(--surface-section) !important;
+      transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s !important;
+    }
+  }
+
+  .p-datatable-tbody > tr:hover {
+    .p-frozen-column {
+      background: var(--table-body-row-hover-bg) !important;
     }
   }
 
