@@ -1,0 +1,53 @@
+.azion-json-form {
+  // .wrapper:has(.select) {
+  //   min-width: 320px;
+  //   position: relative !important;
+
+  //   &::before {
+  //     z-index: 10;
+  //     display: block;
+  //     content: "\e930";
+  //     position: absolute;
+  //     right: 1px;
+  //     top: 1px;
+  //     color: $inputIconColor;
+  //     width: 32px;
+  //     height: 32px;
+  //     font-family: "primeicons";
+  //   }
+  // }
+
+  .wrapper {
+    .select::picker(select) {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .select {
+      min-width: 100%;
+      max-width: 320px;
+      height: 34px;
+      font-family: var(--font-family);
+      font-feature-settings: var(--font-feature-settings, normal);
+      font-size: $inputTextFontSize;
+      color: $inputTextColor;
+      background: $inputBg;
+      padding: $inputPadding;
+      border: $inputBorder;
+      transition: $formElementTransition;
+      // appearance: none;
+      border-radius: $borderRadius;
+      position: relative !important;
+
+      &:enabled:hover {
+        border-color: $inputHoverBorderColor;
+      }
+
+      &:enabled:focus {
+        @include focused-input();
+      }
+    }
+  }
+}
