@@ -1,3 +1,9 @@
+## [1.14.0](https://github.com/aziontech/azion-theme/compare/v1.13.2...v1.14.0) (2025-08-29)
+
+### Features
+
+* overwrite jsonform stylesheet ([#52](https://github.com/aziontech/azion-theme/issues/52)) ([5726d70](https://github.com/aziontech/azion-theme/commit/5726d70b2b0c05092e995ae6978e678a48c074f4))
+
 ## [1.13.2](https://github.com/aziontech/azion-theme/compare/v1.13.1...v1.13.2) (2025-08-20)
 
 ### Bug Fixes
