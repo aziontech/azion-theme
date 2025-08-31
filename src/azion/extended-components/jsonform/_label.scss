@@ -15,7 +15,7 @@
       line-height: 1.25 !important;
       font-weight: 400 !important;
       color: var(--error-color) !important;
-      height: 15px !important;
+      min-height: 15px !important;
 
       &::first-letter {
         text-transform: uppercase;
@@ -54,7 +54,7 @@
     }
 
     .description {
-      height: 15px !important;
+      min-height: 15px !important;
       line-height: 1.25rem !important;
       font-size: 0.75rem !important;
       font-weight: 400 !important;
