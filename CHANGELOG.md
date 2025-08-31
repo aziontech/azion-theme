@@ -1,3 +1,9 @@
+## [1.14.1](https://github.com/aziontech/azion-theme/compare/v1.14.0...v1.14.1) (2025-08-31)
+
+### Bug Fixes
+
+* json form description and error height to min-height ([#55](https://github.com/aziontech/azion-theme/issues/55)) ([c37e8ba](https://github.com/aziontech/azion-theme/commit/c37e8baf919194909574b484a6370048ec2efe1e))
+
 ## [1.14.0](https://github.com/aziontech/azion-theme/compare/v1.13.2...v1.14.0) (2025-08-29)
 
 ### Features
