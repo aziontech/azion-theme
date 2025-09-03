@@ -1,3 +1,21 @@
+## [1.14.2](https://github.com/aziontech/azion-theme/compare/v1.14.1...v1.14.2) (2025-09-01)
+
+### Bug Fixes
+
+* frozen column when bg-altered ([#54](https://github.com/aziontech/azion-theme/issues/54)) ([872baa1](https://github.com/aziontech/azion-theme/commit/872baa14de3fe174e7dcb790045eb2eb85693e9e))
+
+## [1.14.1](https://github.com/aziontech/azion-theme/compare/v1.14.0...v1.14.1) (2025-08-31)
+
+### Bug Fixes
+
+* json form description and error height to min-height ([#55](https://github.com/aziontech/azion-theme/issues/55)) ([c37e8ba](https://github.com/aziontech/azion-theme/commit/c37e8baf919194909574b484a6370048ec2efe1e))
+
+## [1.14.0](https://github.com/aziontech/azion-theme/compare/v1.13.2...v1.14.0) (2025-08-29)
+
+### Features
+
+* overwrite jsonform stylesheet ([#52](https://github.com/aziontech/azion-theme/issues/52)) ([5726d70](https://github.com/aziontech/azion-theme/commit/5726d70b2b0c05092e995ae6978e678a48c074f4))
+
 ## [1.13.2](https://github.com/aziontech/azion-theme/compare/v1.13.1...v1.13.2) (2025-08-20)
 
 ### Bug Fixes
