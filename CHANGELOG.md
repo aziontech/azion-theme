@@ -1,3 +1,10 @@
+## [1.14.3](https://github.com/aziontech/azion-theme/compare/v1.14.2...v1.14.3) (2025-09-03)
+
+### Bug Fixes
+
+* ./ relative path to toast ([eaf0273](https://github.com/aziontech/azion-theme/commit/eaf0273e8e17ddeab48287fad0684893fbd9c965))
+* trigger refactoring last pipeline ([72a558d](https://github.com/aziontech/azion-theme/commit/72a558d2d0f0010366fb7ea1d2c35b1a09b3b482))
+
 ## [1.14.2](https://github.com/aziontech/azion-theme/compare/v1.14.1...v1.14.2) (2025-09-01)
 
 ### Bug Fixes
