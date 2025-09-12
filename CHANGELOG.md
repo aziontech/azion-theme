@@ -1,3 +1,9 @@
+## [1.14.4](https://github.com/aziontech/azion-theme/compare/v1.14.3...v1.14.4) (2025-09-12)
+
+### Bug Fixes
+
+* frozen column bug ([#56](https://github.com/aziontech/azion-theme/issues/56)) ([bdcd287](https://github.com/aziontech/azion-theme/commit/bdcd2878b6313bcd22b0098052fa028e48008e42))
+
 ## [1.14.3](https://github.com/aziontech/azion-theme/compare/v1.14.2...v1.14.3) (2025-09-03)
 
 ### Bug Fixes
