@@ -1,3 +1,9 @@
+## [1.14.5](https://github.com/aziontech/azion-theme/compare/v1.14.4...v1.14.5) (2025-09-15)
+
+### Bug Fixes
+
+* jsonform checkbox style and flex-end warning compilation ([#57](https://github.com/aziontech/azion-theme/issues/57)) ([9e335b0](https://github.com/aziontech/azion-theme/commit/9e335b0f353272a3af37ecff2983279f84b55068))
+
 ## [1.14.4](https://github.com/aziontech/azion-theme/compare/v1.14.3...v1.14.4) (2025-09-12)
 
 ### Bug Fixes
