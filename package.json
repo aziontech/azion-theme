@@ -1,7 +1,7 @@
 {
   "name": "azion-theme",
   "type": "module",
-  "version": "1.14.5",
+  "version": "1.15.0",
   "author": "aziontech",
   "contributors": [
     {
@@ -18,7 +18,12 @@
   ],
   "exports": {
     ".": "./default.js",
-    "./widget": "./widget.js"
+    "./widget": "./widget.js",
+    "./src/tokens/colors-primitive": "./src/tokens/colors-primitive.ts",
+    "./src/tokens/colors-brand": "./src/tokens/colors-brand.ts",
+    "./tokens/primitive": "./src/tokens/colors-primitive.ts",
+    "./tokens/brand": "./src/tokens/colors-brand.ts",
+    "./tokens": "./tokens.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

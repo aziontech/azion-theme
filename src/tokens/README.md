@@ -88,18 +88,33 @@ This project now includes **primitive color tokens** extracted directly from Fig
 
 ### 📁 Token Files
 
-- **`src/tokens/colors-primitive.ts`** - Primitive color tokens from Figma
-- **`src/tokens/colors-brand.ts`** - Organized brand colors
-
 ### 🚀 How to Use the Tokens
 
-#### 1. Tailwind Configuration in Consumer Project
+#### Option 1: Simple Import (Recommended)
+```javascript
+import { primitiveColors, brandColors } from 'azion-theme/tokens';
 
-To use the tokens in your project, configure the `tailwind.config.js` in the project that consumes the library:
+// Or import both at once
+import tokens from 'azion-theme/tokens';
+const { primitive, brand } = tokens;
+```
+
+#### Option 2: Individual Token Imports
+```javascript
+import primitiveColors from 'azion-theme/tokens/primitive';
+import brandColors from 'azion-theme/tokens/brand';
+```
+
+#### Option 3: Direct File Imports
+```javascript
+import primitiveColors from 'azion-theme/src/tokens/colors-primitive';
+import brandColors from 'azion-theme/src/tokens/colors-brand';
+```
+
+### Tailwind Configuration Example
 
 ```javascript
-import primitiveColors from 'azion-theme/src/tokens/colors-primitive.js';
-import brandColors from 'azion-theme/src/tokens/colors-brand.js';
+import { primitiveColors, brandColors } from 'azion-theme/tokens';
 
 export default {
   content: ['./src/**/*.{js,ts,jsx,tsx,html}'],
@@ -141,10 +156,15 @@ export default {
 
 #### 4. In JavaScript/TypeScript:
 ```typescript
-import { primitiveColors } from 'azion-theme/src/tokens/colors-primitive';
+// Option 1: Simple import (recommended)
+import { primitiveColors } from 'azion-theme/tokens';
 
-const primaryColor = primitiveColors.orange[500];
-const brandBlack = primitiveColors.base.black;
+const primaryColor = primitiveColors.primitive.orange[500];
+const brandBlack = primitiveColors.primitive.base.black;
+
+// Option 2: Import both tokens
+import tokens from 'azion-theme/tokens';
+const { primitive, brand } = tokens;
 ```
 
 ### 🎨 Available Colors
@@ -168,13 +188,42 @@ const brandBlack = primitiveColors.base.black;
 - `error` (red-500)
 - `info` (blue-500)
 
-### ✅ Advantages
+### ⚠️ Troubleshooting
 
-- **No processing** - uses tokens directly
-- **TypeScript** - autocomplete and type safety
-- **Compatible** with current SCSS system
-- **Easy migration** - gradually replaces SCSS variables
-- **Figma integrated** - colors extracted directly from design
+#### If you get import errors:
+
+**Option 1: ES Module import (recommended)**
+```javascript
+import { primitiveColors, brandColors } from 'azion-theme/tokens';
+```
+
+**Option 2: Default import**
+```javascript
+import tokens from 'azion-theme/tokens';
+const { primitive, brand } = tokens;
+```
+
+**Option 3: Individual imports**
+```javascript
+import primitiveColors from 'azion-theme/tokens/primitive';
+import brandColors from 'azion-theme/tokens/brand';
+```
+
+**Option 4: Direct file imports**
+```javascript
+import primitiveColors from 'azion-theme/src/tokens/colors-primitive';
+import brandColors from 'azion-theme/src/tokens/colors-brand';
+```
+
+**Option 5: Configure Vite (if using Vite)**
+Add to your `vite.config.js`:
+```javascript
+export default {
+  resolve: {
+    conditions: ['import', 'module', 'browser', 'default']
+  }
+}
+```
 
 ## 🔗 Links
 
