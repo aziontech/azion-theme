@@ -142,36 +142,12 @@ export const primitiveColors = {
     500: '#22c55e',
     600: '#16a34a',
     700: '#15803d',
-    800: '#166534',
     900: '#14532d',
     950: '#052e16',
   },
 } as const;
 
-// Helper function to get colors by category
-export const getColorsByCategory = (category: keyof typeof primitiveColors) => {
-  return primitiveColors[category];
-};
-
-// Function to get all colors in flat format
-export const getAllPrimitiveColors = () => {
-  return {
-    ...primitiveColors.base,
-    ...primitiveColors.orange,
-    ...primitiveColors.violet,
-    ...primitiveColors.slate,
-    ...primitiveColors.gray,
-    ...primitiveColors.neutral,
-    ...primitiveColors.blue,
-    ...primitiveColors.red,
-    ...primitiveColors.yellow,
-    ...primitiveColors.green,
-  };
-};
-
 // Default export for easy import
 export default {
   primitive: primitiveColors,
-  getColorsByCategory,
-  getAllPrimitiveColors,
 };

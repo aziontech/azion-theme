@@ -84,29 +84,54 @@ Any modifications made to `azion-theme` will be reflected on this development se
 
 ## 🎨 Design Tokens
 
-Este projeto agora inclui **tokens de cores primitivas** extraídas diretamente do Figma, prontas para serem consumidas via Tailwind CSS.
+This project now includes **primitive color tokens** extracted directly from Figma, ready to be consumed via Tailwind CSS.
 
-### 📁 Arquivos de Tokens
+### 📁 Token Files
 
-- **`src/tokens/colors-primitive.ts`** - Tokens de cores primitivas do Figma
-- **`tailwind.config.js`** - Configuração do Tailwind com os tokens
+- **`src/tokens/colors-primitive.ts`** - Primitive color tokens from Figma
+- **`src/tokens/colors-brand.ts`** - Organized brand colors
 
-### 🚀 Como Usar os Tokens
+### 🚀 How to Use the Tokens
 
-#### No HTML/Tailwind Classes:
+#### 1. Tailwind Configuration in Consumer Project
+
+To use the tokens in your project, configure the `tailwind.config.js` in the project that consumes the library:
+
+```javascript
+import primitiveColors from 'azion-theme/src/tokens/colors-primitive.js';
+import brandColors from 'azion-theme/src/tokens/colors-brand.js';
+
+export default {
+  content: ['./src/**/*.{js,ts,jsx,tsx,html}'],
+  theme: {
+    extend: {
+      colors: {
+        // Spread all primitive colors at once
+        ...primitiveColors.primitive,
+
+        // Brand Colors
+        brand: brandColors.brand,
+      },
+    },
+  },
+  plugins: [],
+};
+```
+
+#### 2. In HTML/Tailwind Classes:
 ```html
-<!-- Usando cores primitivas -->
+<!-- Using primitive colors -->
 <div class="bg-orange-500 text-brand-black">
-  Fundo laranja com texto preto da marca
+  Orange background with brand black text
 </div>
 
-<!-- Usando cores semânticas -->
-<button class="bg-primary text-brand-white hover:bg-orange-600">
-  Botão primário
+<!-- Using brand colors -->
+<button class="bg-brand-black text-brand-white hover:bg-orange-600">
+  Button with brand colors
 </button>
 ```
 
-#### No CSS:
+#### 3. In CSS:
 ```css
 .my-component {
   background-color: #fe601f; /* orange-500 */
@@ -114,42 +139,42 @@ Este projeto agora inclui **tokens de cores primitivas** extraídas diretamente 
 }
 ```
 
-#### No JavaScript/TypeScript:
+#### 4. In JavaScript/TypeScript:
 ```typescript
-import { primitiveColors, semanticColors } from './src/tokens/colors-primitive';
+import { primitiveColors } from 'azion-theme/src/tokens/colors-primitive';
 
 const primaryColor = primitiveColors.orange[500];
-const brandBlack = primitiveColors.brand.black;
+const brandBlack = primitiveColors.base.black;
 ```
 
-### 🎨 Cores Disponíveis
+### 🎨 Available Colors
 
-#### Paleta Principal (Orange)
+#### Main Palette (Orange)
 - `orange-50` → `orange-950`
 - **Primary**: `orange-500` (#fe601f)
 
-#### Paleta Brand
+#### Brand Palette
 - `brand-black` (#0a0a0a)
 - `brand-white` (#fafafa)
 
-#### Outras Paletas Completas
+#### Other Complete Palettes
 - **Violet, Slate, Gray, Neutral, Blue, Red, Yellow, Green**
-- Todas com 11 tons (50 → 950)
+- All with 11 shades (50 → 950)
 
-#### Cores Semânticas
+#### Semantic Colors
 - `primary` (orange-500)
 - `success` (green-500)
 - `warning` (yellow-500)
 - `error` (red-500)
 - `info` (blue-500)
 
-### ✅ Vantagens
+### ✅ Advantages
 
-- **Sem processamento** - usa diretamente os tokens
-- **TypeScript** - autocomplete e type safety
-- **Compatível** com sistema SCSS atual
-- **Fácil migração** - substitui gradualmente variáveis SCSS
-- **Figma integrado** - cores extraídas diretamente do design
+- **No processing** - uses tokens directly
+- **TypeScript** - autocomplete and type safety
+- **Compatible** with current SCSS system
+- **Easy migration** - gradually replaces SCSS variables
+- **Figma integrated** - colors extracted directly from design
 
 ## 🔗 Links
 
