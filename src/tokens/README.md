@@ -180,3 +180,4 @@ const brandBlack = primitiveColors.base.black;
 
 - [PrimeVue](https://v3.primevue.org/)
 - [PrimeVue Sass Theme](https://github.com/primefaces/primevue-sass-theme)
+- [Figma Global Tokens](https://www.figma.com/design/t97pXRs7xME3SJDs5iZ5RF/Global-Tokens?node-id=0-1)
