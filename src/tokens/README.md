@@ -92,17 +92,17 @@ This project now includes **primitive color tokens** extracted directly from Fig
 
 #### Option 1: Simple Import (Recommended)
 ```javascript
-import { primitiveColors, brandColors } from 'azion-theme/tokens';
+const { primitiveColors, brandColors } = require('azion-theme/tokens');
 
-// Or import both at once
-import tokens from 'azion-theme/tokens';
-const { primitive, brand } = tokens;
+// Or import individually
+const primitiveColors = require('azion-theme/tokens/primitive');
+const brandColors = require('azion-theme/tokens/brand');
 ```
 
-#### Option 2: Individual Token Imports
+#### Option 2: ES Module Import
 ```javascript
-import primitiveColors from 'azion-theme/tokens/primitive';
-import brandColors from 'azion-theme/tokens/brand';
+import tokens from 'azion-theme/tokens';
+const { primitiveColors, brandColors } = tokens;
 ```
 
 #### Option 3: Direct File Imports
@@ -114,9 +114,9 @@ import brandColors from 'azion-theme/src/tokens/colors-brand';
 ### Tailwind Configuration Example
 
 ```javascript
-import { primitiveColors, brandColors } from 'azion-theme/tokens';
+const { primitiveColors, brandColors } = require('azion-theme/tokens');
 
-export default {
+module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx,html}'],
   theme: {
     extend: {
@@ -157,14 +157,14 @@ export default {
 #### 4. In JavaScript/TypeScript:
 ```typescript
 // Option 1: Simple import (recommended)
-import { primitiveColors } from 'azion-theme/tokens';
+const { primitiveColors } = require('azion-theme/tokens');
 
 const primaryColor = primitiveColors.primitive.orange[500];
 const brandBlack = primitiveColors.primitive.base.black;
 
 // Option 2: Import both tokens
-import tokens from 'azion-theme/tokens';
-const { primitive, brand } = tokens;
+const tokens = require('azion-theme/tokens');
+const { primitiveColors: colors, brandColors } = tokens;
 ```
 
 ### 🎨 Available Colors
@@ -192,21 +192,21 @@ const { primitive, brand } = tokens;
 
 #### If you get import errors:
 
-**Option 1: ES Module import (recommended)**
+**Option 1: CommonJS (recommended for most projects)**
 ```javascript
-import { primitiveColors, brandColors } from 'azion-theme/tokens';
+const { primitiveColors, brandColors } = require('azion-theme/tokens');
 ```
 
-**Option 2: Default import**
+**Option 2: ES Modules**
 ```javascript
 import tokens from 'azion-theme/tokens';
-const { primitive, brand } = tokens;
+const { primitiveColors, brandColors } = tokens;
 ```
 
 **Option 3: Individual imports**
 ```javascript
-import primitiveColors from 'azion-theme/tokens/primitive';
-import brandColors from 'azion-theme/tokens/brand';
+const primitiveColors = require('azion-theme/tokens/primitive');
+const brandColors = require('azion-theme/tokens/brand');
 ```
 
 **Option 4: Direct file imports**

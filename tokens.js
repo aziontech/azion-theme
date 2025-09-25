@@ -5,42 +5,49 @@
  * This file is designed to work when imported by consumer projects
  */
 
-// Use dynamic imports with proper path resolution
-const loadTokens = async () => {
-  try {
-    // Get the current module's directory
-    const currentUrl = import.meta.url;
-    const currentPath = currentUrl.replace('file://', '');
-    const currentDir = currentPath.substring(0, currentPath.lastIndexOf('/'));
+// For Node.js environments, use require with proper path resolution
+const path = require('path');
+const fs = require('fs');
 
-    // Load from the library's own directory
-    const primitiveModule = await import(currentDir + '/src/tokens/colors-primitive.js');
-    const brandModule = await import(currentDir + '/src/tokens/colors-brand.js');
+// Get the current file's directory
+const __filename = require.main?.filename || process.argv[1] || '';
+const __dirname = path.dirname(__filename);
 
-    return {
-      primitiveColors: primitiveModule.default?.primitive || primitiveModule.primitive,
-      brandColors: brandModule.default?.brand || brandModule.brand,
-    };
-  } catch (e) {
-    console.warn('Could not load tokens via dynamic import, trying alternative method');
-    return { primitiveColors: {}, brandColors: {} };
-  }
-};
+// Find the library root by looking for package.json
+let libraryRoot = __dirname;
+while (!fs.existsSync(path.join(libraryRoot, 'package.json'))) {
+  const parentDir = path.dirname(libraryRoot);
+  if (parentDir === libraryRoot) break;
+  libraryRoot = parentDir;
+}
 
-// For synchronous environments, provide fallback
+// Load the token files from the library
+const primitivePath = path.join(libraryRoot, 'src/tokens/colors-primitive.js');
+const brandPath = path.join(libraryRoot, 'src/tokens/colors-brand.js');
+
 let primitiveColors = {};
 let brandColors = {};
 
-loadTokens().then(tokens => {
-  primitiveColors = tokens.primitiveColors;
-  brandColors = tokens.brandColors;
-});
+try {
+  if (fs.existsSync(primitivePath)) {
+    const primitiveModule = require(primitivePath);
+    primitiveColors = primitiveModule.primitive || primitiveModule.default?.primitive || primitiveModule;
+  }
 
-// Re-export using ES module syntax
-export { primitiveColors, brandColors };
+  if (fs.existsSync(brandPath)) {
+    const brandModule = require(brandPath);
+    brandColors = brandModule.brand || brandModule.default?.brand || brandModule;
+  }
+} catch (e) {
+  console.warn('Could not load tokens from library path, using fallbacks');
+}
 
-// Default export with both tokens
-export default {
-  primitive: primitiveColors,
-  brand: brandColors,
+// Re-export as CommonJS
+module.exports = {
+  primitiveColors,
+  brandColors,
 };
+
+// Also export individual modules
+module.exports.primitiveColors = primitiveColors;
+module.exports.brandColors = brandColors;
