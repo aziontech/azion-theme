@@ -6,7 +6,7 @@
   "contributors": [
     {
       "name": "Eduardo de Cesaro Amarante",
-      "url": "https://www.professorduda.com/"
+      "url": "https://duda.azion.app/"
     },
     {
       "name": "Robson Junior",
@@ -18,7 +18,12 @@
   ],
   "exports": {
     ".": "./default.js",
-    "./widget": "./widget.js"
+    "./widget": "./widget.js",
+    "./src/tokens/colors-primitive": "./src/tokens/colors-primitive.ts",
+    "./src/tokens/colors-brand": "./src/tokens/colors-brand.ts",
+    "./tokens/primitive": "./src/tokens/colors-primitive.ts",
+    "./tokens/brand": "./src/tokens/colors-brand.ts",
+    "./tokens": "./tokens.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
