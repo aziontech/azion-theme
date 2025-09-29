@@ -1,3 +1,9 @@
+## [1.15.0](https://github.com/aziontech/azion-theme/compare/v1.14.5...v1.15.0) (2025-09-29)
+
+### Features
+
+* new global colors ts, primitives and brand ([#58](https://github.com/aziontech/azion-theme/issues/58)) ([92bafa4](https://github.com/aziontech/azion-theme/commit/92bafa4a26913de156113bf4dd86267bd703e1a4))
+
 ## [1.14.5](https://github.com/aziontech/azion-theme/compare/v1.14.4...v1.14.5) (2025-09-15)
 
 ### Bug Fixes
