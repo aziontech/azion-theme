@@ -1,3 +1,9 @@
+## [1.15.1](https://github.com/aziontech/azion-theme/compare/v1.15.0...v1.15.1) (2025-10-22)
+
+### Bug Fixes
+
+* removed unnecessary color ([#59](https://github.com/aziontech/azion-theme/issues/59)) ([41c1c78](https://github.com/aziontech/azion-theme/commit/41c1c7801375d68cd386fba54704df20a47f252b))
+
 ## [1.15.0](https://github.com/aziontech/azion-theme/compare/v1.14.5...v1.15.0) (2025-09-29)
 
 ### Features
