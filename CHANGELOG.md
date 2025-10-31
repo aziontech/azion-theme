@@ -1,3 +1,9 @@
+## [1.15.2](https://github.com/aziontech/azion-theme/compare/v1.15.1...v1.15.2) (2025-10-31)
+
+### Bug Fixes
+
+* split-button menu button sizes ([#60](https://github.com/aziontech/azion-theme/issues/60)) ([e64ba83](https://github.com/aziontech/azion-theme/commit/e64ba83451220b40f08e6370d76b362ed408ac13))
+
 ## [1.15.1](https://github.com/aziontech/azion-theme/compare/v1.15.0...v1.15.1) (2025-10-22)
 
 ### Bug Fixes
