@@ -124,7 +124,7 @@ $colors: (
   --error-color: #f26464;
   --mask-bg: #1c1c1c80;
   --bg-selection: #fab99e;
-  --table-bg-color: var(--surface-50);
+  --table-bg-color: var(--surface-0);
   --table-header-color: var(--surface-50);
   --highlight-tabview-nav-link: #1e1e1e;
   --bg-tabview-nav-link: var(--surface-100);
@@ -186,7 +186,7 @@ $colors: (
   --action-icon-color: $textSecondaryColor;
   --action-icon-hover-bg: #282828;
   --action-icon-hover-border-color: 1px solid #3e3e3e;
-  --panel-content-bg: #171717;
+  --panel-content-bg: var(--surface-section);
   --panel-header-hover-border-color: #171717;
   --panel-header-text-hover-color: rgba(244, 244, 244, 0.04);
   --card-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.02),
@@ -286,7 +286,7 @@ $colors: (
   --surface-ground: var(--surface-50);
   --surface-section: var(--surface-0);
   --surface-card: var(--surface-0);
-  --surface-overlay: #ffffff;
+  --surface-overlay: var(--surface-0);
   --surface-border: var(--surface-200);
   --surface-hover: #3b3b3b16;
   --surface-code-highlight: #b5b5b550;
@@ -358,7 +358,7 @@ $colors: (
   --action-icon-color: $textColor;
   --action-icon-hover-bg: #1e1e1e04;
   --action-icon-hover-border-color: 1px solid #e7e7e7;
-  --panel-content-bg: #ffffff;
+  --panel-content-bg: var(--surface-section);
   --panel-header-hover-border-color: #dee2e6;
   --panel-header-text-hover-color: var(--text-color);
   --card-shadow: 0px 0px 0px 1px #e7e7e7;
