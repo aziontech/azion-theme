@@ -67,7 +67,7 @@ $colors: (
   --primary-dark-color: #hsla(0, 0%, 96%, 0.5);
   --primary-darker-color: #f4f4f4;
   --primary-text-color: #f4f4f4;
-  --overlay-content-bg: #171717;
+  --overlay-content-bg: var(--surface-ground);
   --highlight-bg: #f4f4f410;
   --degrade-primary: 255, 255, 255;
   --degrade-secondary: 0, 0, 0;
@@ -78,6 +78,17 @@ $colors: (
   --text-color-link: #93c5fd;
   --text-color-link-hover: #93c5fd;
   --text-color-empty: var(--surface-800);
+
+  --gray-50: #282828;
+  --gray-100: #363636;
+  --gray-200: #747474;
+  --gray-300: #939393;
+  --gray-400: #b2b2b2;
+  --gray-500: #9e9e9e;
+  --gray-600: #ebebeb;
+  --gray-700: #f5f5f5;
+  --gray-800: #fafafa;
+  --gray-900: #ffffff;
 
   --surface-0: #0a0a0a;
   --surface-50: #111111;
@@ -91,25 +102,13 @@ $colors: (
   --surface-800: #5e5e5e;
   --surface-900: #7d7d7d;
 
-  --surface-code-highlight: #5e5e5e50;
-
-  --gray-50: #282828;
-  --gray-100: #363636;
-  --gray-200: #747474;
-  --gray-300: #939393;
-  --gray-400: #b2b2b2;
-  --gray-500: #9e9e9e;
-  --gray-600: #ebebeb;
-  --gray-700: #f5f5f5;
-  --gray-800: #fafafa;
-  --gray-900: #ffffff;
-
-  --surface-ground: #171717;
-  --surface-section: #171717;
-  --surface-card: #171717;
+  --surface-ground: var(--surface-0);
+  --surface-section: var(--surface-50);
+  --surface-card: var(--surface-100);
   --surface-overlay: #ffffff;
-  --surface-border: #282828;
+  --surface-border: var(--surface-300);
   --surface-hover: #f5f5f516;
+  --surface-code-highlight: #5e5e5e50;
 
   --content-padding: 1.25rem;
   --inline-spacing: 0.5rem;
@@ -125,21 +124,22 @@ $colors: (
   --error-color: #f26464;
   --mask-bg: #1c1c1c80;
   --bg-selection: #fab99e;
-  --table-bg-color: #1c1c1c;
+  --table-bg-color: var(--surface-50);
+  --table-header-color: var(--surface-50);
   --highlight-tabview-nav-link: #1e1e1e;
-  --bg-tabview-nav-link: var(--surface-section);
+  --bg-tabview-nav-link: var(--surface-100);
   --highlight-tab-menu-link: #1c1c1c;
-  --paginator-bg: #1c1c1c;
-  --paginator-border: #282828;
+  --paginator-bg: var(--surface-50);
+  --paginator-border: var(--surface-border);
   --paginator-element-hover-bg: hsla(0, 0%, 100%, 0.03);
   --table-header-font-weight: 500;
   --table-cell-font-weight: 600;
-  --table-header-cell-hover-bg: #ffffff0d;
-  --table-header-cell-bg: #1c1c1c;
-  --table-header-cell-highlight-bg: #1c1c1c;
-  --table-cell-highlight-hover-bg: rgba(244, 244, 244, 0.16);
-  --table-body-row-even-bg: #212121;
-  --table-body-row-hover-bg: #353535;
+  --table-header-cell-hover-bg: var(--surface-200);
+  --table-header-cell-bg: var(--surface-50);
+  --table-header-cell-highlight-bg: var(--surface-50);
+  --table-cell-highlight-hover-bg: var(--surface-200);
+  --table-body-row-even-bg: var(--surface-100);
+  --table-body-row-hover-bg: var(--surface-200);
   --table-footer-cell-bg: #1c1c1c;
   --table-footer-border: var(--surface-border);
   --table-footer-border-width: none;
@@ -162,7 +162,8 @@ $colors: (
   --toggle-button-bg: #1e1e1e;
   --toggle-button-border: #3e3e3e;
   --toggle-button-hover-bg: #282828;
-  --input-bg: #292929;
+  --input-bg: var(--surface-300);
+  --input-border: var(--surface-500);
   --input-placeholder-text-color: #666;
   --input-filled-bg: #181818;
   --input-filled-hover-bg: #2b2b2b;
@@ -191,11 +192,11 @@ $colors: (
   --card-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.02),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12),
     0px 0px 0px 1px #3c3c3c;
-  --splitter-gutter-handle-bg: #3e3e3e;
+  --splitter-gutter-handle-bg: var(--surface-100);
   --overlay-container-shadow: 0px 0px 0px 1px #3e3e3e,
     0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 11px 15px -7px rgba(0, 0, 0, 0.2),
     0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  --dialog-header-bg: #1c1c1c;
+  --dialog-header-bg: var(--surface-ground);
   --tooltip-text-color: #1c1c1c;
   --badge-font-weight: 400;
   --tag-padding: 0.25rem 0.5rem;
@@ -253,12 +254,22 @@ $colors: (
   --primary-darker-color: #000;
   --primary-text-color: #f4f4f4;
 
-  --overlay-content-bg: #ffffff;
-  --highlight-bg: #2b2b2b10;
+  --overlay-content-bg: var(--surface-ground);
+  --highlight-bg: var(--surface-100);
 
   --primary-color-text: #f4f4f4;
   --primary-text-color: #f4f4f4;
-  --overlay-content-bg: #ffffff;
+
+  --gray-50: #fafafa;
+  --gray-100: #f5f5f5;
+  --gray-200: #eeeeee;
+  --gray-300: #e0e0e0;
+  --gray-400: #bdbdbd;
+  --gray-500: #9e9e9e;
+  --gray-600: #757575;
+  --gray-700: #616161;
+  --gray-800: #424242;
+  --gray-900: #212121;
 
   --surface-0: #ffffff;
   --surface-50: #f9fafb;
@@ -272,25 +283,13 @@ $colors: (
   --surface-800: #b5b5b5;
   --surface-900: #a7a7a7;
 
-  --surface-code-highlight: #b5b5b550;
-
-  --gray-50: #fafafa;
-  --gray-100: #f5f5f5;
-  --gray-200: #eeeeee;
-  --gray-300: #e0e0e0;
-  --gray-400: #bdbdbd;
-  --gray-500: #9e9e9e;
-  --gray-600: #757575;
-  --gray-700: #616161;
-  --gray-800: #424242;
-  --gray-900: #212121;
-
-  --surface-ground: #ffffff;
-  --surface-section: #ffffff;
-  --surface-card: #ffffff;
+  --surface-ground: var(--surface-50);
+  --surface-section: var(--surface-0);
+  --surface-card: var(--surface-0);
   --surface-overlay: #ffffff;
-  --surface-border: #e8e8e8;
+  --surface-border: var(--surface-200);
   --surface-hover: #3b3b3b16;
+  --surface-code-highlight: #b5b5b550;
 
   --maskbg: #1e1e1e32;
   --highlight-text-color: none;
@@ -303,17 +302,18 @@ $colors: (
   --mask-bg: #1e1e1e32;
   --error-color: #ef4040;
   --bg-selection: #f7966e;
-  --table-bg-color: #e7e7e7;
+  --table-bg-color: var(--surface-50);
+  --table-header-color: var(--surface-0);
   --highlight-tab-menu-link: #f4f4f4;
-  --paginator-bg: #ffffff;
+  --paginator-bg: var(--surface-0);
   --paginator-border: none;
   --paginator-element-hover-bg: #e9ecef;
   --table-header-cell-hover-bg: #e9ecef;
   --table-cell-highlight-hover-bg: #e9ecef;
   --table-header-font-weight: 600;
   --table-cell-font-weight: 500;
-  --table-header-cell-bg: #fcfdfd;
-  --table-header-cell-highlight-bg: #f8f9fa;
+  --table-header-cell-bg: var(--surface-50);
+  --table-header-cell-highlight-bg: var(--surface-100);
   --table-body-row-even-bg: #ffffff;
   --table-body-row-hover-bg: #f7f7f7;
   --table-footer-border: #e9ecef;
@@ -334,7 +334,8 @@ $colors: (
   --toggle-button-bg: #ffffff;
   --toggle-button-border: #ced4da;
   --toggle-button-hover-bg: #e9ecef;
-  --input-bg: #f4f4f4;
+  --input-bg: var(--surface-100);
+  --input-border: var(--surface-300);
   --input-placeholder-text-color: #979797;
   --input-filled-bg: #f4f4f4;
   --input-filled-hover-bg: #eaeaea;
