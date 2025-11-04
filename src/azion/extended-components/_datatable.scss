@@ -80,6 +80,15 @@
   .p-datatable-tbody > .p-datatable-emptymessage:hover {
     background: unset !important;
   }
+
+  &.p-datatable-gridlines {
+    border: none !important;
+    .p-paginator-bottom {
+      border-color: var(--surface-border) !important;
+      border-bottom-left-radius: $borderRadius;
+      border-bottom-right-radius: $borderRadius;
+    }
+  }
 }
 
 .p-overlaypanel:has(.hidden-columns-panel) {
