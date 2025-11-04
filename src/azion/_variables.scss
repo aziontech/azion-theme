@@ -67,7 +67,7 @@ $colors: (
   --primary-dark-color: #hsla(0, 0%, 96%, 0.5);
   --primary-darker-color: #f4f4f4;
   --primary-text-color: #f4f4f4;
-  --overlay-content-bg: var(--surface-ground);
+  --overlay-content-bg: var(--surface-section);
   --highlight-bg: #f4f4f410;
   --degrade-primary: 255, 255, 255;
   --degrade-secondary: 0, 0, 0;
@@ -196,7 +196,7 @@ $colors: (
   --overlay-container-shadow: 0px 0px 0px 1px #3e3e3e,
     0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 11px 15px -7px rgba(0, 0, 0, 0.2),
     0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  --dialog-header-bg: var(--surface-ground);
+  --dialog-header-bg: var(--surface-section);
   --tooltip-text-color: #1c1c1c;
   --badge-font-weight: 400;
   --tag-padding: 0.25rem 0.5rem;
@@ -254,7 +254,7 @@ $colors: (
   --primary-darker-color: #000;
   --primary-text-color: #f4f4f4;
 
-  --overlay-content-bg: var(--surface-ground);
+  --overlay-content-bg: var(--surface-section);
   --highlight-bg: var(--surface-100);
 
   --primary-color-text: #f4f4f4;
@@ -365,7 +365,7 @@ $colors: (
   --splitter-gutter-handle-bg: #e7e7e7;
   --overlay-container-shadow: 0px 0px 0px 1px #e7e7e7,
     0px 5px 10px 0px rgba(0, 0, 0, 0.05);
-  --dialog-header-bg: #ffffff;
+  --dialog-header-bg: var(--surface-section);
   --tooltip-text-color: #ffffff;
   --badge-font-weight: 500;
   --tag-padding: 0.25rem 0.4rem;
