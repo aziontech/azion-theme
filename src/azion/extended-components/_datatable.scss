@@ -83,7 +83,6 @@
 
   &.p-datatable-gridlines {
     border: none !important;
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s !important;
     .p-paginator-bottom {
       border-color: var(--surface-border) !important;
       border-bottom-left-radius: $borderRadius;
