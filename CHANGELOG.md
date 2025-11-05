@@ -1,3 +1,11 @@
+## [1.15.3](https://github.com/aziontech/azion-theme/compare/v1.15.2...v1.15.3) (2025-11-05)
+
+### Bug Fixes
+
+* gridtable borders ([#64](https://github.com/aziontech/azion-theme/issues/64)) ([3356539](https://github.com/aziontech/azion-theme/commit/335653963e2a2f96553c88af12f12d06c586cb56))
+* paginator gridtable border ([#62](https://github.com/aziontech/azion-theme/issues/62)) ([4eb74d8](https://github.com/aziontech/azion-theme/commit/4eb74d83a0b03121b7e3975554c9e45bf588796f))
+* paginator gridtable borders ([#63](https://github.com/aziontech/azion-theme/issues/63)) ([149234a](https://github.com/aziontech/azion-theme/commit/149234aa0f728dfd41a0b295074b305ff1b11b91))
+
 ## [1.15.2](https://github.com/aziontech/azion-theme/compare/v1.15.1...v1.15.2) (2025-10-31)
 
 ### Bug Fixes
