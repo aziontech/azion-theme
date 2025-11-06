@@ -1,3 +1,9 @@
+## [1.16.0](https://github.com/aziontech/azion-theme/compare/v1.15.3...v1.16.0) (2025-11-06)
+
+### Features
+
+* [ENG-35795] Surfaces Theme Tokens Adjustments ([#61](https://github.com/aziontech/azion-theme/issues/61)) ([4cfbdc6](https://github.com/aziontech/azion-theme/commit/4cfbdc65f8fca7d7befce26d44db9a723fe38f07))
+
 ## [1.15.3](https://github.com/aziontech/azion-theme/compare/v1.15.2...v1.15.3) (2025-11-05)
 
 ### Bug Fixes
