@@ -4,10 +4,6 @@
   font-size: 0.875rem !important;
   text-wrap: nowrap !important;
 
-  .p-datatable-tbody > tr {
-    background: var(--table-body-row-even-bg);
-  }
-
   .p-paginator {
     border-width: 0px !important;
     border-top-left-radius: 0 !important;
@@ -17,7 +13,6 @@
   .p-datatable-header {
     border-top-right-radius: $borderRadius;
     border-top-left-radius: $borderRadius;
-    background: var(--table-header-color);
   }
 
   .p-datatable-tbody > .p-datatable-emptymessage:hover {
@@ -26,8 +21,8 @@
 
   .p-datatable-tbody {
     .p-frozen-column {
-      background: var(--table-body-row-bg);
-      transition: background-color 0.2s !important;
+      background: var(--table-body-row-even-bg);
+      transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s !important;
     }
   }
 
@@ -88,6 +83,7 @@
 
   &.p-datatable-gridlines {
     border: none !important;
+    transition: border-color 0.2s background-color 0.2s;
     .p-paginator-bottom {
       border-color: var(--surface-border) !important;
       border-bottom-left-radius: $borderRadius;
