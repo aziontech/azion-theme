@@ -1,3 +1,9 @@
+## [1.16.1](https://github.com/aziontech/azion-theme/compare/v1.16.0...v1.16.1) (2025-11-11)
+
+### Bug Fixes
+
+* frozen column values ([#66](https://github.com/aziontech/azion-theme/issues/66)) ([19f591c](https://github.com/aziontech/azion-theme/commit/19f591c2496ce640278ad19a0d1c80ba119016d2))
+
 ## [1.16.0](https://github.com/aziontech/azion-theme/compare/v1.15.3...v1.16.0) (2025-11-06)
 
 ### Features
