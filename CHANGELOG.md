@@ -1,3 +1,9 @@
+## [1.16.2](https://github.com/aziontech/azion-theme/compare/v1.16.1...v1.16.2) (2025-11-25)
+
+### Bug Fixes
+
+* empty commit to fix version ([#69](https://github.com/aziontech/azion-theme/issues/69)) ([5430edf](https://github.com/aziontech/azion-theme/commit/5430edfaad8f66591cc500fb5e584a301ae32778))
+
 ## [1.16.1](https://github.com/aziontech/azion-theme/compare/v1.16.0...v1.16.1) (2025-11-11)
 
 ### Bug Fixes
