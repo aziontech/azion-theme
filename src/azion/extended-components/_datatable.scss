@@ -21,7 +21,7 @@
 
   .p-datatable-tbody {
     .p-frozen-column {
-      background: var(--surface-section);
+      background: var(--table-body-row-even-bg);
       transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s !important;
     }
   }
@@ -79,6 +79,16 @@
 
   .p-datatable-tbody > .p-datatable-emptymessage:hover {
     background: unset !important;
+  }
+
+  &.p-datatable-gridlines {
+    border: none !important;
+    transition: border-color 0.2s background-color 0.2s;
+    .p-paginator-bottom {
+      border-color: var(--surface-border) !important;
+      border-bottom-left-radius: $borderRadius;
+      border-bottom-right-radius: $borderRadius;
+    }
   }
 }
 

@@ -138,6 +138,9 @@
             border-radius: 50%;
             height: $buttonIconOnlyWidth;
         }
+        &.table-button {
+            width: 1rem !important;
+        }
     }
 
     &.p-button-sm {
