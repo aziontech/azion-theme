@@ -1,3 +1,9 @@
+## [1.17.0](https://github.com/aziontech/azion-theme/compare/v1.16.2...v1.17.0) (2025-12-01)
+
+### Features
+
+* remove markdown.scss ([#70](https://github.com/aziontech/azion-theme/issues/70)) ([68a87ca](https://github.com/aziontech/azion-theme/commit/68a87ca6e8140cb9cce8e235ad33739a640fec3c))
+
 ## [1.16.2](https://github.com/aziontech/azion-theme/compare/v1.16.1...v1.16.2) (2025-11-25)
 
 ### Bug Fixes
