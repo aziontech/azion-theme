@@ -16,6 +16,9 @@ The Azion Theme repository is focused on sharing our style kit across interfaces
 
 - [Installation](#-installation)
 - [Usage](#-usage)
+  - [Temas Claro/Escuro](#-temas-claroescuro)
+  - [Integração com Tailwind CSS](#-integração-com-tailwind-css)
+  - [Integração com PrimeVue](#-integração-com-primevue)
 - [Development](#-development)
 - [Design Tokens](#-design-tokens)
 - [Links](#-links)
@@ -41,6 +44,138 @@ Alternatively, you can configure the `package.json` file by adding the dependenc
 ```
 
 After updating the `package.json` file, run `npm install` in the root of your project to install the Azion Theme.
+
+## 🎨 Temas Claro/Escuro
+
+O Azion Theme suporta temas claro e escuro. Para alternar entre os modos:
+
+```typescript
+// Para definir o tema
+const setTheme = (isDark: boolean) => {
+  const root = document.documentElement;
+  root.classList.toggle('dark', isDark);
+};
+
+// Para alternar o tema
+const toggleTheme = () => {
+  const root = document.documentElement;
+  const isDark = root.classList.contains('dark');
+  setTheme(!isDark);
+};
+```
+
+## 🎨 Integração com Tailwind CSS
+
+1. Instale as dependências necessárias:
+
+```bash
+yarn add -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+2. No seu `tailwind.config.js`:
+
+```javascript
+const { tailwindTheme } = require('azion-theme/tokens');
+
+module.exports = {
+  content: [
+    './src/**/*.{js,jsx,ts,tsx,vue}',
+  ],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        ...tailwindTheme.theme.extend.colors,
+      },
+    },
+  },
+  plugins: [],
+};
+```
+
+3. No seu arquivo CSS principal (ex: `index.css`), você só precisa importar as diretivas do Tailwind:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+Os tokens de cores já estarão disponíveis para uso direto nas classes do Tailwind, por exemplo:
+- `text-color-base`
+- `bg-color-surface`
+- `border-color-border`
+- `hover:text-color-primary`
+- `dark:text-color-black` (para temas escuros)
+
+Não é necessário declarar as variáveis CSS manualmente, pois elas já são fornecidas pelo tema do Azion através da configuração do Tailwind.
+
+## 🎨 Integração com Frameworks
+
+### React
+
+Para usar com React, instale as dependências necessárias:
+
+```bash
+yarn add azion-theme
+```
+
+Configure o tema no seu aplicativo:
+
+```tsx
+// App.tsx
+import { useEffect } from 'react';
+import 'azion-theme/dist/light.css'; // Tema claro
+import 'azion-theme/dist/dark.css';  // Tema escuro
+
+function App() {
+  // Exemplo de alternância de tema
+  const setDarkMode = (isDark: boolean) => {
+    document.documentElement.classList.toggle('dark', isDark);
+  };
+
+  return (
+    <div className="text-color-base bg-background">
+      <h1 className="text-color-primary">Meu App</h1>
+      <button 
+        onClick={() => setDarkMode(true)}
+        className="px-4 py-2 bg-primary text-white"
+      >
+        Tema Escuro
+      </button>
+      <button 
+        onClick={() => setDarkMode(false)}
+        className="px-4 py-2 bg-primary text-white"
+      >
+        Tema Claro
+      </button>
+    </div>
+  );
+}
+
+export default App;
+```
+
+### Vue.js
+
+Para usar com Vue, instale as dependências:
+
+```bash
+yarn add azion-theme
+```
+
+Configure o tema no seu `main.ts` ou `main.js`:
+
+```typescript
+import { createApp } from 'vue';
+import App from './App.vue';
+import 'azion-theme/dist/light.css';
+import 'azion-theme/dist/dark.css';
+
+const app = createApp(App);
+app.mount('#app');
+```
 
 ### 🔗 Integration with Front-End Project
 
@@ -84,15 +219,135 @@ Any modifications made to `azion-theme` will be reflected on this development se
 
 ## 🎨 Design Tokens
 
-This project now includes **primitive color tokens** extracted directly from Figma, ready to be consumed via Tailwind CSS.
+### Estrutura de Arquivos
 
-### 📁 Token Files
+Os tokens de design estão organizados nos seguintes arquivos:
 
-### 🚀 How to Use the Tokens
+- `colors-primitive.ts` - Cores primárias extraídas do Figma
+- `colors-brand.ts` - Cores da marca baseadas nas cores primárias
+- `colors-text.ts` - Tokens de cores de texto (claro/escuro)
+- `colors-surfaces.ts` - Tokens para superfícies (claro/escuro)
+- `theme.ts` - Orquestração dos temas e configuração do Tailwind
 
-#### Option 1: Simple Import (Recommended)
+### Cores de Texto
+- `text-color-base` - Cor de texto principal
+- `text-color-base-hover` - Cor de texto principal no hover
+- `text-color-muted` - Texto secundário
+- `text-color-muted-hover` - Texto secundário no hover
+- `text-color-primary` - Texto primário
+- `text-color-primary-hover` - Texto primário no hover
+- `text-color-secondary` - Texto secundário
+- `text-color-secondary-hover` - Texto secundário no hover
+- `text-color-link` - Links
+- `text-color-link-hover` - Links no estado hover
+- `text-color-code` - Texto para códigos/blocos de código
+
+#### Compatibilidade com versões anteriores:
+- `text-base` - Alias para `text-color-base`
+- `text-muted` - Alias para `text-color-muted`
+- `text-primary` - Alias para `text-color-primary`
+- `text-link` - Alias para `text-color-link`
+
+### Cores Fixas
+
+#### Cores de Marca (brandColors)
+- `orange` - Laranja primário
+- `darkOrange` - Laranja escuro
+- `lavander` - Lavanda
+- `darkLavander` - Lavanda escura
+- `blackLavander` - Lavanda preta
+
+#### Cores Primitivas (primitiveColors)
+- `orange` - Paleta de laranja (50-950)
+- `violet` - Paleta de violeta (50-950)
+- `slate` - Paleta de cinza azulado (50-950)
+- `blue` - Paleta de azul (50-950)
+- `green` - Paleta de verde (50-950)
+- `yellow` - Paleta de amarelo (50-950)
+- `red` - Paleta de vermelho (50-950)
+
+### Cores project now includes **primitive color tokens** extracted directly from Figma, ready to be consumed via Tailwind CSS.
+
+## 🔄 Como Usar os Tokens
+
+### Importando Tokens
+
+```typescript
+// Importando tokens específicos
+import { primitiveColors, brandColors, textColors } from 'azion-theme';
+
+// Exemplo de uso com Tailwind
+function MyComponent() {
+  return (
+    <div className="text-color-base dark:text-color-base">
+      <h1 className="text-color-primary hover:text-color-primary-hover">Título</h1>
+      <p className="text-color-muted">Texto secundário</p>
+      <a href="#" className="text-color-link hover:text-color-link-hover">Link</a>
+    </div>
+  );
+}
+```
+
+### Configuração do Tailwind
+
+Atualize seu `tailwind.config.js` para incluir o tema do Azion:
+
 ```javascript
-const { primitiveColors, brandColors } = require('azion-theme/tokens');
+// tailwind.config.js
+const { tailwindTheme } = require('azion-theme/tokens');
+
+module.exports = {
+  content: [
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        ...tailwindTheme.theme.extend.colors,
+      },
+    },
+  },
+  plugins: [],
+};
+```
+
+## 🌓 Suporte a Temas
+
+O Azion Theme suporta temas claro e escuro. O tema é controlado pela classe `dark` no elemento raiz do HTML.
+
+### Alternando entre temas
+
+```typescript
+// Alternar tema
+const toggleTheme = () => {
+  document.documentElement.classList.toggle('dark');
+};
+
+// Definir tema específico
+const setTheme = (isDark: boolean) => {
+  const root = document.documentElement;
+  if (isDark) {
+    root.classList.add('dark');
+  } else {
+    root.classList.remove('dark');
+  }
+};
+```
+
+### Usando em CSS
+
+```css
+/* Estilos base (tema claro) */
+.text-color-base {
+  color: theme('colors.text-color-base');
+}
+
+/* Sobrescreve para tema escuro */
+.dark .text-color-base {
+  color: theme('colors.dark.text-color-base');
+}
+```
 
 // Or import individually
 const primitiveColors = require('azion-theme/tokens/primitive');
