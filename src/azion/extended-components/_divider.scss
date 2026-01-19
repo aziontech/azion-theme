@@ -1,6 +1,6 @@
 .p-divider {
   .p-divider-content {
-    background-color: $panelContentBg;
+    background-color: var(--surface-card);
   }
 
   &.p-divider-horizontal {
