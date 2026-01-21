@@ -1,12 +1,12 @@
+.surface-card {
+  .p-divider-content {
+    background-color: var(--surface-card) !important;
+  }
+}
+
 .p-divider {
   .p-divider-content {
     background-color: $panelContentBg;
-  }
-
-  .surface-card {
-    .p-divider-content {
-      background-color: var(--surface-card) !important;
-    }
   }
 
   &.p-divider-horizontal {
