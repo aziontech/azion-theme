@@ -30,7 +30,7 @@
   --red-800: #8c221c;
   --red-900: #661814;
 
-  --font-family: "Roboto", sans-serif;
+  --font-family: "Sora", sans-serif;
 }
 // Mandatory Designer Variables
 
@@ -171,8 +171,8 @@ $colors: (
   --input-group-bg: #1c1c1c;
   --input-list-bg: #171717;
   --input-list-header-bg: #1c1c1c;
-  --input-overlay-shadow: 0px 0px 0px 1px #3b3b3b,
-    0px 5px 10px 0px rgba(0, 0, 0, 0.05);
+  --input-overlay-shadow:
+    0px 0px 0px 1px #3b3b3b, 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
   --checkbox-border: #666666;
   --calendar-bg: #292929;
   --calendar-cell-date-today-bg: #f4f4f4;
@@ -189,13 +189,13 @@ $colors: (
   --panel-content-bg: var(--surface-section);
   --panel-header-hover-border-color: #171717;
   --panel-header-text-hover-color: rgba(244, 244, 244, 0.04);
-  --card-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.02),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12),
-    0px 0px 0px 1px #3c3c3c;
+  --card-shadow:
+    0px 2px 1px -1px rgba(0, 0, 0, 0.02), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 0px 0px 1px #3c3c3c;
   --splitter-gutter-handle-bg: var(--surface-100);
-  --overlay-container-shadow: 0px 0px 0px 1px #3e3e3e,
-    0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 11px 15px -7px rgba(0, 0, 0, 0.2),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  --overlay-container-shadow:
+    0px 0px 0px 1px #3e3e3e, 0px 24px 38px 3px rgba(0, 0, 0, 0.14),
+    0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   --dialog-header-bg: var(--surface-section);
   --tooltip-text-color: #1c1c1c;
   --badge-font-weight: 400;
@@ -217,9 +217,9 @@ $colors: (
   --menu-bg: #1c1c1c;
   --menu-border: #3e3e3e;
   --submenu-header-font-weight: 500;
-  --overlay-menu-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.12),
-    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
-    0px 0px 0px 1px #3c3c3c;
+  --overlay-menu-shadow:
+    0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+    0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 0px 0px 1px #3c3c3c;
   --horizontal-menu-bg: #1c1c1c;
   --p-tag-background: #ff6c4729;
   --p-tag-color: #ff6c47;
@@ -230,7 +230,7 @@ $colors: (
   --p-tag-danger-background: #f53d3d33;
   --p-tag-danger-color: #f53d3d;
   --p-tag-close-background: #404040;
-  --p-tag-close-color: #FFFFFF;
+  --p-tag-close-color: #ffffff;
   --carousel-indicator: #e9ecef20;
   --carousel-indicator-highlight: #ededed;
   --carousel-indicator-hover: #dee2e640;
@@ -343,8 +343,8 @@ $colors: (
   --input-group-bg: #eaeaea;
   --input-list-bg: #ffffff;
   --input-list-header-bg: #f8f9fa;
-  --input-overlay-shadow: 0px 0px 0px 1px #e7e7e7,
-    0px 1px 4px 0px rgba(0, 0, 0, 0.04);
+  --input-overlay-shadow:
+    0px 0px 0px 1px #e7e7e7, 0px 1px 4px 0px rgba(0, 0, 0, 0.04);
   --checkbox-border: var(--surface-border);
   --calendar-bg: #ffffff;
   --calendar-cell-date-today-bg: #1e1e1e;
@@ -363,8 +363,8 @@ $colors: (
   --panel-header-text-hover-color: var(--text-color);
   --card-shadow: 0px 0px 0px 1px #e7e7e7;
   --splitter-gutter-handle-bg: #e7e7e7;
-  --overlay-container-shadow: 0px 0px 0px 1px #e7e7e7,
-    0px 5px 10px 0px rgba(0, 0, 0, 0.05);
+  --overlay-container-shadow:
+    0px 0px 0px 1px #e7e7e7, 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
   --dialog-header-bg: var(--surface-section);
   --tooltip-text-color: #ffffff;
   --badge-font-weight: 500;
@@ -386,8 +386,8 @@ $colors: (
   --menu-bg: #ffffff;
   --menu-border: #e7e7e7;
   --submenu-header-font-weight: 400;
-  --overlay-menu-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.04),
-    0px 0px 0px 1px #e7e7e7;
+  --overlay-menu-shadow:
+    0px 1px 4px 0px rgba(0, 0, 0, 0.04), 0px 0px 0px 1px #e7e7e7;
   --horizontal-menu-bg: #f8f9fa;
   --p-tag-background: #ff6c4729;
   --p-tag-color: #ff6c47;
@@ -398,7 +398,7 @@ $colors: (
   --p-tag-danger-background: #ef404033;
   --p-tag-danger-color: #ef4040;
   --p-tag-close-background: #404040;
-  --p-tag-close-color: #FFFFFF;
+  --p-tag-close-color: #ffffff;
   --carousel-indicator: #e9ecef;
   --carousel-indicator-highlight: #1c1c1c;
   --carousel-indicator-hover: #dee2e6;
