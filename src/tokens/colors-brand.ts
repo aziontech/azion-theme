@@ -4,24 +4,21 @@
  * Organized brand colors consuming primitive colors.
  */
 
-// Import primitive colors
-import { primitiveColors } from './colors-primitive';
+import { primitives } from './primitives/colors';
 
-/** Brand colors organized by specification */
 export const brandColors = {
-  orange: primitiveColors.orange[500],
-  darkOrange: primitiveColors.orange[600],
-  lavander: primitiveColors.violet[500],
-  darkLavander: primitiveColors.slate[900],
-  blackLavander: primitiveColors.slate[950],
-  gray: primitiveColors.neutral[200],
-  darkGray: primitiveColors.neutral[700],
-  blackGray: primitiveColors.neutral[900],
-  white: primitiveColors.base.white,
-  black: primitiveColors.base.black,
+  orange: primitives.orange[500],
+  darkOrange: primitives.orange[600],
+  lavander: primitives.violet[300],
+  darkLavander: primitives.slate[900],
+  blackLavander: primitives.slate[950],
+  gray: primitives.neutral[200],
+  mediumGray: primitives.neutral[500],
+  darkGray: primitives.neutral[900],
+  white: primitives.neutral[50],
+  black: primitives.neutral[950],
 } as const;
 
-// Default export for easy import
 export default {
   brand: brandColors,
 };

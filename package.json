@@ -19,9 +19,14 @@
   "exports": {
     ".": "./default.js",
     "./widget": "./widget.js",
-    "./src/tokens/colors-primitive": "./src/tokens/colors-primitive.ts",
+    "./src/tokens/primitives/colors": "./src/tokens/primitives/colors.ts",
+    "./src/tokens/primitives/brand": "./src/tokens/primitives/brand.ts",
+    "./src/tokens/semantic/text": "./src/tokens/semantic/text.ts",
+    "./src/tokens/semantic/backgrounds": "./src/tokens/semantic/backgrounds.ts",
+    "./src/tokens/semantic/borders": "./src/tokens/semantic/borders.ts",
     "./src/tokens/colors-brand": "./src/tokens/colors-brand.ts",
-    "./tokens/primitive": "./src/tokens/colors-primitive.ts",
+    "./src/tokens/index": "./src/tokens/index.ts",
+    "./tokens/primitive": "./src/tokens/primitives/colors.ts",
     "./tokens/brand": "./src/tokens/colors-brand.ts",
     "./tokens": "./tokens.js"
   },
