@@ -13,3 +13,4 @@ export * from './build/resolve';
 export * from './build/css-vars';
 export * from './build/preset';
 export * from './build/tailwind-helper';
+export * from './build/tailwind-plugin';

@@ -24,6 +24,7 @@
     "./src/tokens/semantic/text": "./src/tokens/semantic/text.ts",
     "./src/tokens/semantic/backgrounds": "./src/tokens/semantic/backgrounds.ts",
     "./src/tokens/semantic/borders": "./src/tokens/semantic/borders.ts",
+    "./src/tokens/build/tailwind-plugin": "./src/tokens/build/tailwind-plugin.ts",
     "./src/tokens/colors-brand": "./src/tokens/colors-brand.ts",
     "./src/tokens/index": "./src/tokens/index.ts",
     "./tokens/primitive": "./src/tokens/primitives/colors.ts",

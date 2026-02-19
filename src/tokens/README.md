@@ -117,6 +117,30 @@ import borderSemantic from 'azion-theme/src/tokens/semantic/borders';
 
 ### Tailwind Configuration Example
 
+> **Note:** Option A emits both `.bg-*`, `.text-*`, and `.border-*` utilities for light and dark using Tailwind's `dark` selector. This does **not** use CSS variables.
+
+
+#### Option A: Static utilities with dark variants (no CSS vars)
+```javascript
+import typography from '@tailwindcss/typography';
+import { tokenUtilities } from 'azion-theme/src/tokens/build/tailwind-plugin';
+const { colors } = require('azion-theme/tokens');
+
+export default {
+  content: ['./src/**/*.{js,ts,jsx,tsx,html}'],
+  darkMode: ['class', '.dark', '.azion.azion-dark'],
+  theme: {
+    extend: {
+      colors: {
+        ...colors,
+      },
+    },
+  },
+  plugins: [tokenUtilities(), typography],
+};
+```
+
+#### Option B: CSS variables initializer (theme switching at runtime)
 ```javascript
 const { colors } = require('azion-theme/tokens');
 

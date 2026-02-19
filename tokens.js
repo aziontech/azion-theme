@@ -8,10 +8,10 @@
 const path = require('path');
 const fs = require('fs');
 
-const __filename = require.main?.filename || process.argv[1] || '';
-const __dirname = path.dirname(__filename);
+const fileName = typeof __filename !== 'undefined' ? __filename : require.main?.filename || process.argv[1] || '';
+const dirName = typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileName);
 
-let libraryRoot = __dirname;
+let libraryRoot = dirName;
 while (!fs.existsSync(path.join(libraryRoot, 'package.json'))) {
   const parentDir = path.dirname(libraryRoot);
   if (parentDir === libraryRoot) break;
@@ -78,18 +78,87 @@ try {
   console.warn('Could not load tokens from library path, using fallbacks');
 }
 
+const primitivePalette =
+  primitiveColors && typeof primitiveColors === 'object' ? { ...primitiveColors } : {};
+if (primitivePalette.base) {
+  delete primitivePalette.base;
+}
+
+const absolutePalette =
+  brandPrimitives?.absolute && typeof brandPrimitives.absolute === 'object'
+    ? {
+        white: brandPrimitives.absolute.white,
+        black: brandPrimitives.absolute.black,
+      }
+    : {};
+
+const semanticColorVars = {
+  text: {
+    base: 'var(--text-textColorBase)',
+    muted: 'var(--text-textColorMuted)',
+    link: 'var(--text-textColorLink)',
+    code: 'var(--text-textColorCode)',
+    mutedHover: 'var(--text-textColorMutedHover)',
+    linkHover: 'var(--text-textColorLinkHover)',
+    baseHover: 'var(--text-textColorBaseHover)',
+    primary: 'var(--text-textColorPrimary)',
+    primaryHover: 'var(--text-textColorPrimaryHover)',
+    accent: 'var(--text-textColorSecondary)',
+    accentHover: 'var(--text-textColorSecondaryHover)',
+  },
+  background: {
+    layer1: 'var(--background-bgLayer1)',
+    layer2: 'var(--background-bgLayer2)',
+    base: 'var(--background-bgBase)',
+    canvas: 'var(--background-bgCanvas)',
+    layer1Hover: 'var(--background-bgLayer1Hover)',
+    layer2Hover: 'var(--background-bgLayer2Hover)',
+  },
+  border: {
+    base: 'var(--border-borderBase)',
+    baseHover: 'var(--border-borderBaseHover)',
+    warning: 'var(--border-borderWarning)',
+    success: 'var(--border-borderSuccess)',
+    danger: 'var(--border-borderDanger)',
+    primary: 'var(--border-borderPrimary)',
+    accent: 'var(--border-boderAccent)',
+    warningHover: 'var(--border-borderWarningHover)',
+    successHover: 'var(--border-borderSuccessHover)',
+    dangerHover: 'var(--border-borderDangerHover)',
+    primaryHover: 'var(--border-borderPrimaryHover)',
+    accentHover: 'var(--border-boderAccentHover)',
+  },
+};
+
+const tailwindAliases = {
+  canvas: semanticColorVars.background.canvas,
+  layer1: semanticColorVars.background.layer1,
+  layer2: semanticColorVars.background.layer2,
+  layer1Hover: semanticColorVars.background.layer1Hover,
+  layer2Hover: semanticColorVars.background.layer2Hover,
+  base: semanticColorVars.border.base,
+  baseHover: semanticColorVars.border.baseHover,
+  warning: semanticColorVars.border.warning,
+  success: semanticColorVars.border.success,
+  danger: semanticColorVars.border.danger,
+  primary: semanticColorVars.border.primary,
+  accent: semanticColorVars.border.accent,
+  warningHover: semanticColorVars.border.warningHover,
+  successHover: semanticColorVars.border.successHover,
+  dangerHover: semanticColorVars.border.dangerHover,
+  primaryHover: semanticColorVars.border.primaryHover,
+  accentHover: semanticColorVars.border.accentHover,
+};
+
 const colors = {
-  ...primitiveColors,
+  ...primitivePalette,
+  ...absolutePalette,
+  ...tailwindAliases,
   brand: brandColors,
   brandPrimitives,
   surfaces: surfacePrimitives,
-  semantic: {
-    text: textSemantic,
-    background: backgroundSemantic,
-    border: borderSemantic,
-  },
-  background: backgroundSemantic,
-  border: borderSemantic,
+  ...semanticColorVars,
+  semantic: semanticColorVars,
 };
 
 module.exports = {
