@@ -209,12 +209,31 @@ const { colors: allColors, brandColors } = tokens;
 
 ### 🛠️ Sync & Maintenance (With Script)
 
-1) **Export tokens from Tokens Studio (Figma)** and save the output into [`figma-reference-tokens-studio/`](src/tokens/figma-reference-tokens-studio:1).
-2) **Regenerate tokens** with the script below. This overwrites the token files, so commit only after review.
+#### How to feed new and changed tokens from Figma
+
+1) **Update Figma Variables**
+   - Ensure **Global** and **Semantic** variables are updated and organized correctly (naming, groups, modes, and values).
+
+2) **Open the Tokens Studio for Figma plugin**
+
+3) **Import Figma Variables into Tokens Studio**
+   - Use Tokens Studio’s import-from-variables flow to bring the current Variables state into the token sets.
+
+4) **Export to file/folder**
+   - Export using **Multiple files**.
+
+5) **Copy the exported files into this repo**
+   - Place them under [`src/tokens/figma-reference-tokens-studio/`](src/tokens/figma-reference-tokens-studio:1) (replace existing contents).
+
+6) **Regenerate the code tokens**
+   - Run:
 
 ```bash
 node ./scripts/figma-sync.js
 ```
+
+7) **Review and commit**
+   - Inspect the diff in the generated files and validate light/dark semantics before committing.
 
 Files affected by the script:
 - [`src/tokens/primitives/colors.ts`](src/tokens/primitives/colors.ts:1)

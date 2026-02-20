@@ -5,54 +5,55 @@
  */
 
 import { brandColors } from '../colors-brand';
+import { primitives } from './colors';
 
+// Aliases:
+// - surfaces are neutrals
+// - accent is violet
 export const surfacePrimitives = {
   surface: {
-    '0': '#ffffff',
-    '50': '#fafafa',
-    '100': '#f5f5f5',
-    '200': '#e5e5e5',
-    '300': '#d4d4d4',
-    '400': '#a3a3a3',
-    '500': '#737373',
-    '600': '#525252',
-    '700': '#404040',
-    '800': '#262626',
-    '900': '#171717',
-    '950': '#0a0a0a'
+    '0': primitives.base.white,
+    '50': primitives.neutral[50],
+    '100': primitives.neutral[100],
+    '200': primitives.neutral[200],
+    '300': primitives.neutral[300],
+    '400': primitives.neutral[400],
+    '500': primitives.neutral[500],
+    '600': primitives.neutral[600],
+    '700': primitives.neutral[700],
+    '800': primitives.neutral[800],
+    '900': primitives.neutral[900],
+    '950': primitives.neutral[950]
   }
 } as const;
 
 export const brandPrimitives = {
   accent: {
-    '50': '#f6f6ff',
-    '100': '#ececff',
-    '200': '#d9d7fa',
-    '300': '#b5b1f4',
-    '400': '#9f9af1',
-    '500': '#8a84ec',
-    '600': '#756fe5',
-    '700': '#625bd5',
-    '800': '#524bbb',
-    '900': '#423f99',
-    '950': '#343279'
+    '50': primitives.violet[50],
+    '100': primitives.violet[100],
+    '200': primitives.violet[200],
+    '300': primitives.violet[300],
+    '400': primitives.violet[400],
+    '500': primitives.violet[500],
+    '600': primitives.violet[600],
+    '700': primitives.violet[700],
+    '800': primitives.violet[800],
+    '900': primitives.violet[900],
+    '950': primitives.violet[950]
   },
+  // primary is orange
   primary: {
-    '50': '#fff5ef',
-    '100': '#ffe7d8',
-    '200': '#ffcfb3',
-    '300': '#ffb180',
-    '400': '#ff8e4d',
-    '500': '#fe601f',
-    '600': '#d94a03',
-    '700': '#b03c02',
-    '800': '#8a2f02',
-    '900': '#692402',
-    '950': '#401602'
-  },
-  absolute: {
-    white: '#fafafa',
-    black: '#0a0a0a'
+    '50': primitives.orange[50],
+    '100': primitives.orange[100],
+    '200': primitives.orange[200],
+    '300': primitives.orange[300],
+    '400': primitives.orange[400],
+    '500': primitives.orange[500],
+    '600': primitives.orange[600],
+    '700': primitives.orange[700],
+    '800': primitives.orange[800],
+    '900': primitives.orange[900],
+    '950': primitives.orange[950]
   }
 } as const;
 
