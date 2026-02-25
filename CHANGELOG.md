@@ -1,3 +1,9 @@
+## [1.18.0](https://github.com/aziontech/azion-theme/compare/v1.17.0...v1.18.0) (2026-02-25)
+
+### Features
+
+* change font to sora ([#74](https://github.com/aziontech/azion-theme/issues/74)) ([4ef00e3](https://github.com/aziontech/azion-theme/commit/4ef00e3c5d1913c0f8d21408afa8fd66d99340b2))
+
 ## [1.17.0](https://github.com/aziontech/azion-theme/compare/v1.16.2...v1.17.0) (2025-12-01)
 
 ### Features
