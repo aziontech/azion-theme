@@ -1,3 +1,9 @@
+## [1.18.3](https://github.com/aziontech/azion-theme/compare/v1.18.2...v1.18.3) (2026-02-25)
+
+### Bug Fixes
+
+* trigger, allow empty ([ab231f6](https://github.com/aziontech/azion-theme/commit/ab231f64247e3c4cc026a3cff351d4b92975bdb2))
+
 ## [1.18.2](https://github.com/aziontech/azion-theme/compare/v1.18.1...v1.18.2) (2026-02-25)
 
 ### Bug Fixes
