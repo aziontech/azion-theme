@@ -1,3 +1,9 @@
+## [1.18.2](https://github.com/aziontech/azion-theme/compare/v1.18.1...v1.18.2) (2026-02-25)
+
+### Bug Fixes
+
+* trigger to test password ([312f433](https://github.com/aziontech/azion-theme/commit/312f433662dbf447f1a3059085dbc87b369cde1c))
+
 ## [1.18.1](https://github.com/aziontech/azion-theme/compare/v1.18.0...v1.18.1) (2026-02-25)
 
 ### Bug Fixes
