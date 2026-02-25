@@ -1,3 +1,10 @@
+## [1.18.1](https://github.com/aziontech/azion-theme/compare/v1.18.0...v1.18.1) (2026-02-25)
+
+### Bug Fixes
+
+* trigger ([322d359](https://github.com/aziontech/azion-theme/commit/322d359c536cef3be35d79cf52df56da89ba0ad7))
+* trigger ([a4b3f83](https://github.com/aziontech/azion-theme/commit/a4b3f83eb497079418f2d8dc3788d1cb01170eeb))
+
 ## [1.18.0](https://github.com/aziontech/azion-theme/compare/v1.17.0...v1.18.0) (2026-02-25)
 
 ### Features
