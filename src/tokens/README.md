@@ -92,29 +92,57 @@ This project now includes **primitive color tokens** extracted directly from Fig
 
 #### Option 1: Simple Import (Recommended)
 ```javascript
-const { primitiveColors, brandColors } = require('azion-theme/tokens');
+const { colors } = require('azion-theme/tokens');
 
 // Or import individually
-const primitiveColors = require('azion-theme/tokens/primitive');
+const primitives = require('azion-theme/tokens/primitive');
 const brandColors = require('azion-theme/tokens/brand');
 ```
 
 #### Option 2: ES Module Import
 ```javascript
 import tokens from 'azion-theme/tokens';
-const { primitiveColors, brandColors } = tokens;
+const { colors } = tokens;
 ```
 
 #### Option 3: Direct File Imports
 ```javascript
-import primitiveColors from 'azion-theme/src/tokens/colors-primitive';
+import primitives from 'azion-theme/src/tokens/primitives/colors';
+import { brandPrimitives, surfacePrimitives } from 'azion-theme/src/tokens/primitives/brand';
 import brandColors from 'azion-theme/src/tokens/colors-brand';
+import textSemantic from 'azion-theme/src/tokens/semantic/text';
+import backgroundSemantic from 'azion-theme/src/tokens/semantic/backgrounds';
+import borderSemantic from 'azion-theme/src/tokens/semantic/borders';
 ```
 
 ### Tailwind Configuration Example
 
+> **Note:** Option A emits both `.bg-*`, `.text-*`, and `.border-*` utilities for light and dark using Tailwind's `dark` selector. This does **not** use CSS variables.
+
+
+#### Option A: Static utilities with dark variants (no CSS vars)
 ```javascript
-const { primitiveColors, brandColors } = require('azion-theme/tokens');
+import typography from '@tailwindcss/typography';
+import { tokenUtilities } from 'azion-theme/src/tokens/build/tailwind-plugin';
+const { colors } = require('azion-theme/tokens');
+
+export default {
+  content: ['./src/**/*.{js,ts,jsx,tsx,html}'],
+  darkMode: ['class', '.dark', '.azion.azion-dark'],
+  theme: {
+    extend: {
+      colors: {
+        ...colors,
+      },
+    },
+  },
+  plugins: [tokenUtilities(), typography],
+};
+```
+
+#### Option B: CSS variables initializer (theme switching at runtime)
+```javascript
+const { colors } = require('azion-theme/tokens');
 
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx,html}'],
@@ -122,19 +150,31 @@ module.exports = {
     extend: {
       colors: {
         // Spread all primitive colors at once
-        ...primitiveColors.primitive,
-
-        // Brand Colors
-        brand: brandColors.brand,
+        ...colors,
       },
     },
   },
+  darkMode: ['class', '.dark', '.azion.azion-dark'],
   plugins: [],
 };
 ```
 
+### Theme Switch Compatibility
+
+The CSS variable initializer targets both the Tailwind `.dark` class and the existing theme classes used by the SCSS theme:
+
+```css
+:root, [data-theme=light], .azion.azion-light { /* light vars */ }
+[data-theme=dark], .dark, .azion.azion-dark { /* dark vars */ }
+```
+
 #### 2. In HTML/Tailwind Classes:
 ```html
+<!-- Using semantic text/background tokens -->
+<div class="text-base bg-background-card">
+  Base text with card background
+</div>
+
 <!-- Using primitive colors -->
 <div class="bg-orange-500 text-brand-black">
   Orange background with brand black text
@@ -157,15 +197,69 @@ module.exports = {
 #### 4. In JavaScript/TypeScript:
 ```typescript
 // Option 1: Simple import (recommended)
-const { primitiveColors } = require('azion-theme/tokens');
+const { colors } = require('azion-theme/tokens');
 
-const primaryColor = primitiveColors.primitive.orange[500];
-const brandBlack = primitiveColors.primitive.base.black;
+const primaryColor = colors.orange[500];
+const brandBlack = colors.brand.black;
 
-// Option 2: Import both tokens
+// Option 2: Import structured tokens
 const tokens = require('azion-theme/tokens');
-const { primitiveColors: colors, brandColors } = tokens;
+const { colors: allColors, brandColors } = tokens;
 ```
+
+### 🛠️ Sync & Maintenance (With Script)
+
+#### How to feed new and changed tokens from Figma
+
+1) **Update Figma Variables**
+   - Ensure **Global** and **Semantic** variables are updated and organized correctly (naming, groups, modes, and values).
+
+2) **Open the Tokens Studio for Figma plugin**
+
+3) **Import Figma Variables into Tokens Studio**
+   - Use Tokens Studio’s import-from-variables flow to bring the current Variables state into the token sets.
+
+4) **Export to file/folder**
+   - Export using **Multiple files**.
+
+5) **Copy the exported files into this repo**
+   - Place them under [`src/tokens/figma-reference-tokens-studio/`](src/tokens/figma-reference-tokens-studio:1) (replace existing contents).
+
+6) **Regenerate the code tokens**
+   - Run:
+
+```bash
+node ./scripts/figma-sync.js
+```
+
+7) **Review and commit**
+   - Inspect the diff in the generated files and validate light/dark semantics before committing.
+
+Files affected by the script:
+- [`src/tokens/primitives/colors.ts`](src/tokens/primitives/colors.ts:1)
+- [`src/tokens/primitives/brand.ts`](src/tokens/primitives/brand.ts:1)
+- [`src/tokens/semantic/text.ts`](src/tokens/semantic/text.ts:1)
+- [`src/tokens/semantic/backgrounds.ts`](src/tokens/semantic/backgrounds.ts:1)
+- [`src/tokens/semantic/borders.ts`](src/tokens/semantic/borders.ts:1)
+
+### 🧰 Manual Maintenance (Without Script)
+
+When updating or adding tokens manually, edit the files below depending on the token type:
+
+- **Primitive palettes:** [`src/tokens/primitives/colors.ts`](src/tokens/primitives/colors.ts:1)
+- **Brand + surface primitives:** [`src/tokens/primitives/brand.ts`](src/tokens/primitives/brand.ts:1)
+- **Semantic text (light/dark):** [`src/tokens/semantic/text.ts`](src/tokens/semantic/text.ts:1)
+- **Semantic backgrounds (light/dark):** [`src/tokens/semantic/backgrounds.ts`](src/tokens/semantic/backgrounds.ts:1)
+- **Semantic borders (light/dark):** [`src/tokens/semantic/borders.ts`](src/tokens/semantic/borders.ts:1)
+- **Brand aliases:** [`src/tokens/colors-brand.ts`](src/tokens/colors-brand.ts:1)
+- **Tailwind mappings (class names):** [`src/tokens/build/preset.ts`](src/tokens/build/preset.ts:1)
+- **CSS vars output/selectors:** [`src/tokens/build/css-vars.ts`](src/tokens/build/css-vars.ts:1)
+
+Checklist when adding a new token manually:
+1) Add/update the primitive or surface scale value (if needed).
+2) Add matching semantic entries for both `light` and `dark`.
+3) Update Tailwind mappings if you want a class for the token.
+4) Regenerate or verify CSS vars output for both themes.
 
 ### 🎨 Available Colors
 
@@ -176,6 +270,8 @@ const { primitiveColors: colors, brandColors } = tokens;
 #### Brand Palette
 - `brand-black` (#0a0a0a)
 - `brand-white` (#fafafa)
+- `brand-dark-gray` (#171717)
+- `brand-medium-gray` (#737373)
 
 #### Other Complete Palettes
 - **Violet, Slate, Gray, Neutral, Blue, Red, Yellow, Green**
