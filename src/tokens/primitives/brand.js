@@ -4,8 +4,8 @@
  * Generated from figma-reference-tokens-studio.
  */
 
-import { brandColors } from '../colors-brand';
-import { primitives } from './colors';
+import { brandColors } from '../colors-brand.js';
+import { primitives } from './colors.js';
 
 // Aliases:
 // - surfaces are neutrals
@@ -23,9 +23,9 @@ export const surfacePrimitives = {
     '700': primitives.neutral[700],
     '800': primitives.neutral[800],
     '900': primitives.neutral[900],
-    '950': primitives.neutral[950]
-  }
-} as const;
+    '950': primitives.neutral[950],
+  },
+};
 
 export const brandPrimitives = {
   accent: {
@@ -39,7 +39,7 @@ export const brandPrimitives = {
     '700': primitives.violet[700],
     '800': primitives.violet[800],
     '900': primitives.violet[900],
-    '950': primitives.violet[950]
+    '950': primitives.violet[950],
   },
   // primary is orange
   primary: {
@@ -53,12 +53,9 @@ export const brandPrimitives = {
     '700': primitives.orange[700],
     '800': primitives.orange[800],
     '900': primitives.orange[900],
-    '950': primitives.orange[950]
-  }
-} as const;
-
-export type SurfacePrimitives = typeof surfacePrimitives;
-export type BrandPrimitives = typeof brandPrimitives;
+    '950': primitives.orange[950],
+  },
+};
 
 export { brandColors };
 

@@ -2,26 +2,10 @@
  * Tailwind preset for Azion tokens.
  */
 
-type TailwindConfig = {
-  theme?: { extend?: { colors?: Record<string, unknown> } };
-  darkMode?: unknown;
-};
-
-export const preset: Partial<TailwindConfig> = {
+export const preset = {
   theme: {
     extend: {
       colors: {
-        base: 'var(--text-textColorBase)',
-        muted: 'var(--text-textColorMuted)',
-        link: 'var(--text-textColorLink)',
-        code: 'var(--text-textColorCode)',
-        mutedHover: 'var(--text-textColorMutedHover)',
-        linkHover: 'var(--text-textColorLinkHover)',
-        baseHover: 'var(--text-textColorBaseHover)',
-        primary: 'var(--text-textColorPrimary)',
-        primaryHover: 'var(--text-textColorPrimaryHover)',
-        accent: 'var(--text-textColorSecondary)',
-        accentHover: 'var(--text-textColorSecondaryHover)',
         text: {
           base: 'var(--text-textColorBase)',
           muted: 'var(--text-textColorMuted)',
@@ -32,8 +16,10 @@ export const preset: Partial<TailwindConfig> = {
           baseHover: 'var(--text-textColorBaseHover)',
           primary: 'var(--text-textColorPrimary)',
           primaryHover: 'var(--text-textColorPrimaryHover)',
-          accent: 'var(--text-textColorSecondary)',
-          accentHover: 'var(--text-textColorSecondaryHover)',
+          accent: 'var(--text-textColorAccent)',
+          accentHover: 'var(--text-textColorAccentHover)',
+          secondary: 'var(--text-textColorSecondary)',
+          secondaryHover: 'var(--text-textColorSecondaryHover)',
         },
         background: {
           layer1: 'var(--background-bgLayer1)',
@@ -50,15 +36,19 @@ export const preset: Partial<TailwindConfig> = {
           success: 'var(--border-borderSuccess)',
           danger: 'var(--border-borderDanger)',
           primary: 'var(--border-borderPrimary)',
-          accent: 'var(--border-boderAccent)',
+          secondary: 'var(--border-borderSecondary)',
+          accent: 'var(--border-borderAccent)',
           warningHover: 'var(--border-borderWarningHover)',
           successHover: 'var(--border-borderSuccessHover)',
           dangerHover: 'var(--border-borderDangerHover)',
           primaryHover: 'var(--border-borderPrimaryHover)',
-          accentHover: 'var(--border-boderAccentHover)',
+          secondaryHover: 'var(--border-borderSecondaryHover)',
+          accentHover: 'var(--border-borderAccentHover)',
         },
       },
     },
   },
   darkMode: ['class', '.dark', '.azion.azion-dark'],
 };
+
+export default preset;

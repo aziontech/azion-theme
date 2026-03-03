@@ -280,14 +280,14 @@ const buildBorderSemantic = (lightEntries, darkEntries) => ({
 });
 
 const writePrimitivesFile = async (primitives) => {
-  const content = `/**\n * PRIMITIVE COLORS TOKENS\n *\n * Generated from figma-reference-tokens-studio.\n */\n\nexport const primitives = {\n${toTsObject(primitives, 2)}\n} as const;\n\nexport type PrimitiveColors = typeof primitives;\n\nexport default {\n  primitives,\n};\n`;
-  await writeFile(path.join(root, 'src/tokens/primitives/colors.ts'), content);
+  const content = `/**\n * PRIMITIVE COLORS TOKENS\n *\n * Generated from figma-reference-tokens-studio.\n */\n\nexport const primitives = {\n${toTsObject(primitives, 2)}\n};\n\nexport default {\n  primitives,\n};\n`;
+  await writeFile(path.join(root, 'src/tokens/primitives/colors.js'), content);
 };
 
 const writeBrandPrimitivesFile = async (payload) => {
   const { surfacePrimitives, brandPrimitives } = payload;
-  const content = `/**\n * BRAND + SURFACE PRIMITIVES TOKENS\n *\n * Generated from figma-reference-tokens-studio.\n */\n\nimport { brandColors } from '../colors-brand';\n\nexport const surfacePrimitives = {\n${toTsObject(surfacePrimitives, 2)}\n} as const;\n\nexport const brandPrimitives = {\n${toTsObject(brandPrimitives, 2)}\n} as const;\n\nexport type SurfacePrimitives = typeof surfacePrimitives;\nexport type BrandPrimitives = typeof brandPrimitives;\n\nexport { brandColors };\n\nexport default {\n  brandColors,\n  brandPrimitives,\n  surfacePrimitives,\n};\n`;
-  await writeFile(path.join(root, 'src/tokens/primitives/brand.ts'), content);
+  const content = `/**\n * BRAND + SURFACE PRIMITIVES TOKENS\n *\n * Generated from figma-reference-tokens-studio.\n */\n\nimport { brandColors } from '../colors-brand.js';\n\nexport const surfacePrimitives = {\n${toTsObject(surfacePrimitives, 2)}\n};\n\nexport const brandPrimitives = {\n${toTsObject(brandPrimitives, 2)}\n};\n\nexport { brandColors };\n\nexport default {\n  brandColors,\n  brandPrimitives,\n  surfacePrimitives,\n};\n`;
+  await writeFile(path.join(root, 'src/tokens/primitives/brand.js'), content);
 };
 
 const writeTextSemanticFile = async (textSemantic) => {
@@ -295,8 +295,8 @@ const writeTextSemanticFile = async (textSemantic) => {
     Object.entries(scope)
       .map(([key, value]) => `    ${key}: ${value}`)
       .join(',\n');
-  const content = `/**\n * SEMANTIC TEXT TOKENS\n *\n * Generated from figma-reference-tokens-studio.\n */\n\nimport { tokenRef } from '../build/refs';\n\nexport const textSemantic = {\n  light: {\n${formatScope(textSemantic.light)}\n  },\n  dark: {\n${formatScope(textSemantic.dark)}\n  },\n} as const;\n\nexport type TextSemantic = typeof textSemantic;\n`;
-  await writeFile(path.join(root, 'src/tokens/semantic/text.ts'), content);
+  const content = `/**\n * SEMANTIC TEXT TOKENS\n *\n * Generated from figma-reference-tokens-studio.\n */\n\nimport { tokenRef } from '../build/refs.js';\n\nexport const textSemantic = {\n  light: {\n${formatScope(textSemantic.light)}\n  },\n  dark: {\n${formatScope(textSemantic.dark)}\n  },\n};\n\nexport default {\n  textSemantic,\n};\n`;
+  await writeFile(path.join(root, 'src/tokens/semantic/text.js'), content);
 };
 
 const writeBackgroundSemanticFile = async (backgroundSemantic) => {
@@ -304,8 +304,8 @@ const writeBackgroundSemanticFile = async (backgroundSemantic) => {
     Object.entries(scope)
       .map(([key, value]) => `    ${key}: ${value}`)
       .join(',\n');
-  const content = `/**\n * SEMANTIC BACKGROUND TOKENS\n *\n * Generated from figma-reference-tokens-studio.\n */\n\nimport { tokenRef } from '../build/refs';\n\nexport const backgroundSemantic = {\n  light: {\n${formatScope(backgroundSemantic.light)}\n  },\n  dark: {\n${formatScope(backgroundSemantic.dark)}\n  },\n} as const;\n\nexport type BackgroundSemantic = typeof backgroundSemantic;\n`;
-  await writeFile(path.join(root, 'src/tokens/semantic/backgrounds.ts'), content);
+  const content = `/**\n * SEMANTIC BACKGROUND TOKENS\n *\n * Generated from figma-reference-tokens-studio.\n */\n\nimport { tokenRef } from '../build/refs.js';\n\nexport const backgroundSemantic = {\n  light: {\n${formatScope(backgroundSemantic.light)}\n  },\n  dark: {\n${formatScope(backgroundSemantic.dark)}\n  },\n};\n\nexport default {\n  backgroundSemantic,\n};\n`;
+  await writeFile(path.join(root, 'src/tokens/semantic/backgrounds.js'), content);
 };
 
 const writeBorderSemanticFile = async (borderSemantic) => {
@@ -313,8 +313,8 @@ const writeBorderSemanticFile = async (borderSemantic) => {
     Object.entries(scope)
       .map(([key, value]) => `    ${key}: ${value}`)
       .join(',\n');
-  const content = `/**\n * SEMANTIC BORDER TOKENS\n *\n * Generated from figma-reference-tokens-studio.\n */\n\nimport { tokenRef } from '../build/refs';\n\nexport const borderSemantic = {\n  light: {\n${formatScope(borderSemantic.light)}\n  },\n  dark: {\n${formatScope(borderSemantic.dark)}\n  },\n} as const;\n\nexport type BorderSemantic = typeof borderSemantic;\n`;
-  await writeFile(path.join(root, 'src/tokens/semantic/borders.ts'), content);
+  const content = `/**\n * SEMANTIC BORDER TOKENS\n *\n * Generated from figma-reference-tokens-studio.\n */\n\nimport { tokenRef } from '../build/refs.js';\n\nexport const borderSemantic = {\n  light: {\n${formatScope(borderSemantic.light)}\n  },\n  dark: {\n${formatScope(borderSemantic.dark)}\n  },\n};\n\nexport default {\n  borderSemantic,\n};\n`;
+  await writeFile(path.join(root, 'src/tokens/semantic/borders.js'), content);
 };
 
 const hasTokens = (scope) => scope && Object.keys(scope).length > 0;

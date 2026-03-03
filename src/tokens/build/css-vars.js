@@ -2,12 +2,12 @@
  * CSS variables initializer for tokens.
  */
 
-import { primitives } from '../primitives/colors';
-import { surfacePrimitives, brandPrimitives } from '../primitives/brand';
-import { textSemantic } from '../semantic/text';
-import { backgroundSemantic } from '../semantic/backgrounds';
-import { borderSemantic } from '../semantic/borders';
-import { resolveRefsToCssVars } from './resolve';
+import { primitives } from '../primitives/colors.js';
+import { surfacePrimitives, brandPrimitives } from '../primitives/brand.js';
+import { textSemantic } from '../semantic/text.js';
+import { backgroundSemantic } from '../semantic/backgrounds.js';
+import { borderSemantic } from '../semantic/borders.js';
+import { resolveRefsToCssVars } from './resolve.js';
 
 export const createCssVars = () =>
   resolveRefsToCssVars({
@@ -21,7 +21,7 @@ export const createCssVars = () =>
 
 export const cssVarsString = () => {
   const { light, dark } = createCssVars();
-  const format = (vars: Record<string, string>) =>
+  const format = (vars) =>
     Object.entries(vars)
       .map(([key, value]) => `  ${key}: ${value};`)
       .join('\n');

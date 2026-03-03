@@ -7,7 +7,7 @@
 export const primitives = {
   base: {
     white: '#ffffff',
-    black: '#000000'
+    black: '#000000',
   },
   gray: {
     '50': '#f9fafb',
@@ -20,7 +20,7 @@ export const primitives = {
     '700': '#374151',
     '800': '#1f2937',
     '900': '#111827',
-    '950': '#030712'
+    '950': '#030712',
   },
   violet: {
     '50': '#f6f6ff',
@@ -33,7 +33,7 @@ export const primitives = {
     '700': '#625bd5',
     '800': '#524bbb',
     '900': '#423f99',
-    '950': '#343279'
+    '950': '#343279',
   },
   orange: {
     '50': '#fff5ef',
@@ -46,7 +46,7 @@ export const primitives = {
     '700': '#b03c02',
     '800': '#8a2f02',
     '900': '#692402',
-    '950': '#401602'
+    '950': '#401602',
   },
   slate: {
     '50': '#f8f7fc',
@@ -59,7 +59,7 @@ export const primitives = {
     '700': '#6d698b',
     '800': '#534f70',
     '900': '#353040',
-    '950': '#13131a'
+    '950': '#13131a',
   },
   yellow: {
     '50': '#fefce8',
@@ -72,7 +72,7 @@ export const primitives = {
     '700': '#a16207',
     '800': '#854d0e',
     '900': '#713f12',
-    '950': '#422006'
+    '950': '#422006',
   },
   green: {
     '50': '#f0fdf4',
@@ -85,7 +85,7 @@ export const primitives = {
     '700': '#15803d',
     '800': '#166534',
     '900': '#14532d',
-    '950': '#052e16'
+    '950': '#052e16',
   },
   blue: {
     '50': '#eff6ff',
@@ -98,7 +98,7 @@ export const primitives = {
     '700': '#1d4ed8',
     '800': '#1e40af',
     '900': '#1e3a8a',
-    '950': '#172554'
+    '950': '#172554',
   },
   neutral: {
     '50': '#fafafa',
@@ -111,7 +111,7 @@ export const primitives = {
     '700': '#404040',
     '800': '#262626',
     '900': '#171717',
-    '950': '#0a0a0a'
+    '950': '#0a0a0a',
   },
   red: {
     '50': '#ffe5e5',
@@ -124,11 +124,9 @@ export const primitives = {
     '700': '#b91c1c',
     '800': '#991b1b',
     '900': '#7f1d1d',
-    '950': '#450a0a'
-  }
-} as const;
-
-export type PrimitiveColors = typeof primitives;
+    '950': '#450a0a',
+  },
+};
 
 export default {
   primitives,

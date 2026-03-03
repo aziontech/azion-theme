@@ -90,40 +90,36 @@ This project now includes **primitive color tokens** extracted directly from Fig
 
 ### 🚀 How to Use the Tokens
 
-#### Option 1: Simple Import (Recommended)
+#### Recommended (CommonJS)
 ```javascript
-const { colors } = require('azion-theme/tokens');
-
-// Or import individually
-const primitives = require('azion-theme/tokens/primitive');
-const brandColors = require('azion-theme/tokens/brand');
+const { colors, brandColors, primitiveColors } = require('azion-theme/tokens');
 ```
 
-#### Option 2: ES Module Import
+#### Recommended (ES Modules)
 ```javascript
 import tokens from 'azion-theme/tokens';
-const { colors } = tokens;
+const { colors, brandColors, primitiveColors } = tokens;
 ```
 
-#### Option 3: Direct File Imports
+> Tokens are now published as ESM-only (`tokens.js`), and CommonJS consumers must use dynamic `import()` or ESM-compatible tooling.
+
+#### Token structure overview
 ```javascript
-import primitives from 'azion-theme/src/tokens/primitives/colors';
-import { brandPrimitives, surfacePrimitives } from 'azion-theme/src/tokens/primitives/brand';
-import brandColors from 'azion-theme/src/tokens/colors-brand';
-import textSemantic from 'azion-theme/src/tokens/semantic/text';
-import backgroundSemantic from 'azion-theme/src/tokens/semantic/backgrounds';
-import borderSemantic from 'azion-theme/src/tokens/semantic/borders';
+colors.orange[500];           // primitive palette
+colors.brand.black;           // brand aliases
+colors.text.base;             // semantic text (CSS var)
+colors.background.layer1;     // semantic background (CSS var)
+colors.border.primary;        // semantic border (CSS var)
 ```
 
-### Tailwind Configuration Example
+### Tailwind Setup
 
-> **Note:** Option A emits both `.bg-*`, `.text-*`, and `.border-*` utilities for light and dark using Tailwind's `dark` selector. This does **not** use CSS variables.
-
+> **Option A** creates static `.bg-*`, `.text-*`, and `.border-*` utilities for **light + dark** using the `dark` selector.
 
 #### Option A: Static utilities with dark variants (no CSS vars)
 ```javascript
 import typography from '@tailwindcss/typography';
-import { tokenUtilities } from 'azion-theme/src/tokens/build/tailwind-plugin';
+import { tokenUtilities } from 'azion-theme/tokens/build/tailwind-plugin';
 const { colors } = require('azion-theme/tokens');
 
 export default {
@@ -140,24 +136,36 @@ export default {
 };
 ```
 
-#### Option B: CSS variables initializer (theme switching at runtime)
+**Example classes (Option A):**
+- `bg-layer1`, `bg-canvas`, `bg-layer2-hover`
+- `text-base`, `text-muted`, `text-accent`, `text-secondary`
+- `border-base`, `border-primary`, `border-accent`, `border-secondary`
+
+> **Option B** keeps **CSS variables** and uses the preset to add semantic names under `colors.text`, `colors.background`, `colors.border`.
+
+#### Option B: CSS variables via preset (recommended for theme switching)
 ```javascript
+import { createTailwindConfig } from 'azion-theme/tokens/build/tailwind-helper';
 const { colors } = require('azion-theme/tokens');
 
-module.exports = {
+export default createTailwindConfig({
   content: ['./src/**/*.{js,ts,jsx,tsx,html}'],
+  darkMode: ['class', '.dark', '.azion.azion-dark'],
   theme: {
     extend: {
       colors: {
-        // Spread all primitive colors at once
         ...colors,
       },
     },
   },
-  darkMode: ['class', '.dark', '.azion.azion-dark'],
   plugins: [],
-};
+});
 ```
+
+**Example classes (Option B):**
+- `bg-background-layer1`, `bg-background-canvas`
+- `text-text-base`, `text-text-primary`, `text-text-accent`
+- `border-border-base`, `border-border-primary`, `border-border-accent`
 
 ### Theme Switch Compatibility
 
@@ -170,9 +178,9 @@ The CSS variable initializer targets both the Tailwind `.dark` class and the exi
 
 #### 2. In HTML/Tailwind Classes:
 ```html
-<!-- Using semantic text/background tokens -->
-<div class="text-base bg-background-card">
-  Base text with card background
+<!-- Semantic colors (Option A example) -->
+<div class="text-base bg-layer1">
+  Base text with layer1 background
 </div>
 
 <!-- Using primitive colors -->
@@ -236,24 +244,24 @@ node ./scripts/figma-sync.js
    - Inspect the diff in the generated files and validate light/dark semantics before committing.
 
 Files affected by the script:
-- [`src/tokens/primitives/colors.ts`](src/tokens/primitives/colors.ts:1)
-- [`src/tokens/primitives/brand.ts`](src/tokens/primitives/brand.ts:1)
-- [`src/tokens/semantic/text.ts`](src/tokens/semantic/text.ts:1)
-- [`src/tokens/semantic/backgrounds.ts`](src/tokens/semantic/backgrounds.ts:1)
-- [`src/tokens/semantic/borders.ts`](src/tokens/semantic/borders.ts:1)
+- [`src/tokens/primitives/colors.js`](src/tokens/primitives/colors.js)
+- [`src/tokens/primitives/brand.js`](src/tokens/primitives/brand.js)
+- [`src/tokens/semantic/text.js`](src/tokens/semantic/text.js)
+- [`src/tokens/semantic/backgrounds.js`](src/tokens/semantic/backgrounds.js)
+- [`src/tokens/semantic/borders.js`](src/tokens/semantic/borders.js)
 
 ### 🧰 Manual Maintenance (Without Script)
 
 When updating or adding tokens manually, edit the files below depending on the token type:
 
-- **Primitive palettes:** [`src/tokens/primitives/colors.ts`](src/tokens/primitives/colors.ts:1)
-- **Brand + surface primitives:** [`src/tokens/primitives/brand.ts`](src/tokens/primitives/brand.ts:1)
-- **Semantic text (light/dark):** [`src/tokens/semantic/text.ts`](src/tokens/semantic/text.ts:1)
-- **Semantic backgrounds (light/dark):** [`src/tokens/semantic/backgrounds.ts`](src/tokens/semantic/backgrounds.ts:1)
-- **Semantic borders (light/dark):** [`src/tokens/semantic/borders.ts`](src/tokens/semantic/borders.ts:1)
-- **Brand aliases:** [`src/tokens/colors-brand.ts`](src/tokens/colors-brand.ts:1)
-- **Tailwind mappings (class names):** [`src/tokens/build/preset.ts`](src/tokens/build/preset.ts:1)
-- **CSS vars output/selectors:** [`src/tokens/build/css-vars.ts`](src/tokens/build/css-vars.ts:1)
+- **Primitive palettes:** [`src/tokens/primitives/colors.js`](src/tokens/primitives/colors.js)
+- **Brand + surface primitives:** [`src/tokens/primitives/brand.js`](src/tokens/primitives/brand.js)
+- **Semantic text (light/dark):** [`src/tokens/semantic/text.js`](src/tokens/semantic/text.js)
+- **Semantic backgrounds (light/dark):** [`src/tokens/semantic/backgrounds.js`](src/tokens/semantic/backgrounds.js)
+- **Semantic borders (light/dark):** [`src/tokens/semantic/borders.js`](src/tokens/semantic/borders.js)
+- **Brand aliases:** [`src/tokens/colors-brand.js`](src/tokens/colors-brand.js)
+- **Tailwind mappings (class names):** [`src/tokens/build/preset.js`](src/tokens/build/preset.js)
+- **CSS vars output/selectors:** [`src/tokens/build/css-vars.js`](src/tokens/build/css-vars.js)
 
 Checklist when adding a new token manually:
 1) Add/update the primitive or surface scale value (if needed).

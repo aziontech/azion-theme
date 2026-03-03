@@ -4,7 +4,7 @@
  * Organized brand colors consuming primitive colors.
  */
 
-import { primitives } from './primitives/colors';
+import { primitives } from './primitives/colors.js';
 
 export const brandColors = {
   orange: primitives.orange[500],
@@ -17,7 +17,7 @@ export const brandColors = {
   darkGray: primitives.neutral[900],
   white: primitives.neutral[50],
   black: primitives.neutral[950],
-} as const;
+};
 
 export default {
   brand: brandColors,

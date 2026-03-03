@@ -4,7 +4,7 @@
  * Generated from figma-reference-tokens-studio.
  */
 
-import { tokenRef } from '../build/refs';
+import { tokenRef } from '../build/refs.js';
 
 export const backgroundSemantic = {
   light: {
@@ -13,7 +13,7 @@ export const backgroundSemantic = {
     bgBase: tokenRef('brand.surfaces.surface-0'),
     bgCanvas: tokenRef('brand.surfaces.surface-100'),
     bgLayer1Hover: tokenRef('brand.surfaces.surface-50'),
-    bgLayer2Hover: tokenRef('brand.surfaces.surface-100')
+    bgLayer2Hover: tokenRef('brand.surfaces.surface-100'),
   },
   dark: {
     bgLayer1: tokenRef('brand.surfaces.surface-800'),
@@ -21,8 +21,10 @@ export const backgroundSemantic = {
     bgBase: tokenRef('brand.surfaces.surface-900'),
     bgCanvas: tokenRef('brand.surfaces.surface-950'),
     bgLayer1Hover: tokenRef('brand.surfaces.surface-700'),
-    bgLayer2Hover: tokenRef('brand.surfaces.surface-600')
+    bgLayer2Hover: tokenRef('brand.surfaces.surface-600'),
   },
-} as const;
+};
 
-export type BackgroundSemantic = typeof backgroundSemantic;
+export default {
+  backgroundSemantic,
+};

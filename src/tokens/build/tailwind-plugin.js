@@ -1,40 +1,37 @@
 /**
  * Tailwind plugin to generate static light/dark utilities from semantic tokens.
  *
- * This avoids CSS variables by emitting concrete values for both themes.
+ * This plugin emits concrete values for both light and dark themes,
+ * supporting:
+ * - Background color utilities
+ * - Text color utilities
+ * - Border color utilities
+ * - Both dark selectors (.dark and .azion.azion-dark)
  */
 
-import { primitives } from '../primitives/colors';
-import { surfacePrimitives, brandPrimitives } from '../primitives/brand';
-import { textSemantic } from '../semantic/text';
-import { backgroundSemantic } from '../semantic/backgrounds';
-import { borderSemantic } from '../semantic/borders';
-import { resolveRefsToCssVars } from './resolve';
+// Lazy-require to avoid hard dependency for consumers
+const plugin = (() => {
+  try {
+    return require('tailwindcss/plugin');
+  } catch {
+    return (handler) => handler;
+  }
+})();
 
-type TokenUtilitiesOptions = {
-  darkSelector?: string;
-  extraDarkSelectors?: string[];
-};
+import { primitives } from '../primitives/colors.js';
+import { surfacePrimitives, brandPrimitives } from '../primitives/brand.js';
+import { textSemantic } from '../semantic/text.js';
+import { backgroundSemantic } from '../semantic/backgrounds.js';
+import { borderSemantic } from '../semantic/borders.js';
+import { resolveRefsToCssVars } from './resolve.js';
 
-type Utilities = Record<string, Record<string, string>>;
-
-type TailwindPluginApi = {
-  addUtilities: (utilities: Utilities) => void;
-};
-
-type TailwindPlugin = (api: TailwindPluginApi) => void;
-
-type TailwindPluginFactory = (handler: TailwindPlugin) => TailwindPlugin;
-
-const createPlugin: TailwindPluginFactory = (handler) => handler;
-
-const kebab = (value: string) =>
+const kebab = (value) =>
   value
     .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
     .replace(/_/g, '-')
     .toLowerCase();
 
-const stripPrefix = (value: string, prefix: string) =>
+const stripPrefix = (value, prefix) =>
   value.startsWith(prefix) ? value.slice(prefix.length) : value;
 
 const resolveTokenMaps = () =>
@@ -47,16 +44,16 @@ const resolveTokenMaps = () =>
     borderSemantic,
   });
 
-const getValue = (map: Record<string, string>, key: string) => map[`--${key}`];
+const getValue = (map, key) => map[`--${key}`];
 
 const addUtility = (
-  utilities: Utilities,
-  darkUtilities: Utilities,
-  selectors: string[],
-  className: string,
-  property: string,
-  lightValue?: string,
-  darkValue?: string
+  utilities,
+  darkUtilities,
+  selectors,
+  className,
+  property,
+  lightValue,
+  darkValue
 ) => {
   if (lightValue) {
     utilities[className] = { [property]: lightValue };
@@ -68,13 +65,22 @@ const addUtility = (
   }
 };
 
-export const tokenUtilities = (options: TokenUtilitiesOptions = {}) => {
+/**
+ * Generate semantic token utilities for light and dark modes
+ *
+ * Usage:
+ * - Background: bg-layer1, bg-layer2, bg-base, bg-canvas, etc.
+ * - Text: text-base, text-muted, text-link, text-primary, etc.
+ * - Border: border-base, border-warning, border-danger, border-primary, etc.
+ */
+export const tokenUtilities = (options = {}) => {
   const { light, dark } = resolveTokenMaps();
   const darkSelectors = [options.darkSelector ?? '.dark', ...(options.extraDarkSelectors ?? ['.azion.azion-dark'])];
 
-  const utilities: Utilities = {};
-  const darkUtilities: Utilities = {};
+  const utilities = {};
+  const darkUtilities = {};
 
+  // Background color utilities
   Object.keys(backgroundSemantic.light).forEach((key) => {
     const suffix = kebab(stripPrefix(key, 'bg'));
     const className = `.bg-${suffix}`;
@@ -89,11 +95,12 @@ export const tokenUtilities = (options: TokenUtilitiesOptions = {}) => {
     );
   });
 
+  // Text color utilities
   const hasAccent = 'textColorAccent' in textSemantic.light;
   const accentKey = hasAccent ? 'textColorAccent' : 'textColorSecondary';
   const accentHoverKey = hasAccent ? 'textColorAccentHover' : 'textColorSecondaryHover';
 
-  const textMap: Record<string, string> = {
+  const textMap = {
     base: 'textColorBase',
     muted: 'textColorMuted',
     link: 'textColorLink',
@@ -105,6 +112,8 @@ export const tokenUtilities = (options: TokenUtilitiesOptions = {}) => {
     'primary-hover': 'textColorPrimaryHover',
     accent: accentKey,
     'accent-hover': accentHoverKey,
+    secondary: 'textColorSecondary',
+    'secondary-hover': 'textColorSecondaryHover',
   };
 
   Object.entries(textMap).forEach(([name, key]) => {
@@ -120,7 +129,8 @@ export const tokenUtilities = (options: TokenUtilitiesOptions = {}) => {
     );
   });
 
-  const borderMap: Record<string, string> = {
+  // Border color utilities
+  const borderMap = {
     base: 'borderBase',
     'base-hover': 'borderBaseHover',
     warning: 'borderWarning',
@@ -128,8 +138,10 @@ export const tokenUtilities = (options: TokenUtilitiesOptions = {}) => {
     danger: 'borderDanger',
     primary: 'borderPrimary',
     'primary-hover': 'borderPrimaryHover',
-    accent: 'boderAccent',
-    'accent-hover': 'boderAccentHover',
+    secondary: 'borderSecondary',
+    'secondary-hover': 'borderSecondaryHover',
+    accent: 'borderAccent',
+    'accent-hover': 'borderAccentHover',
     'warning-hover': 'borderWarningHover',
     'success-hover': 'borderSuccessHover',
     'danger-hover': 'borderDangerHover',
@@ -148,7 +160,7 @@ export const tokenUtilities = (options: TokenUtilitiesOptions = {}) => {
     );
   });
 
-  return createPlugin(({ addUtilities }: TailwindPluginApi) => {
+  return plugin(({ addUtilities }) => {
     addUtilities(utilities);
     addUtilities(darkUtilities);
   });

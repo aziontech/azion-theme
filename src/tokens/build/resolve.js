@@ -2,25 +2,22 @@
  * Resolve token refs to CSS variable map.
  */
 
-import { isTokenRef } from './refs';
+import { isTokenRef } from './refs.js';
 
-type TokenInput = Record<string, unknown>;
-
-const getValueByPath = (obj: TokenInput, path: string): unknown => {
-  return path.split('.').reduce<unknown>((acc, key) => {
-    if (acc && typeof acc === 'object' && key in (acc as Record<string, unknown>)) {
-      return (acc as Record<string, unknown>)[key];
+const getValueByPath = (obj, path) =>
+  path.split('.').reduce((acc, key) => {
+    if (acc && typeof acc === 'object' && key in acc) {
+      return acc[key];
     }
     return undefined;
   }, obj);
-};
 
-const flattenToCssVars = (obj: TokenInput, prefix: string[] = []): Record<string, string> => {
-  const result: Record<string, string> = {};
+const flattenToCssVars = (obj, prefix = []) => {
+  const result = {};
   Object.entries(obj).forEach(([key, value]) => {
     const nextPath = [...prefix, key];
     if (value && typeof value === 'object' && !Array.isArray(value) && !isTokenRef(value)) {
-      Object.assign(result, flattenToCssVars(value as TokenInput, nextPath));
+      Object.assign(result, flattenToCssVars(value, nextPath));
       return;
     }
     if (isTokenRef(value)) {
@@ -34,14 +31,7 @@ const flattenToCssVars = (obj: TokenInput, prefix: string[] = []): Record<string
   return result;
 };
 
-export const resolveRefsToCssVars = (tokens: {
-  primitives: TokenInput;
-  surfacePrimitives: TokenInput;
-  brandPrimitives: TokenInput;
-  textSemantic: { light: TokenInput; dark: TokenInput };
-  backgroundSemantic: { light: TokenInput; dark: TokenInput };
-  borderSemantic: { light: TokenInput; dark: TokenInput };
-}) => {
+export const resolveRefsToCssVars = (tokens) => {
   const baseForResolve = {
     primitives: tokens.primitives,
     surfacePrimitives: tokens.surfacePrimitives,
@@ -59,7 +49,7 @@ export const resolveRefsToCssVars = (tokens: {
     border: tokens.borderSemantic.dark,
   };
 
-  const resolveBrandRef = (ref: string): string | null => {
+  const resolveBrandRef = (ref) => {
     if (ref.startsWith('brand.surfaces.surface-')) {
       const shade = ref.replace('brand.surfaces.surface-', '');
       const resolved = getValueByPath(baseForResolve, `surfacePrimitives.surface.${shade}`);
@@ -83,7 +73,7 @@ export const resolveRefsToCssVars = (tokens: {
     return null;
   };
 
-  const resolveSemantic = (semantic: TokenInput) => {
+  const resolveSemantic = (semantic) => {
     const flattened = flattenToCssVars(semantic);
     return Object.fromEntries(
       Object.entries(flattened).map(([key, value]) => {
@@ -108,5 +98,5 @@ export const resolveRefsToCssVars = (tokens: {
       ...flattenToCssVars(baseForVars),
       ...resolveSemantic(darkSemantic),
     },
-  } as const;
+  };
 };

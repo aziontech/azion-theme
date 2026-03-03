@@ -4,7 +4,7 @@
  * Generated from figma-reference-tokens-studio.
  */
 
-import { tokenRef } from '../build/refs';
+import { tokenRef } from '../build/refs.js';
 
 export const textSemantic = {
   light: {
@@ -20,7 +20,7 @@ export const textSemantic = {
     textColorSecondary: tokenRef('primitives.violet.500'),
     textColorSecondaryHover: tokenRef('primitives.violet.600'),
     textColorAccent: tokenRef('brand.accent.accent-500'),
-    textColorAccentHover: tokenRef('brand.accent.accent-600')
+    textColorAccentHover: tokenRef('brand.accent.accent-600'),
   },
   dark: {
     textColorBase: tokenRef('primitives.neutral.50'),
@@ -35,8 +35,10 @@ export const textSemantic = {
     textColorSecondary: tokenRef('primitives.violet.500'),
     textColorSecondaryHover: tokenRef('primitives.violet.400'),
     textColorAccent: tokenRef('brand.accent.accent-500'),
-    textColorAccentHover: tokenRef('brand.accent.accent-400')
+    textColorAccentHover: tokenRef('brand.accent.accent-400'),
   },
-} as const;
+};
 
-export type TextSemantic = typeof textSemantic;
+export default {
+  textSemantic,
+};
