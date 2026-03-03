@@ -1,3 +1,28 @@
+## [1.18.3](https://github.com/aziontech/azion-theme/compare/v1.18.2...v1.18.3) (2026-02-25)
+
+### Bug Fixes
+
+* trigger, allow empty ([ab231f6](https://github.com/aziontech/azion-theme/commit/ab231f64247e3c4cc026a3cff351d4b92975bdb2))
+
+## [1.18.2](https://github.com/aziontech/azion-theme/compare/v1.18.1...v1.18.2) (2026-02-25)
+
+### Bug Fixes
+
+* trigger to test password ([312f433](https://github.com/aziontech/azion-theme/commit/312f433662dbf447f1a3059085dbc87b369cde1c))
+
+## [1.18.1](https://github.com/aziontech/azion-theme/compare/v1.18.0...v1.18.1) (2026-02-25)
+
+### Bug Fixes
+
+* trigger ([322d359](https://github.com/aziontech/azion-theme/commit/322d359c536cef3be35d79cf52df56da89ba0ad7))
+* trigger ([a4b3f83](https://github.com/aziontech/azion-theme/commit/a4b3f83eb497079418f2d8dc3788d1cb01170eeb))
+
+## [1.18.0](https://github.com/aziontech/azion-theme/compare/v1.17.0...v1.18.0) (2026-02-25)
+
+### Features
+
+* change font to sora ([#74](https://github.com/aziontech/azion-theme/issues/74)) ([4ef00e3](https://github.com/aziontech/azion-theme/commit/4ef00e3c5d1913c0f8d21408afa8fd66d99340b2))
+
 ## [1.17.0](https://github.com/aziontech/azion-theme/compare/v1.16.2...v1.17.0) (2025-12-01)
 
 ### Features
