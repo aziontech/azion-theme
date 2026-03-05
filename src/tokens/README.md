@@ -84,43 +84,15 @@ Any modifications made to `azion-theme` will be reflected on this development se
 
 ## 🎨 Design Tokens
 
-This project now includes **primitive color tokens** extracted directly from Figma, ready to be consumed via Tailwind CSS.
-
-### 📁 Token Files
+This project includes **primitive color tokens** extracted directly from Figma, ready to be consumed via Tailwind CSS.
 
 ### 🚀 How to Use the Tokens
 
-#### Recommended (CommonJS)
 ```javascript
-const { colors, brandColors, primitiveColors } = require('azion-theme/tokens');
-```
-
-#### Recommended (ES Modules)
-```javascript
-import tokens from 'azion-theme/tokens';
-const { colors, brandColors, primitiveColors } = tokens;
-```
-
-> Tokens are now published as ESM-only (`tokens.js`), and CommonJS consumers must use dynamic `import()` or ESM-compatible tooling.
-
-#### Token structure overview
-```javascript
-colors.orange[500];           // primitive palette
-colors.brand.black;           // brand aliases
-colors.text.base;             // semantic text (CSS var)
-colors.background.layer1;     // semantic background (CSS var)
-colors.border.primary;        // semantic border (CSS var)
-```
-
-### Tailwind Setup
-
-> **Option A** creates static `.bg-*`, `.text-*`, and `.border-*` utilities for **light + dark** using the `dark` selector.
-
-#### Option A: Static utilities with dark variants (no CSS vars)
-```javascript
+// tailwind.config.js
 import typography from '@tailwindcss/typography';
 import { tokenUtilities } from 'azion-theme/tokens/build/tailwind-plugin';
-const { colors } = require('azion-theme/tokens');
+import colors from 'azion-theme/tokens';
 
 export default {
   content: ['./src/**/*.{js,ts,jsx,tsx,html}'],
@@ -136,36 +108,106 @@ export default {
 };
 ```
 
-**Example classes (Option A):**
-- `bg-layer1`, `bg-canvas`, `bg-layer2-hover`
-- `text-base`, `text-muted`, `text-accent`, `text-secondary`
-- `border-base`, `border-primary`, `border-accent`, `border-secondary`
+#### Token structure overview
 
-> **Option B** keeps **CSS variables** and uses the preset to add semantic names under `colors.text`, `colors.background`, `colors.border`.
-
-#### Option B: CSS variables via preset (recommended for theme switching)
+**Global/Primitive tokens** (direct values, use with `dark:` variant):
 ```javascript
-import { createTailwindConfig } from 'azion-theme/tokens/build/tailwind-helper';
-const { colors } = require('azion-theme/tokens');
+// Primitive palettes (all with 50-950 shades)
+colors.orange[500];           // #fe601f
+colors.violet[500];           // #8a84ec
+colors.neutral[900];          // #171717
 
-export default createTailwindConfig({
-  content: ['./src/**/*.{js,ts,jsx,tsx,html}'],
-  darkMode: ['class', '.dark', '.azion.azion-dark'],
-  theme: {
-    extend: {
-      colors: {
-        ...colors,
-      },
-    },
-  },
-  plugins: [],
-});
+// Brand colors
+colors.brand.black;           // #0a0a0a
+colors.brand.white;           // #fafafa
+colors.brand.orange;          // #fe601f
+
+// Brand primitives (aliases)
+colors.primary[500];          // orange palette
+colors.accent[500];           // violet palette
+
+// Surface primitives (neutral-based)
+colors.surface[950];          // #0a0a0a
 ```
 
-**Example classes (Option B):**
-- `bg-background-layer1`, `bg-background-canvas`
-- `text-text-base`, `text-text-primary`, `text-text-accent`
-- `border-border-base`, `border-border-primary`, `border-border-accent`
+**Semantic tokens** (theme-aware, no `dark:` variant needed):
+```javascript
+// Text colors - automatically switches between light/dark
+colors.text.base;             // neutral-900 (light) / neutral-50 (dark)
+colors.text.muted;            // neutral-600 (light) / neutral-400 (dark)
+colors.text.accent;           // accent-500 (both modes)
+
+// Background colors - theme-aware layers
+colors.background.layer1;     // surface-0 (light) / surface-800 (dark)
+colors.background.layer2;     // surface-50 (light) / surface-700 (dark)
+colors.background.canvas;     // surface-100 (light) / surface-950 (dark)
+
+// Border colors - theme-aware borders
+colors.border.base;           // surface-200 (light) / surface-700 (dark)
+colors.border.primary;        // primary-500 (both modes)
+colors.border.accent;         // accent-500 (both modes)
+```
+
+#### Usage in HTML/Tailwind Classes
+
+**Using semantic tokens** (theme-aware, no `dark:` variant needed):
+```html
+<!-- Semantic background - automatically switches theme -->
+<div class="bg-layer1">
+  Layer 1 background (white in light, dark in dark mode)
+</div>
+
+<!-- Semantic text colors -->
+<p class="text-base">
+  Base text color (auto-adapts to theme)
+</p>
+
+<!-- Semantic borders -->
+<div class="border border-base">
+  Border adapts to current theme
+</div>
+
+<!-- Semantic interactive states -->
+<button class="bg-layer1 hover:bg-layer1-hover border border-primary text-primary">
+  Themed button
+</button>
+```
+
+**Using global tokens** (can use `dark:` in this cases):
+```html
+<!-- Background with dark variant -->
+<div class="bg-neutral-50 dark:bg-neutral-950">
+  Adaptive background
+</div>
+
+<!-- Text colors with dark variant -->
+<p class="text-neutral-900 dark:text-neutral-100">
+  Primary text color
+</p>
+
+<!-- Border colors with dark variant -->
+<div class="border border-neutral-200 dark:border-neutral-800">
+  Card with adaptive border
+</div>
+
+<!-- Using brand colors (no dark variant needed) -->
+<button class="bg-orange-500 text-white hover:bg-orange-600">
+  Action Button
+</button>
+```
+
+**Available token classes:**
+
+*Global tokens* (use with `dark:` variant):
+- **Neutrals:** `neutral-50` → `neutral-950` (surface backgrounds, text, borders)
+- **Brand:** `orange-50` → `orange-950` (primary actions)
+- **Accent:** `violet-50` → `violet-950` (secondary highlights)
+- **Status:** `red-*`, `green-*`, `yellow-*`, `blue-*` (semantic status colors)
+
+*Semantic tokens* (theme-aware, no `dark:` needed):
+- **Text:** `text-base`, `text-muted`, `text-accent`, `text-primary`, `text-link`
+- **Background:** `bg-layer1`, `bg-layer2`, `bg-canvas`, `bg-base`
+- **Border:** `border-base`, `border-primary`, `border-accent`, `border-warning`, `border-success`, `border-danger`
 
 ### Theme Switch Compatibility
 
@@ -176,43 +218,19 @@ The CSS variable initializer targets both the Tailwind `.dark` class and the exi
 [data-theme=dark], .dark, .azion.azion-dark { /* dark vars */ }
 ```
 
-#### 2. In HTML/Tailwind Classes:
-```html
-<!-- Semantic colors (Option A example) -->
-<div class="text-base bg-layer1">
-  Base text with layer1 background
-</div>
+### Granular Imports (Advanced)
 
-<!-- Using primitive colors -->
-<div class="bg-orange-500 text-brand-black">
-  Orange background with brand black text
-</div>
-
-<!-- Using brand colors -->
-<button class="bg-brand-black text-brand-white hover:bg-orange-600">
-  Button with brand colors
-</button>
-```
-
-#### 3. In CSS:
-```css
-.my-component {
-  background-color: #fe601f; /* orange-500 */
-  color: #0a0a0a; /* brand-black */
-}
-```
-
-#### 4. In JavaScript/TypeScript:
-```typescript
-// Option 1: Simple import (recommended)
-const { colors } = require('azion-theme/tokens');
-
-const primaryColor = colors.orange[500];
-const brandBlack = colors.brand.black;
-
-// Option 2: Import structured tokens
-const tokens = require('azion-theme/tokens');
-const { colors: allColors, brandColors } = tokens;
+```javascript
+// Named exports for specific token types
+import { 
+  primitives, 
+  brandColors, 
+  brandPrimitives,
+  surfacePrimitives,
+  preset,
+  createTailwindConfig,
+  tokenUtilities 
+} from 'azion-theme/tokens';
 ```
 
 ### 🛠️ Sync & Maintenance (With Script)
@@ -296,30 +314,23 @@ Checklist when adding a new token manually:
 
 #### If you get import errors:
 
-**Option 1: CommonJS (recommended for most projects)**
+**ES Modules (recommended)**
 ```javascript
-const { primitiveColors, brandColors } = require('azion-theme/tokens');
+import colors from 'azion-theme/tokens';
 ```
 
-**Option 2: ES Modules**
+**Named exports**
 ```javascript
-import tokens from 'azion-theme/tokens';
-const { primitiveColors, brandColors } = tokens;
+import { primitives, brandColors, brandPrimitives, surfacePrimitives } from 'azion-theme/tokens';
 ```
 
-**Option 3: Individual imports**
+**Direct file imports**
 ```javascript
-const primitiveColors = require('azion-theme/tokens/primitive');
-const brandColors = require('azion-theme/tokens/brand');
+import { primitives } from 'azion-theme/tokens/primitives/colors.js';
+import { brandColors } from 'azion-theme/tokens/colors-brand.js';
 ```
 
-**Option 4: Direct file imports**
-```javascript
-import primitiveColors from 'azion-theme/src/tokens/colors-primitive';
-import brandColors from 'azion-theme/src/tokens/colors-brand';
-```
-
-**Option 5: Configure Vite (if using Vite)**
+**Configure Vite (if using Vite)**
 Add to your `vite.config.js`:
 ```javascript
 export default {
@@ -331,6 +342,4 @@ export default {
 
 ## 🔗 Links
 
-- [PrimeVue](https://v3.primevue.org/)
-- [PrimeVue Sass Theme](https://github.com/primefaces/primevue-sass-theme)
 - [Figma Global Tokens](https://www.figma.com/design/t97pXRs7xME3SJDs5iZ5RF/Global-Tokens?node-id=0-1)
