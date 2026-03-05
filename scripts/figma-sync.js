@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const root = path.resolve(__dirname, '..');
 
-const referenceDir = path.join(root, 'src/tokens/figma-reference-tokens-studio');
+const referenceDir = path.join(__dirname, 'figma-reference-tokens-studio');
 const metadataPath = path.join(referenceDir, '$metadata.json');
 
 const readJson = async (filePath) => {
@@ -42,11 +42,11 @@ const toTsObject = (obj, indent = 0) => {
   const lines = entries.map(([key, value]) => {
     const safeKey = /^[a-zA-Z_][\w-]*$/.test(key) ? key : `'${key}'`;
     if (value && typeof value === 'object' && !Array.isArray(value)) {
-      return `${pad}${safeKey}: {\n${toTsObject(value, indent + 2)}\n${pad}}`;
+      return `${pad}${safeKey}: {\n${toTsObject(value, indent + 2)}\n${pad}  }`;
     }
     return `${pad}${safeKey}: '${value}'`;
   });
-  return lines.join(',\n');
+  return lines.join(',\n') + ',';
 };
 
 const deepMerge = (target, source) => {
@@ -186,8 +186,17 @@ const buildSurfacePrimitives = (entries, primitives) => {
     if (!key.startsWith('surfaces.surface-') && !key.startsWith('brand.surfaces.surface-')) return;
     const shade = key.split('surface-')[1];
     const alias = parseAlias(value);
-    const resolved = alias ? resolveAliasValue(alias, primitives) : null;
-    surface[shade] = resolved ?? value;
+    const ref = aliasToRef(alias);
+    if (ref && ref.startsWith('primitives.')) {
+      const path = ref.replace('primitives.', '').split('.');
+      if (path[0] === 'base') {
+        surface[shade] = `primitives.base.${path[1]}`;
+      } else {
+        surface[shade] = `primitives.${path[0]}[${path[1]}]`;
+      }
+    } else {
+      surface[shade] = `tokenRef('${ref ?? alias ?? value}')`;
+    }
   });
 
   const sorted = {};
@@ -198,7 +207,7 @@ const buildSurfacePrimitives = (entries, primitives) => {
   return { surface: sorted };
 };
 
-const buildBrandPrimitives = (entries, primitives) => {
+const buildBrandPrimitives = (entries) => {
   const accent = {};
   const primary = {};
   const absolute = {};
@@ -207,24 +216,39 @@ const buildBrandPrimitives = (entries, primitives) => {
     if (key.startsWith('brand.accent.accent-')) {
       const shade = key.replace('brand.accent.accent-', '');
       const alias = parseAlias(value);
-      const resolved = alias ? resolveAliasValue(alias, primitives) : null;
-      accent[shade] = resolved ?? value;
+      const ref = aliasToRef(alias);
+      if (ref && ref.startsWith('primitives.')) {
+        const path = ref.replace('primitives.', '').split('.');
+        accent[shade] = `primitives.${path[0]}[${path[1]}]`;
+      } else {
+        accent[shade] = `tokenRef('${ref ?? alias ?? value}')`;
+      }
       return;
     }
 
     if (key.startsWith('brand.primary.primary-')) {
       const shade = key.replace('brand.primary.primary-', '');
       const alias = parseAlias(value);
-      const resolved = alias ? resolveAliasValue(alias, primitives) : null;
-      primary[shade] = resolved ?? value;
+      const ref = aliasToRef(alias);
+      if (ref && ref.startsWith('primitives.')) {
+        const path = ref.replace('primitives.', '').split('.');
+        primary[shade] = `primitives.${path[0]}[${path[1]}]`;
+      } else {
+        primary[shade] = `tokenRef('${ref ?? alias ?? value}')`;
+      }
       return;
     }
 
     if (key.startsWith('brand.absolute.')) {
       const name = key.replace('brand.absolute.', '');
       const alias = parseAlias(value);
-      const resolved = alias ? resolveAliasValue(alias, primitives) : null;
-      absolute[name] = resolved ?? value;
+      const ref = aliasToRef(alias);
+      if (ref && ref.startsWith('primitives.')) {
+        const path = ref.replace('primitives.', '').split('.');
+        absolute[name] = `primitives.${path[0]}[${path[1]}]`;
+      } else {
+        absolute[name] = `tokenRef('${ref ?? alias ?? value}')`;
+      }
     }
   });
 
@@ -249,7 +273,9 @@ const normalizeSemanticKey = (tokenPath, prefix) => {
   if (!tokenPath.startsWith(prefix)) return tokenPath;
   const trimmed = tokenPath.slice(prefix.length + 1);
   const flattened = trimmed.split('.').join('-');
-  return toCamel(flattened);
+  // Fix typo in Figma tokens: "boder" -> "border"
+  const corrected = flattened.replace(/^boder-/, 'border-').replace(/-boder-/g, '-border-');
+  return toCamel(corrected);
 };
 
 const buildSemanticScope = (entries, prefix) => {
@@ -284,9 +310,38 @@ const writePrimitivesFile = async (primitives) => {
   await writeFile(path.join(root, 'src/tokens/primitives/colors.js'), content);
 };
 
+const formatBrandScope = (scope) =>
+  Object.entries(scope)
+    .map(([key, value]) => {
+      if (typeof value === 'string' && value.startsWith('tokenRef(')) {
+        return `    ${key}: ${value}`;
+      }
+      return `    ${key}: '${value}'`;
+    })
+    .join(',\n');
+
 const writeBrandPrimitivesFile = async (payload) => {
   const { surfacePrimitives, brandPrimitives } = payload;
-  const content = `/**\n * BRAND + SURFACE PRIMITIVES TOKENS\n *\n * Generated from figma-reference-tokens-studio.\n */\n\nimport { brandColors } from '../colors-brand.js';\n\nexport const surfacePrimitives = {\n${toTsObject(surfacePrimitives, 2)}\n};\n\nexport const brandPrimitives = {\n${toTsObject(brandPrimitives, 2)}\n};\n\nexport { brandColors };\n\nexport default {\n  brandColors,\n  brandPrimitives,\n  surfacePrimitives,\n};\n`;
+
+  const formatScope = (scope) =>
+    Object.entries(scope)
+      .map(([key, value]) => {
+        if (typeof value === 'string' && (value.startsWith('tokenRef(') || value.startsWith('primitives.'))) {
+          return `    ${key}: ${value}`;
+        }
+        return `    ${key}: '${value}'`;
+      })
+      .join(',\n');
+
+  const surfaceContent = Object.entries(surfacePrimitives)
+    .map(([name, scope]) => `  ${name}: {\n${formatScope(scope)}\n  }`)
+    .join(',\n');
+
+  const brandContent = Object.entries(brandPrimitives)
+    .map(([name, scope]) => `  ${name}: {\n${formatScope(scope)}\n  }`)
+    .join(',\n');
+
+  const content = `/**\n * BRAND + SURFACE PRIMITIVES TOKENS\n *\n * Generated from figma-reference-tokens-studio.\n */\n\nimport { brandColors } from '../colors-brand.js';\nimport { primitives } from './colors.js';\n\n// Aliases:\n// - surfaces are neutrals\n// - accent is violet\nexport const surfacePrimitives = {\n${surfaceContent}\n};\n\nexport const brandPrimitives = {\n${brandContent}\n};\n\nexport { brandColors };\n\nexport default {\n  brandColors,\n  brandPrimitives,\n  surfacePrimitives,\n};\n`;
   await writeFile(path.join(root, 'src/tokens/primitives/brand.js'), content);
 };
 
@@ -337,7 +392,7 @@ const run = async () => {
 
   const primitives = buildPrimitives(globalEntries);
   const surfacePrimitives = buildSurfacePrimitives(globalEntries, primitives);
-  const brandPrimitives = buildBrandPrimitives(globalEntries, primitives);
+  const brandPrimitives = buildBrandPrimitives(globalEntries);
   const textSemantic = buildTextSemantic(lightEntries, darkEntries);
   const backgroundSemantic = buildBackgroundSemantic(lightEntries, darkEntries);
   const borderSemantic = buildBorderSemantic(lightEntries, darkEntries);

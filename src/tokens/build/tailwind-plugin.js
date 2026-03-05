@@ -114,6 +114,12 @@ export const tokenUtilities = (options = {}) => {
     'accent-hover': accentHoverKey,
     secondary: 'textColorSecondary',
     'secondary-hover': 'textColorSecondaryHover',
+    danger: 'textDanger',
+    'danger-hover': 'textDangerHover',
+    warning: 'textWarning',
+    'warning-hover': 'textWarningHover',
+    success: 'textSuccess',
+    'success-hover': 'textSuccessHover',
   };
 
   Object.entries(textMap).forEach(([name, key]) => {

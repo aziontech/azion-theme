@@ -21,7 +21,7 @@ export const borderSemantic = {
     borderPrimaryHover: tokenRef('brand.primary.primary-600'),
     borderSecondaryHover: tokenRef('primitives.violet.600'),
     borderAccent: tokenRef('brand.accent.accent-500'),
-    borderAccentHover: tokenRef('brand.accent.accent-600'),
+    borderAccentHover: tokenRef('brand.accent.accent-600')
   },
   dark: {
     borderBase: tokenRef('brand.surfaces.surface-700'),
@@ -37,7 +37,7 @@ export const borderSemantic = {
     borderPrimaryHover: tokenRef('brand.primary.primary-400'),
     borderSecondaryHover: tokenRef('primitives.violet.400'),
     borderAccent: tokenRef('brand.accent.accent-500'),
-    borderAccentHover: tokenRef('brand.accent.accent-400'),
+    borderAccentHover: tokenRef('brand.accent.accent-400')
   },
 };
 
