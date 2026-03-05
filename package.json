@@ -19,11 +19,15 @@
   "exports": {
     ".": "./default.js",
     "./widget": "./widget.js",
-    "./src/tokens/colors-primitive": "./src/tokens/colors-primitive.ts",
-    "./src/tokens/colors-brand": "./src/tokens/colors-brand.ts",
-    "./tokens/primitive": "./src/tokens/colors-primitive.ts",
-    "./tokens/brand": "./src/tokens/colors-brand.ts",
-    "./tokens": "./tokens.js"
+    "./tokens": "./tokens.js",
+    "./tokens/primitive": "./tokens.js",
+    "./tokens/brand": "./tokens.js",
+    "./tokens/semantic/text": "./tokens.js",
+    "./tokens/semantic/backgrounds": "./tokens.js",
+    "./tokens/semantic/borders": "./tokens.js",
+    "./tokens/build/preset": "./src/tokens/build/preset.js",
+    "./tokens/build/tailwind-helper": "./src/tokens/build/tailwind-helper.js",
+    "./tokens/build/tailwind-plugin": "./src/tokens/build/tailwind-plugin.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -32,7 +36,11 @@
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "conventional-changelog-conventionalcommits": "^8.0.0",
-    "semantic-release": "^24.0.0"
+    "semantic-release": "^24.0.0",
+    "tailwindcss": "^3.4.17"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3.4.0"
   },
   "keywords": [
     "css",
