@@ -1,3 +1,9 @@
+## [1.18.4](https://github.com/aziontech/azion-theme/compare/v1.18.3...v1.18.4) (2026-03-09)
+
+### Bug Fixes
+
+* jsonforms function formbuilder icons ([#76](https://github.com/aziontech/azion-theme/issues/76)) ([62b4e74](https://github.com/aziontech/azion-theme/commit/62b4e745660b1a062fbc9173d55029932c73e15b))
+
 ## [1.18.3](https://github.com/aziontech/azion-theme/compare/v1.18.2...v1.18.3) (2026-02-25)
 
 ### Bug Fixes
