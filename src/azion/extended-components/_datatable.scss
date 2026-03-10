@@ -19,6 +19,10 @@
     background: unset !important;
   }
 
+  .p-datatable-tbody > tr:focus-visible {
+    outline: none !important;
+  }
+
   .p-datatable-tbody {
     .p-frozen-column {
       background: var(--table-body-row-even-bg);
