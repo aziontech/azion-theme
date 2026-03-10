@@ -106,7 +106,7 @@
           }
 
           &::before {
-            content: '\e90d';
+            content: '\f16e';
             display: block;
             position: absolute;
             font-family: "primeicons";
@@ -168,15 +168,15 @@
           }
 
           .array-list-item-move-up::before {
-            content: '\e91c';
+            content: '\f21c';
           }
 
           .array-list-item-move-down::before {
-            content: '\e919';
+            content: '\f223';
           }
 
           .array-list-item-delete::before {
-            content: '\e93d';
+            content: '\f11e';
           }
         }
       }
