@@ -1,3 +1,9 @@
+## [1.19.0](https://github.com/aziontech/azion-theme/compare/v1.18.4...v1.19.0) (2026-03-10)
+
+### Features
+
+* [ENG-36536] tokens ts and new architecture ([#75](https://github.com/aziontech/azion-theme/issues/75)) ([2715f47](https://github.com/aziontech/azion-theme/commit/2715f47d8f70794faba7b3d82f9f5fe4f3e02886))
+
 ## [1.18.4](https://github.com/aziontech/azion-theme/compare/v1.18.3...v1.18.4) (2026-03-09)
 
 ### Bug Fixes
