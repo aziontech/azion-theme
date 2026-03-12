@@ -1,3 +1,9 @@
+## [1.19.1](https://github.com/aziontech/azion-theme/compare/v1.19.0...v1.19.1) (2026-03-12)
+
+### Bug Fixes
+
+* removed focus on table row, not necessary anymore ([#77](https://github.com/aziontech/azion-theme/issues/77)) ([76eebbc](https://github.com/aziontech/azion-theme/commit/76eebbc37998c4e725d267163514fcb5cd232331))
+
 ## [1.19.0](https://github.com/aziontech/azion-theme/compare/v1.18.4...v1.19.0) (2026-03-10)
 
 ### Features
