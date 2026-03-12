@@ -110,6 +110,10 @@ $colors: (
   --surface-hover: #f5f5f516;
   --surface-code-highlight: #5e5e5e50;
 
+  --card-content-bg: var(--surface-100);
+  --card-header-bg: var(--surface-50);
+  --card-footer-bg: var(--surface-50);
+
   --content-padding: 1.25rem;
   --inline-spacing: 0.5rem;
   --border-radius: 6px;
@@ -290,6 +294,10 @@ $colors: (
   --surface-border: var(--surface-200);
   --surface-hover: #3b3b3b16;
   --surface-code-highlight: #b5b5b550;
+
+  --card-content-bg: var(--surface-0);
+  --card-header-bg: var(--surface-0);
+  --card-footer-bg: var(--surface-0);
 
   --maskbg: #1e1e1e32;
   --highlight-text-color: none;
