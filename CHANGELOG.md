@@ -1,3 +1,9 @@
+## [1.20.0](https://github.com/aziontech/azion-theme/compare/v1.19.1...v1.20.0) (2026-03-12)
+
+### Features
+
+* added new tokens to cards home ([#78](https://github.com/aziontech/azion-theme/issues/78)) ([52af798](https://github.com/aziontech/azion-theme/commit/52af79825178b41cbf0d84fa9a1769b03ff53491))
+
 ## [1.19.1](https://github.com/aziontech/azion-theme/compare/v1.19.0...v1.19.1) (2026-03-12)
 
 ### Bug Fixes
